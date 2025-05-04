@@ -1,33 +1,32 @@
+'use strict';
+
 function makeTransaction(quantity, pricePerDroid) {
   const totalPrice = quantity * pricePerDroid;
-
   return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
 }
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
+console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
+console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
+console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
 
-//
+// ------------------
 
 function getShippingMessage(country, price, deliveryFee) {
   const totalPrice = price + deliveryFee;
-
   return `Shipping to ${country} will cost ${totalPrice} credits`;
 }
 
-console.log(getShippingMessage('Australia', 120, 50));
-console.log(getShippingMessage('Germany', 80, 20));
-console.log(getShippingMessage('Sweden', 100, 20));
+console.log(getShippingMessage('Australia', 120, 50)); // "Shipping to Australia will cost 170 credits"
+console.log(getShippingMessage('Germany', 80, 20)); // "Shipping to Germany will cost 100 credits"
+console.log(getShippingMessage('Sweden', 100, 20)); // "Shipping to Sweden will cost 120 credits"
 
-//
+// -------------------
 
 function getElementWidth(content, padding, border) {
   const contentWidth = parseFloat(content);
   const paddingWidth = parseFloat(padding) * 2;
   const borderWidth = parseFloat(border) * 2;
-
-  const totalWidth = contentWidth + paddingWidth + borderWidth;
+  const totalWidth = contentWidth + paddingWidth * 2 + borderWidth * 2;
 
   return totalWidth;
 }

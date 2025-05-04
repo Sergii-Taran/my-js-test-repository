@@ -1,3 +1,5 @@
+'use strict';
+
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
   const totalPrice = quantity * pricePerDroid;
 
@@ -8,11 +10,13 @@ function makeTransaction(quantity, pricePerDroid, customerCredits) {
   }
 }
 
-console.log(makeTransaction(5, 3000, 23000));
-console.log(makeTransaction(3, 1000, 15000));
-console.log(makeTransaction(10, 5000, 8000));
-console.log(makeTransaction(8, 2000, 10000));
-console.log(makeTransaction(10, 500, 5000));
+console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
+console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
+console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
+console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
+console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 5000 credits!"
+
+// ------------------
 
 function formatMessage(message, maxLength) {
   if (message.length <= maxLength) {
@@ -28,6 +32,8 @@ console.log(formatMessage('Vestibulum facilisis purus nec', 20)); // "Vestibulum
 console.log(formatMessage('Vestibulum facilisis purus nec', 30)); // "Vestibulum facilisis purus nec"
 console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15)); // "Nunc sed turpis..."
 console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41)); // "Nunc sed turpis a felis in nunc fringilla"
+
+// ------------------
 
 function checkForSpam(message) {
   const lowerCaseMessage = message.toLowerCase();
@@ -47,6 +53,8 @@ console.log(checkForSpam('Trust me, this is not a spam message')); // true
 console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!')); // true
 console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
 
+// -----------------
+
 function getShippingCost(country) {
   let price;
 
@@ -62,6 +70,9 @@ function getShippingCost(country) {
       break;
     case 'Jamaica':
       price = 120;
+      break;
+    case 'Ukraine':
+      price = 300;
       break;
 
     default:
