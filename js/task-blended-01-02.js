@@ -9,17 +9,51 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
 
-const number = parseInt(prompt('Enter a number:'));
+// const number = parseInt(prompt('Enter a number:'));
 
-if (isNaN(number)) {
-  alert("You didn't enter a number!");
-} else if (number === 10) {
-  alert('True');
-} else {
-  alert('False');
-}
+// if (isNaN(number)) {
+//   alert("You didn't enter a number!");
+// } else if (number === 10) {
+//   alert('True');
+// } else {
+//   alert('False');
+// }
 
 // ===================== //
+
+// У змінній min лежить випадкове число від 0 до 59.
+// Визначте, в яку чверть години потрапляє
+// це число (у першу, другу, третю чи четверту).
+// Виведіть в alert відповідне повідомлення, наприклад:
+// "10 входить в першу чверть"
+
+// const min = Math.floor(Math.random() * 60);
+
+// switch (true) {
+//   case min <= 15:
+//     alert(`${min} is in the first quarter`);
+//     break;
+
+//   case min <= 15:
+//     alert(`${min} is in the second quarter`);
+//     break;
+
+//   case min <= 15:
+//     alert(`${min} is in the third quarter`);
+//     break;
+
+//   default:
+//     alert(`${min} is in the fourth quarter`);
+// }
+
+// компактний варіант через Math
+
+// const min = Math.floor(Math.random() * 60);
+
+// const quarter = Math.floor(min / 15) + 1;
+
+// alert(`${min} is in the quarter ${quarter}`);
+
 // ===================== //
 // ===================== //
 // ===================== //
