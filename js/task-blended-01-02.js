@@ -1,6 +1,5 @@
-// ===================== //
-
-// task-01
+// ================= ======= //
+// ======== task-01 ======== //
 
 // Запропонуйте користувачу ввести число за допомогою prompt().
 // Збережіть введене значення у змінну number.
@@ -21,9 +20,8 @@
 //   alert('False');
 // }
 
-// ===================== //
-
-// task-02
+// ================ ======== //
+// ======== task-02 ======== //
 
 // У змінній min лежить випадкове число від 0 до 59.
 // Визначте, в яку чверть години потрапляє
@@ -58,9 +56,8 @@
 
 // alert(`${min} is in the quarter ${quarter}`);
 
-// ===================== //
-
-// task-03
+// ================ ======== //
+// ======== task-03 ======== //
 
 // Змінна num може набувати 4 значення: '1', '2', '3' або '4'
 // (запитуй це значення у користувача через prompt).
@@ -105,8 +102,8 @@
 // alert(result);
 // console.log(result);
 
-// ===================== //
-// task-04
+// ================ ======== //
+// ======== task-04 ======== //
 
 // Отримуйте від користувача число (кількість хвилин) через prompt
 // і виводьте у консоль рядок у форматі годин та хвилин.
@@ -137,8 +134,8 @@
 //   console.log(result);
 // }
 
-// ===================== //
-// task-05
+// ========================= //
+// ======== task-05 ======== //
 
 // Напишіть код, який запитуватиме у користувача
 // логін за допомогою prompt і виводить результат в консоль браузера
@@ -155,42 +152,97 @@
 // то вивести в alert рядок "Добрий день!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
-// варіант_1 (if...else)
+// ======== var.01 (if...else) ======== //
 
-let login = prompt('Enter your login:');
+// let login = prompt('Enter your login:');
 
-console.log('Entered login:', login);
+// console.log('Entered login:', login);
 
-if (login === null || login === '') {
-  alert('Cancelled');
-} else if (login === 'Admin') {
-  let password = prompt('Enter password:');
+// if (login === null || login === '') {
+//   alert('Cancelled');
+// } else if (login === 'Admin') {
+//   let password = prompt('Enter password:');
 
-  if (password === null || password === '') {
-    alert('Cancelled');
-  } else if (password === 'I_Am_the_boss') {
-    alert('Hello!');
-  } else {
-    alert('Incorrect password!');
+//   if (password === null || password === '') {
+//     alert('Cancelled');
+//   } else if (password === 'I_am_the_Boss') {
+//     alert('Hello!');
+//   } else {
+//     alert('Incorrect password!');
+//   }
+// } else {
+//   alert('I dont know you!');
+// }
+
+// ======== var.02 (function) ======== //
+
+// function checkLogin(login) {
+//   if (login === null || login === '') {
+//     alert('Cancelled');
+//   } else if (login === 'Admin') {
+//     checkPassword();
+//   } else {
+//     alert('I dont know you!');
+//   }
+// }
+
+// function checkPassword() {
+//   let password = prompt('Enter password:');
+
+//   if (password === null || password === '') {
+//     alert('Cancelled');
+//   } else if (password === 'I_am_the_Boss') {
+//     alert('Hello!');
+//   } else {
+//     alert('Incorrect password!');
+//   }
+// }
+
+// let login = prompt('Enter your login:');
+// console.log('Entered login:', login);
+// checkLogin(login);
+
+// ======== var.03 (function) ======== //
+
+function authenticateUser(login, passwordPrompt = true) {
+  if (login === null || login === '') {
+    return 'Cancelled';
   }
-} else {
-  alert('I dont know you!');
+
+  if (login === 'Admin') {
+    if (!passwordPrompt) return 'Cancelled';
+
+    let password = prompt('Enter password:');
+    if (password === null || password === '') {
+      return 'Cancelled';
+    } else if (password === 'I_am_the_Boss') {
+      return 'Hello!';
+    } else {
+      return 'Incorrect password!';
+    }
+  }
+
+  return 'I dont know you!';
 }
 
-// варіант_2 (function)
+let login = prompt('Enter your login:');
+console.log('Entered login:', login);
 
-// ===================== //
-// task-06
-// ===================== //
-// task-07
-// ===================== //
-// task-08
-// ===================== //
-// task-09
-// ===================== //
-// task-10
-// ===================== //
-// ===================== //
-// ===================== //
-// ===================== //
-// ===================== //
+alert(authenticateUser(login));
+
+// ========================= //
+// ======== task-06 ======== //
+
+// ========================= //
+// ======== task-07 ======== //
+
+// ========================= //
+// ======== task-08 ======== //
+
+// ========================= //
+// ======== task-09 ======== //
+
+// ========================= //
+// ======== task-10 ======== //
+
+// ========================= //
