@@ -294,19 +294,69 @@
 
 // ======== var.02 (ternary operator) ======== //
 
-function min(a, b) {
-  if (!Number.isFinite(a) || !Number.isFinite(b)) {
-    return 'Not a number!';
-  }
+// function min(a, b) {
+//   if (!Number.isFinite(a) || !Number.isFinite(b)) {
+//     return 'Not a number!';
+//   }
 
-  return a < b ? a : b;
-}
+//   return a < b ? a : b;
+// }
 
-console.log(min(1, 5));
-console.log(min('Hello!', 5));
+// console.log(min(1, 5));
+// console.log(min('Hello!', 5));
 
 // ========================= //
 // ======== task-09 ======== //
+
+// Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+
+// ======== var.01 (easy) ======== //
+
+// function isAdult(age) {
+//   if (!Number.isFinite(age)) {
+//     return 'Error: age must be a number!';
+//   }
+
+//   return age >= 18 || confirm('Are you 18 years old?');
+// }
+
+// console.log(isAdult(25));
+// console.log(isAdult(15));
+// console.log(isAdult('hello'));
+
+// ======== var.02 (extended) ======== //
+
+function isAdult() {
+  const input = prompt('Enter your age:');
+  const age = Number(input);
+
+  if (!Number.isFinite(age)) {
+    alert('Error: The entered value must be a number!');
+    return false;
+  }
+
+  if (age >= 18) {
+    alert('You are of legal age!');
+    return true;
+  }
+
+  const approved = confirm(
+    'You are not 18 years old. Did your parents allow it?'
+  );
+
+  if (approved) {
+    alert('Confirmation received!');
+  } else {
+    alert('Access is denied!');
+  }
+
+  return approved;
+}
+
+console.log(isAdult());
 
 // ========================= //
 // ======== task-10 ======== //
