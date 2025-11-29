@@ -252,24 +252,58 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-function getNumbers(min, max) {
-  let sum = 0;
+// function getNumbers(min, max) {
+//   let sum = 0;
 
-  for (let i = max; i >= min; i--) {
-    console.log(i);
+//   for (let i = max; i >= min; i--) {
+//     console.log(i);
 
-    if (i % 2 === 0) {
-      sum += i;
-    }
-  }
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-console.log(getNumbers(7, 99));
+// console.log(getNumbers(7, 99));
 
 // ========================= //
 // ======== task-08 ======== //
+
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+// ======== var.01 (function) ======== //
+
+// function min(a, b) {
+//   if (!Number.isFinite(a) || !Number.isFinite(b)) {
+//     return 'Not a number!';
+//   }
+
+//   if (a < b) {
+//     return a;
+//   } else {
+//     return b;
+//   }
+// }
+
+// console.log(min(10, 5));
+// console.log(min('Hello!', 5));
+
+// ======== var.02 (ternary operator) ======== //
+
+function min(a, b) {
+  if (!Number.isFinite(a) || !Number.isFinite(b)) {
+    return 'Not a number!';
+  }
+
+  return a < b ? a : b;
+}
+
+console.log(min(1, 5));
+console.log(min('Hello!', 5));
 
 // ========================= //
 // ======== task-09 ======== //
