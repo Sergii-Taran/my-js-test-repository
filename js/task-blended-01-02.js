@@ -114,31 +114,71 @@
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
 
-function formatTimeFromMinutes(totalMinutes) {
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = totalMinutes % 60;
+// function formatTimeFromMinutes(totalMinutes) {
+//   const hours = Math.floor(totalMinutes / 60);
+//   const minutes = totalMinutes % 60;
 
-  const formatted =
-    String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0');
+//   const formatted =
+//     String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0');
 
-  return formatted;
-}
+//   return formatted;
+// }
 
-const input = prompt('Enter minutes:');
-const minutes = parseInt(input);
+// const input = prompt('Enter minutes:');
+// const minutes = parseInt(input);
 
-if (isNaN(minutes) || minutes < 0) {
-  alert('Please enter a valid positive number!');
-  console.log('Invalid input');
-} else {
-  const result = formatTimeFromMinutes(minutes);
+// if (isNaN(minutes) || minutes < 0) {
+//   alert('Please enter a valid positive number!');
+//   console.log('Invalid input');
+// } else {
+//   const result = formatTimeFromMinutes(minutes);
 
-  alert(result);
-  console.log(result);
-}
+//   alert(result);
+//   console.log(result);
+// }
 
 // ===================== //
 // task-05
+
+// Напишіть код, який запитуватиме у користувача
+// логін за допомогою prompt і виводить результат в консоль браузера
+
+// Після цього додайте перевірку введеного користувачем значення:
+// Якщо відвідувач вводить "Адмін",
+// то prompt запитує пароль (не забудьте зберігти його у змінну для подальшої перевірки).
+// Якщо нічого не ввели або натиснули Cancel,
+// Вивести в alert строку "Скасовано"
+// В іншому випадку вивести в alert рядок "Я вас не знаю"
+
+// Пароль перевіряти так:
+// Якщо введено пароль "Я головний",
+// то вивести в alert рядок "Добрий день!",
+// в іншому випадку вивести в alert рядок "Невірний пароль!"
+
+// варіант_1 (if...else)
+
+let login = prompt('Enter your login:');
+
+console.log('Entered login:', login);
+
+if (login === null || login === '') {
+  alert('Cancelled');
+} else if (login === 'Admin') {
+  let password = prompt('Enter password:');
+
+  if (password === null || password === '') {
+    alert('Cancelled');
+  } else if (password === 'I_Am_the_boss') {
+    alert('Hello!');
+  } else {
+    alert('Incorrect password!');
+  }
+} else {
+  alert('I dont know you!');
+}
+
+// варіант_2 (function)
+
 // ===================== //
 // task-06
 // ===================== //
