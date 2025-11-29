@@ -72,41 +72,71 @@
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
 
-const input = prompt('Enter a number from 1 to 4:');
-const number = parseInt(input);
+// const input = prompt('Enter a number from 1 to 4:');
+// const number = parseInt(input);
 
-let result;
+// let result;
 
-if (!input || isNaN(number)) {
-  result = 'Please enter a valid number!';
-} else {
-  switch (number) {
-    case 1:
-      result = 'Winter';
-      break;
+// if (!input || isNaN(number)) {
+//   result = 'Please enter a valid number!';
+// } else {
+//   switch (number) {
+//     case 1:
+//       result = 'Winter';
+//       break;
 
-    case 2:
-      result = 'Spring';
-      break;
+//     case 2:
+//       result = 'Spring';
+//       break;
 
-    case 3:
-      result = 'Summer';
-      break;
+//     case 3:
+//       result = 'Summer';
+//       break;
 
-    case 4:
-      result = 'Autumn';
-      break;
+//     case 4:
+//       result = 'Autumn';
+//       break;
 
-    default:
-      result = 'Sorry, but you must enter a number between 1 and 4 inclusive';
-  }
-}
+//     default:
+//       result = 'Sorry, but you must enter a number between 1 and 4 inclusive';
+//   }
+// }
 
-alert(result);
-console.log(result);
+// alert(result);
+// console.log(result);
 
 // ===================== //
 // task-04
+
+// Отримуйте від користувача число (кількість хвилин) через prompt
+// і виводьте у консоль рядок у форматі годин та хвилин.
+// Приклад: користувач вводить в prompt '70' -> в консолі відобразиться '01:10'.
+// Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
+
+function formatTimeFromMinutes(totalMinutes) {
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  const formatted =
+    String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0');
+
+  return formatted;
+}
+
+const input = prompt('Enter minutes:');
+const minutes = parseInt(input);
+
+if (isNaN(minutes) || minutes < 0) {
+  alert('Please enter a valid positive number!');
+  console.log('Invalid input');
+} else {
+  const result = formatTimeFromMinutes(minutes);
+
+  alert(result);
+  console.log(result);
+}
+
 // ===================== //
 // task-05
 // ===================== //
