@@ -204,34 +204,43 @@
 
 // ======== var.03 (function) ======== //
 
-function authenticateUser(login, passwordPrompt = true) {
-  if (login === null || login === '') {
-    return 'Cancelled';
-  }
+// function authenticateUser(login, passwordPrompt = true) {
+//   if (login === null || login === '') {
+//     return 'Cancelled';
+//   }
 
-  if (login === 'Admin') {
-    if (!passwordPrompt) return 'Cancelled';
+//   if (login === 'Admin') {
+//     if (!passwordPrompt) return 'Cancelled';
 
-    let password = prompt('Enter password:');
-    if (password === null || password === '') {
-      return 'Cancelled';
-    } else if (password === 'I_am_the_Boss') {
-      return 'Hello!';
-    } else {
-      return 'Incorrect password!';
-    }
-  }
+//     let password = prompt('Enter password:');
+//     if (password === null || password === '') {
+//       return 'Cancelled';
+//     } else if (password === 'I_am_the_Boss') {
+//       return 'Hello!';
+//     } else {
+//       return 'Incorrect password!';
+//     }
+//   }
 
-  return 'I dont know you!';
-}
+//   return 'I dont know you!';
+// }
 
-let login = prompt('Enter your login:');
-console.log('Entered login:', login);
+// let login = prompt('Enter your login:');
+// console.log('Entered login:', login);
 
-alert(authenticateUser(login));
+// alert(authenticateUser(login));
 
 // ========================= //
 // ======== task-06 ======== //
+
+// Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
+
+let count = 0;
+
+while (count <= 20) {
+  console.log(`Count: ${count}`);
+  count += 1;
+}
 
 // ========================= //
 // ======== task-07 ======== //
