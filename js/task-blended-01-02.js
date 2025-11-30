@@ -366,20 +366,72 @@
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
 
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('fizzbuzz');
+//     } else if (i % 3 === 0) {
+//       console.log('fizz');
+//     } else if (i % 5 === 0) {
+//       console.log('buzz');
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// fizzBuzz(15);
+
+// ------------------------- //
+
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     let output = '';
+
+//     if (i % 3 === 0) output += 'fizz';
+//     if (i % 5 === 0) output += 'buzz';
+
+//     console.log(output || i);
+//   }
+// }
+
+// fizzBuzz(15);
+
+// ------------------------ //
+
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     switch (true) {
+//       case i % 3 === 0 && i % 5 === 0:
+//         console.log('fizzbuzz');
+//         break;
+
+//       case i % 3 === 0:
+//         console.log('fizz');
+//         break;
+
+//       case i % 5 === 0:
+//         console.log('buzz');
+//         break;
+
+//       default:
+//         console.log(i);
+//         break;
+//     }
+//   }
+// }
+
+// fizzBuzz(15);
+
+// ------------------------- //
+
 function fizzBuzz(num) {
-  for (let i = 1; i <= num; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log('fizzbuzz');
-    } else if (i % 3 === 0) {
-      console.log('fizz');
-    } else if (i % 5 === 0) {
-      console.log('buzz');
-    } else {
-      console.log(i);
-    }
+  for (let i = 1; i <= 15; i++) {
+    console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : '') || i);
   }
 }
 
-fizzBuzz(25);
+fizzBuzz(15);
 
+// ------------------------- //
 // ========================= //
