@@ -329,36 +329,57 @@
 
 // ======== var.02 (extended) ======== //
 
-function isAdult() {
-  const input = prompt('Enter your age:');
-  const age = Number(input);
+// function isAdult() {
+//   const input = prompt('Enter your age:');
+//   const age = Number(input);
 
-  if (!Number.isFinite(age)) {
-    alert('Error: The entered value must be a number!');
-    return false;
-  }
+//   if (!Number.isFinite(age)) {
+//     alert('Error: The entered value must be a number!');
+//     return false;
+//   }
 
-  if (age >= 18) {
-    alert('You are of legal age!');
-    return true;
-  }
+//   if (age >= 18) {
+//     alert('You are of legal age!');
+//     return true;
+//   }
 
-  const approved = confirm(
-    'You are not 18 years old. Did your parents allow it?'
-  );
+//   const approved = confirm(
+//     'You are not 18 years old. Did your parents allow it?'
+//   );
 
-  if (approved) {
-    alert('Confirmation received!');
-  } else {
-    alert('Access is denied!');
-  }
+//   if (approved) {
+//     alert('Confirmation received!');
+//   } else {
+//     alert('Access is denied!');
+//   }
 
-  return approved;
-}
+//   return approved;
+// }
 
-console.log(isAdult());
+// console.log(isAdult());
 
 // ========================= //
 // ======== task-10 ======== //
+
+// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+fizzBuzz(25);
 
 // ========================= //
