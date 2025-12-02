@@ -52,17 +52,35 @@
 // Оголоси для функції add три параметри: a, b і c, які будуть отримувати значення з аргументів, під час її виклику.
 // Доповни console.log() таким чином, щоб він логував рядок "Addition result equals <result>", де <result> - це сума переданих чисел.
 
-function add(a, b, c) {
-  const result = a + b + c;
-  console.log(`Addition result equals ${result}`);
-}
+// function add(a, b, c) {
+//   const result = a + b + c;
+//   console.log(`Addition result equals ${result}`);
+// }
 
-add(15, 5, 55);
-add(22, 13, 8);
-add(11, 45, 99);
+// add(15, 5, 55);
+// add(22, 13, 8);
+// add(11, 45, 99);
 
 // ======================= //
-// ======= task-01 ======= //
+// ======= task-05 ======= //
+
+// Написати функцію calcBMI (weight, height), яка розраховує та повертає індекс маси тіла людини.
+// Для цього необхідно розділити вагу людини на квадрат її висоти.
+// Вага та висота будуть спеціально передані як рядки.
+// Не цілі числа можуть бути задані у вигляді 24.7 або 24,7, тобто як роздільник дробової частини може бути як крапка, так і кома.
+// Індекс маси тіла потрібно округлити до однієї цифри після коми.
+
+function calcBMI(weight, height) {
+  let numWeight = Number.parseFloat(weight.replace(',', '.'));
+  let numHeight = Number.parseFloat(height.replace(',', '.'));
+
+  const bmi = numWeight / numHeight ** 2;
+
+  return parseFloat(bmi.toFixed(1));
+}
+
+const bmi = calcBMI('102.5', '1.85');
+console.log(bmi);
 
 // ======================= //
 // ======= task-01 ======= //
