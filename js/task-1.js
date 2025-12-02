@@ -34,19 +34,32 @@
 // firstElement - перший символ рядка
 // lastElement - останній символ рядка (використовуй змінну courseTopicLength)
 
-const string = 'Winter is coming';
+// const string = 'Winter is coming';
 
-const courseTopicLength = string.length;
-console.log(courseTopicLength);
+// const courseTopicLength = string.length;
+// console.log(courseTopicLength);
 
-const firstElement = string[0];
-console.log(firstElement);
+// const firstElement = string[0];
+// console.log(firstElement);
 
-const lastElement = string[string.length - 1];
-console.log(lastElement);
+// const lastElement = string[string.length - 1];
+// console.log(lastElement);
 
 // ======================= //
-// ======= task-01 ======= //
+// ======= task-04 ======= //
+
+// Функція add повинна вміти додавати три числа і виводити результат у консоль.
+// Оголоси для функції add три параметри: a, b і c, які будуть отримувати значення з аргументів, під час її виклику.
+// Доповни console.log() таким чином, щоб він логував рядок "Addition result equals <result>", де <result> - це сума переданих чисел.
+
+function add(a, b, c) {
+  const result = a + b + c;
+  console.log(`Addition result equals ${result}`);
+}
+
+add(15, 5, 55);
+add(22, 13, 8);
+add(11, 45, 99);
 
 // ======================= //
 // ======= task-01 ======= //
