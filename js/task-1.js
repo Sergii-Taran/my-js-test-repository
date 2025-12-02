@@ -21,13 +21,29 @@
 // Змінна username зберігає рядок з іменем користувача.
 // Оголоси змінну message та за допомогою синтаксису шаблонних рядків. Доповни код так, щоб в ній зберігався рядок наступного формату: "Username <name> is <length> characters long", в якому <name> це ім'я користувача зі змінної username, а <length> це його довжина.
 
-const userName = 'Sergio';
-const message = `Username ${userName} is ${userName.length} characters long`;
+// const userName = 'Sergio';
+// const message = `Username ${userName} is ${userName.length} characters long`;
 
-console.log(message);
+// console.log(message);
 
 // ======================= //
-// ======= task-01 ======= //
+// ======= task-03 ======= //
+
+// Додай код, який записує у змінні наступні значення:
+// courseTopicLength - довжина рядка
+// firstElement - перший символ рядка
+// lastElement - останній символ рядка (використовуй змінну courseTopicLength)
+
+const string = 'Winter is coming';
+
+const courseTopicLength = string.length;
+console.log(courseTopicLength);
+
+const firstElement = string[0];
+console.log(firstElement);
+
+const lastElement = string[string.length - 1];
+console.log(lastElement);
 
 // ======================= //
 // ======= task-01 ======= //
