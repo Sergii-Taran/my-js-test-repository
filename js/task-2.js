@@ -67,22 +67,39 @@
 // Якщо товарів у замовленні більше, ніж їх доступно на складі, то функція повертає рядок "Your order is too large, there are not enough items in stock!".
 // В іншому випадку функція повертає рядок "The order is accepted, our manager will contact you".
 
-function checkStorage(available, ordered) {
-  if (ordered === 0) {
-    return 'There are no products in the order!';
-  } else if (available < ordered) {
-    return 'Your order is too large, there are not enough items in stock!';
-  } else {
-    return 'The order is accepted, our manager will contact you!';
-  }
-}
+// function checkStorage(available, ordered) {
+//   if (ordered === 0) {
+//     return 'There are no products in the order!';
+//   } else if (available < ordered) {
+//     return 'Your order is too large, there are not enough items in stock!';
+//   } else {
+//     return 'The order is accepted, our manager will contact you!';
+//   }
+// }
 
-console.log(checkStorage(10000, 0));
-console.log(checkStorage(10000, 15000));
-console.log(checkStorage(10000, 7000));
+// console.log(checkStorage(10000, 0));
+// console.log(checkStorage(10000, 15000));
+// console.log(checkStorage(10000, 7000));
 
 // ======================= //
 // ======= task-05 ======= //
+
+// Функція checkPassword(password) порівнює переданий їй пароль (параметр password) зі збереженим паролем адміністратора (correctPassword) і повертає рядок з повідомленням про результат.
+// Використовуючи тернарний оператор, доповни функцію таким чином, щоб:
+// Якщо значення password і correctPassword збігаються, функція повертала рядок "Access granted"
+// В іншому випадку, функція повертала рядок "Access denied, wrong password!"
+
+function checkPassword(password) {
+  const correctPassword = 'Wsxcde159';
+
+  return password === correctPassword
+    ? 'Access granted!'
+    : 'Access denied, wrong password!';
+}
+
+console.log(checkPassword('Ghtnb951'));
+console.log(checkPassword('Wsxcde159'));
+
 // ======================= //
 // ======= task-06 ======= //
 // ======================= //
