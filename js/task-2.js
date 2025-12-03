@@ -1,174 +1,43 @@
-'use strict';
+// ======= task-01 ======= //
 
-// function makeTransaction(quantity, pricePerDroid, customerCredits) {
-//   const totalPrice = quantity * pricePerDroid;
+// Доповни код функції checkAge(age) так, щоб функція повертала рядок "You are an adult", якщо значення параметра age більше або дорівнює 18
+// Використай у тілі функції інструкцію if для перевірки значення age.
 
-//   if (totalPrice > customerCredits) {
-//     return 'Insufficient funds!';
+// function checkAge(age) {
+//   if (age >= 18) {
+//     return 'You are an adult';
 //   } else {
-//     return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+//     return 'You are not an adult';
 //   }
 // }
 
-// console.log(makeTransaction(5, 3000, 23000));
-// console.log(makeTransaction(3, 1000, 15000));
-// console.log(makeTransaction(10, 5000, 8000));
-// console.log(makeTransaction(8, 2000, 10000));
-// console.log(makeTransaction(10, 500, 5000));
+// console.log(checkAge(25));
+// console.log(checkAge(15));
 
-// ===================== //
+// ======================= //
+// ======= task-02 ======= //
 
-// function formatMessage(message, maxLength) {
-//   if (message.length <= maxLength) {
-//     return message;
-//   } else {
-//     return message.slice(0, maxLength) + '...';
-//   }
-// }
+// Напиши програму, яка запитує у користувача ціле число і визначає, чи є це число парним або непарним
 
-// console.log(formatMessage('Curabitur ligula sapien', 16));
-// console.log(formatMessage('Curabitur ligula sapien', 23));
-// console.log(formatMessage('Vestibulum facilisis purus nec', 20));
-// console.log(formatMessage('Vestibulum facilisis purus nec', 30));
-// console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15));
-// console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41));
+const userInput = prompt('Enter a number:');
+const number = Number(userInput);
 
-// ===================== //
-
-// function checkForSpam(message) {
-//   const lowerCaseMessage = message.toLowerCase();
-
-//   if (lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale')) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-// console.log(checkForSpam('Latest technology news'));
-// console.log(checkForSpam('JavaScript weekly newsletter'));
-// console.log(checkForSpam('Get best sale offers now!'));
-// console.log(checkForSpam('Amazing SalE, only tonight!'));
-// console.log(checkForSpam('Trust me, this is not a spam message'));
-// console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
-// console.log(checkForSpam('[SPAM] How to earn fast money?'));
-
-// ===================== //
-
-// function getShippingCost(country) {
-//   let price;
-
-//   switch (country) {
-//     case 'China':
-//       price = 100;
-//       break;
-//     case 'Chile':
-//       price = 250;
-//       break;
-//     case 'Australia':
-//       price = 170;
-//       break;
-//     case 'Jamaica':
-//       price = 120;
-//       break;
-//     case 'Ukraine':
-//       price = 300;
-//       break;
-
-//     default:
-//       return 'Sorry, there is no delivery to your country';
-//   }
-//   return `Shipping to ${country} will cost ${price} credits`;
-// }
-
-// console.log(getShippingCost('Australia'));
-// console.log(getShippingCost('Germany'));
-// console.log(getShippingCost('China'));
-// console.log(getShippingCost('Chile'));
-// console.log(getShippingCost('Jamaica'));
-// console.log(getShippingCost('Sweden'));
-
-// ===================== //
-
-function makeTransaction(quantity, pricePerDroid, customerCredits) {
-  const totalDroidsCost = quantity * pricePerDroid;
-
-  if (totalDroidsCost > customerCredits) {
-    return 'Insufficient funds!';
+if (Number.isNaN(number)) {
+  console.log('You entered not a number!');
+} else {
+  if (number % 2 === 0) {
+    console.log('The number is even!');
   } else {
-    return `You ordered ${quantity} droids worth ${totalDroidsCost} credits!`;
+    console.log('The number is odd!');
   }
 }
 
-console.log(makeTransaction(5, 3000, 23000));
-console.log(makeTransaction(3, 1000, 15000));
-console.log(makeTransaction(10, 5000, 8000));
-console.log(makeTransaction(8, 2000, 10000));
-console.log(makeTransaction(10, 500, 5000));
-
-// ===================== //
-
-function formatMessage(message, maxLength) {
-  if (message.length <= maxLength) {
-    return message;
-  } else {
-    return message.slice(0, maxLength) + '...';
-  }
-}
-
-console.log(formatMessage('Curabitur ligula sapien', 16));
-console.log(formatMessage('Curabitur ligula sapien', 23));
-console.log(formatMessage('Vestibulum facilisis purus nec', 20));
-console.log(formatMessage('Vestibulum facilisis purus nec', 30));
-console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15));
-console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41));
-
-// ===================== //
-
-function checkForSpam(message) {
-  const lowerCaseMessage = message.toLowerCase();
-
-  return lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale');
-}
-
-console.log(checkForSpam('Latest technology news'));
-console.log(checkForSpam('JavaScript weekly newsletter'));
-console.log(checkForSpam('Get best sale offers now!'));
-console.log(checkForSpam('Amazing SalE, only tonight!'));
-console.log(checkForSpam('Trust me, this is not a spam message'));
-console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
-console.log(checkForSpam('[SPAM] How to earn fast money?'));
-
-// ===================== //
-
-function getShippingCost(country) {
-  let price;
-
-  switch (country) {
-    case 'China':
-      price = 100;
-      break;
-    case 'Chile':
-      price = 250;
-      break;
-    case 'Australia':
-      price = 170;
-      break;
-    case 'Jamaica':
-      price = 120;
-      break;
-
-    default:
-      return 'Sorry, there is no delivery to your country';
-  }
-  return `Shipping to ${country} will cost ${price} credits`;
-}
-
-console.log(getShippingCost('Australia'));
-console.log(getShippingCost('Germany'));
-console.log(getShippingCost('China'));
-console.log(getShippingCost('Chile'));
-console.log(getShippingCost('Jamaica'));
-console.log(getShippingCost('Sweden'));
-
-// ===================== //
+// ======================= //
+// ======= task-03 ======= //
+// ======================= //
+// ======= task-04 ======= //
+// ======================= //
+// ======= task-05 ======= //
+// ======================= //
+// ======= task-06 ======= //
+// ======================= //
