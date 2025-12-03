@@ -89,17 +89,58 @@
 // Якщо значення password і correctPassword збігаються, функція повертала рядок "Access granted"
 // В іншому випадку, функція повертала рядок "Access denied, wrong password!"
 
-function checkPassword(password) {
-  const correctPassword = 'Wsxcde159';
+// function checkPassword(password) {
+//   const correctPassword = 'Wsxcde159';
 
-  return password === correctPassword
-    ? 'Access granted!'
-    : 'Access denied, wrong password!';
+//   return password === correctPassword
+//     ? 'Access granted!'
+//     : 'Access denied, wrong password!';
+// }
+
+// console.log(checkPassword('Ghtnb951'));
+// console.log(checkPassword('Wsxcde159'));
+
+// ======================= //
+// ======= task-06 ======= //
+
+// Функція getSubscriptionPrice(type) отримує рядок з типом передплати користувача (параметр type), перевіряє її на збіг з трьома можливими типами щомісячної передплати та повертає ціну, або повідомлення про неправильний тип передплати.
+// Якщо значення параметра type — це рядок:
+// "starter" — ціна передплати 0 кредитів.
+// "professional" — ціна передплати 20 кредитів.
+// "organization" — ціна передплати 50 кредитів.
+// Для будь-якого іншого значення параметра type повертається рядок "Invalid subscription type!".
+// Використай оператор switch для розв'язання цієї задачі!
+
+function getSubscriptionPrice(type) {
+  let price;
+
+  switch (type) {
+    case 'starter':
+      price = 0;
+      break;
+    case 'professional':
+      price = 20;
+      break;
+    case 'organization':
+      price = 50;
+      break;
+
+    default:
+      return 'Invalid subscription type!';
+  }
+  return price;
 }
 
-console.log(checkPassword('Ghtnb951'));
-console.log(checkPassword('Wsxcde159'));
+console.log(getSubscriptionPrice('starter'));
+console.log(getSubscriptionPrice('professional'));
+console.log(getSubscriptionPrice('organization'));
 
+// ======================= //
+// ======= task-06 ======= //
+// ======================= //
+// ======= task-06 ======= //
+// ======================= //
+// ======= task-06 ======= //
 // ======================= //
 // ======= task-06 ======= //
 // ======================= //
