@@ -43,20 +43,44 @@
 // Якщо в замовленні вказане число, яке перевищує доступну кількість товарів на складі, функція повертає рядок "Not enough goods in stock!"
 // В іншому випадку функція повертає рядок "Order is processed, our manager will contact you"
 
-function checkStorage(available, ordered) {
-  if (ordered > available) {
-    return 'Not enough goods in stock!';
-  } else {
-    return 'Order is processed, our manager will contact you';
-  }
-}
+// function checkStorage(available, ordered) {
+//   if (ordered > available) {
+//     return 'Not enough goods in stock!';
+//   } else {
+//     return 'Order is processed, our manager will contact you';
+//   }
+// }
 
-console.log(checkStorage(2200, 3500));
-console.log(checkStorage(5700, 3660));
-console.log(checkStorage(7800, 7800));
+// console.log(checkStorage(2200, 3500));
+// console.log(checkStorage(5700, 3660));
+// console.log(checkStorage(7800, 7800));
 
 // ======================= //
 // ======= task-04 ======= //
+
+// Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат
+// Вона оголошує два параметри, значення яких будуть задаватися під час її виклику.
+// available - доступна кількість товарів на складі
+// ordered - кількість одиниць товару в замовленні
+// Використовуючи розгалуження, доповни код функції таким чином, щоб:
+// Якщо в замовленні ще немає товарів, тобто значення параметра ordered дорівнює 0, функція повертає рядок "There are no products in the order!".
+// Якщо товарів у замовленні більше, ніж їх доступно на складі, то функція повертає рядок "Your order is too large, there are not enough items in stock!".
+// В іншому випадку функція повертає рядок "The order is accepted, our manager will contact you".
+
+function checkStorage(available, ordered) {
+  if (ordered === 0) {
+    return 'There are no products in the order!';
+  } else if (available < ordered) {
+    return 'Your order is too large, there are not enough items in stock!';
+  } else {
+    return 'The order is accepted, our manager will contact you!';
+  }
+}
+
+console.log(checkStorage(10000, 0));
+console.log(checkStorage(10000, 15000));
+console.log(checkStorage(10000, 7000));
+
 // ======================= //
 // ======= task-05 ======= //
 // ======================= //
