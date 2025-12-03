@@ -19,21 +19,42 @@
 
 // Напиши програму, яка запитує у користувача ціле число і визначає, чи є це число парним або непарним
 
-const userInput = prompt('Enter a number:');
-const number = Number(userInput);
+// const userInput = prompt('Enter a number:');
+// const number = Number(userInput);
 
-if (Number.isNaN(number)) {
-  console.log('You entered not a number!');
-} else {
-  if (number % 2 === 0) {
-    console.log('The number is even!');
-  } else {
-    console.log('The number is odd!');
-  }
-}
+// if (Number.isNaN(number)) {
+//   console.log('You entered not a number!');
+// } else {
+//   if (number % 2 === 0) {
+//     console.log('The number is even!');
+//   } else {
+//     console.log('The number is odd!');
+//   }
+// }
 
 // ======================= //
 // ======= task-03 ======= //
+
+// Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат
+// Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+// available - доступна кількість товарів на складі
+// ordered - кількість одиниць товару в замовленні
+// Використовуючи розгалуження, доповни код функції таким чином, щоб:
+// Якщо в замовленні вказане число, яке перевищує доступну кількість товарів на складі, функція повертає рядок "Not enough goods in stock!"
+// В іншому випадку функція повертає рядок "Order is processed, our manager will contact you"
+
+function checkStorage(available, ordered) {
+  if (ordered > available) {
+    return 'Not enough goods in stock!';
+  } else {
+    return 'Order is processed, our manager will contact you';
+  }
+}
+
+console.log(checkStorage(2200, 3500));
+console.log(checkStorage(5700, 3660));
+console.log(checkStorage(7800, 7800));
+
 // ======================= //
 // ======= task-04 ======= //
 // ======================= //
