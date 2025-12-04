@@ -285,23 +285,50 @@
 // Доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
 // Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6
 
+// function calculateTotal(number) {
+//   let sum = 0;
+//   let i = 1;
+
+//   while (i <= number) {
+//     sum += i;
+//     i++;
+//   }
+
+//   return sum;
+// }
+
+// console.log(calculateTotal(15));
+// console.log(calculateTotal(99));
+// console.log(calculateTotal(0));
+// console.log(calculateTotal(77));
+
+// ======================= //
+// ======= task-16 ======= //
+
+// Функція calculateTotal(number) приймає ціле число (параметр number)
+// Використовуючи цикл for, доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
+
 function calculateTotal(number) {
   let sum = 0;
-  let i = 1;
 
-  while (i <= number) {
+  for (let i = 1; i <= number; i++) {
     sum += i;
-    i++;
   }
-
   return sum;
 }
 
 console.log(calculateTotal(15));
-console.log(calculateTotal(99));
-console.log(calculateTotal(0));
-console.log(calculateTotal(77));
 
 // ======================= //
-// ======= task-16 ======= //
+// ======= task-17 ======= //
+// ======================= //
+// ======= task-18 ======= //
+// ======================= //
+// ======= task-19 ======= //
+// ======================= //
+// ======= task-20 ======= //
+// ======================= //
+// ======= task-21 ======= //
+// ======================= //
+// ======= task-22 ======= //
 // ======================= //
