@@ -175,18 +175,42 @@
 // Програма запитує у користувача рік і перевіряє, чи є він високосним
 // Рік є високосним, якщо він ділиться на 4, але не ділиться на 100, або ділиться на 400
 
-const year = Number(prompt('Enter the year:'));
+// const year = Number(prompt('Enter the year:'));
 
-if (isNaN(year)) {
-  console.log('Please enter a valid number');
-} else {
-  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    console.log(`${year} is a leap year`);
-  } else {
-    console.log(`${year} is not a leap year`);
-  }
-}
+// if (isNaN(year)) {
+//   console.log('Please enter a valid number');
+// } else {
+//   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//     console.log(`${year} is a leap year`);
+//   } else {
+//     console.log(`${year} is not a leap year`);
+//   }
+// }
 
 // ======================= //
 // ======= task-10 ======= //
+// Функція getSubstring(string, length) приймає рядок і повертає новий підрядок (його часткову копію)
+// Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+// string - оригінальний рядок
+// length - довжина нового підрядка
+// Доповни код функції так, щоб вона повертала новий підрядок, який починається від початку string і має довжину length.
+
+function getSubstring(string, length) {
+  return string.slice(0, length);
+}
+
+console.log(getSubstring('slice НЕ змінює оригінальний рядок', 15));
+
+// ======================= //
+// ======= task-11 ======= //
+// ======================= //
+// ======= task-12 ======= //
+// ======================= //
+// ======= task-13 ======= //
+// ======================= //
+// ======= task-14 ======= //
+// ======================= //
+// ======= task-15 ======= //
+// ======================= //
+// ======= task-16 ======= //
 // ======================= //
