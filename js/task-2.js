@@ -161,16 +161,32 @@
 // Використовуючи оператор "АБО", доповни код функції так, щоб якщо значення параметра subType дорівнює рядкам "pro" або "vip", то функція повертала true і користувач отримував доступ
 // В іншому випадку повертала false.
 
-function checkAccess(subType) {
-  return subType === 'pro' || subType === 'vip';
-}
+// function checkAccess(subType) {
+//   return subType === 'pro' || subType === 'vip';
+// }
 
-console.log(checkAccess('pro'));
-console.log(checkAccess('start'));
-console.log(checkAccess('vip'));
+// console.log(checkAccess('pro'));
+// console.log(checkAccess('start'));
+// console.log(checkAccess('vip'));
 
 // ======================= //
 // ======= task-09 ======= //
+
+// Програма запитує у користувача рік і перевіряє, чи є він високосним
+// Рік є високосним, якщо він ділиться на 4, але не ділиться на 100, або ділиться на 400
+
+const year = Number(prompt('Enter the year:'));
+
+if (isNaN(year)) {
+  console.log('Please enter a valid number');
+} else {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log(`${year} is a leap year`);
+  } else {
+    console.log(`${year} is not a leap year`);
+  }
+}
+
 // ======================= //
 // ======= task-10 ======= //
 // ======================= //
