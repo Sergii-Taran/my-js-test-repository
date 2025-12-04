@@ -234,15 +234,35 @@
 // Врахуй, що регістр символів в параметрах fullName і firstName наперед не відомий
 // Перед перевіркою входження не забудь прирівняти їх до однакового регістру
 
-function checkForName(fullName, firstName) {
-  return fullName.toLowerCase().includes(firstName.toLowerCase());
-}
+// function checkForName(fullName, firstName) {
+//   return fullName.toLowerCase().includes(firstName.toLowerCase());
+// }
 
-console.log(checkForName('Serhii Taran', 'sErHIi'));
-console.log(checkForName('Serhii Taran', 'Mykola'));
+// console.log(checkForName('Serhii Taran', 'sErHIi'));
+// console.log(checkForName('Serhii Taran', 'Mykola'));
 
 // ======================= //
 // ======= task-13 ======= //
+
+// Функція getFileName(file) приймає один параметр
+// file - рядок з іменем файлу. Ім'я файлу може бути з розширенням, наприклад: styles.css, app.js або без, наприклад: styles, app.
+// Використовуючи методи indexOf та slice, доповни код функції таким чином, щоб:
+// Вона перевіряла наявність розширення в імені файлу (назва розширення відокремлюється від імені файла крапкою)
+// Якщо ім'я файлу не містить розширення, то функція повертала новий підрядок, що містить ім'я файлу без змін
+// В іншому разі функція повертала підрядок з іменем файлу, але без розширення
+
+function getFileName(file) {
+  const dotIndex = file.indexOf('.');
+
+  if (dotIndex === -1) {
+    return file;
+  }
+
+  return file.slice(0, dotIndex);
+}
+console.log(getFileName('index.html'));
+console.log(getFileName('styles'));
+
 // ======================= //
 // ======= task-14 ======= //
 // ======================= //
