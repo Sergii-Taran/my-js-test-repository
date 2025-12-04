@@ -325,21 +325,37 @@
 // Функція calculateEvenTotal(number) приймає ціле число (параметр number)
 // Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно
 
-function calculateEvenTotal(number) {
-  let sum = 0;
+// function calculateEvenTotal(number) {
+//   let sum = 0;
 
-  for (let i = 1; i <= number; i++) {
-    if (i % 2 === 0) {
-      sum += i;
-    }
-  }
-  return sum;
-}
+//   for (let i = 1; i <= number; i++) {
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
 
-console.log(calculateEvenTotal(15));
+// console.log(calculateEvenTotal(15));
 
 // ======================= //
 // ======= task-18 ======= //
+
+// Доповни код таким чином, щоб у змінну number записувалося перше число у проміжку від start до end, яке ділиться на 5 без остачі
+
+const start = 7;
+const end = 29;
+let number;
+
+for (let i = start; i <= end; i++) {
+  if (i % 5 === 0) {
+    number = i;
+    break;
+  }
+}
+
+console.log(number);
+
 // ======================= //
 // ======= task-19 ======= //
 // ======================= //
