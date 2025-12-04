@@ -195,14 +195,35 @@
 // length - довжина нового підрядка
 // Доповни код функції так, щоб вона повертала новий підрядок, який починається від початку string і має довжину length.
 
-function getSubstring(string, length) {
-  return string.slice(0, length);
-}
+// function getSubstring(string, length) {
+//   return string.slice(0, length);
+// }
 
-console.log(getSubstring('slice НЕ змінює оригінальний рядок', 15));
+// console.log(getSubstring('slice НЕ змінює оригінальний рядок', 15));
 
 // ======================= //
 // ======= task-11 ======= //
+
+// Функція normalizeInput(input, to) оголошує два параметри:
+// input - рядок, який потрібно привести до певного регістру
+// to - рядок с двома можливими значеннями: "upper" або "lower", що вказують до якого регістру потрібно привести значення input
+// Доповни код функції таким чином, щоб:
+// Якщо значення параметра to — це рядок "upper", то функція повертала копію рядка input, але у верхньому регістрі
+// В іншому разі, функція повертала копію рядка inputу нижньому регістрі
+
+function normalizeInput(input, to) {
+  if (to === 'upper') {
+    return input.toUpperCase();
+  } else if (to === 'lower') {
+    return input.toLowerCase();
+  }
+  return 'Invalid value: must be "upper" or "lower"';
+}
+
+console.log(normalizeInput('Доповни код функції', 'upper'));
+console.log(normalizeInput('Доповни код функції', 'input'));
+console.log(normalizeInput('Доповни код функції', 'lower'));
+
 // ======================= //
 // ======= task-12 ======= //
 // ======================= //
