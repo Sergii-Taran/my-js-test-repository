@@ -111,36 +111,52 @@
 // Для будь-якого іншого значення параметра type повертається рядок "Invalid subscription type!".
 // Використай оператор switch для розв'язання цієї задачі!
 
-function getSubscriptionPrice(type) {
-  let price;
+// function getSubscriptionPrice(type) {
+//   let price;
 
-  switch (type) {
-    case 'starter':
-      price = 0;
-      break;
-    case 'professional':
-      price = 20;
-      break;
-    case 'organization':
-      price = 50;
-      break;
+//   switch (type) {
+//     case 'starter':
+//       price = 0;
+//       break;
+//     case 'professional':
+//       price = 20;
+//       break;
+//     case 'organization':
+//       price = 50;
+//       break;
 
-    default:
-      return 'Invalid subscription type!';
-  }
-  return price;
+//     default:
+//       return 'Invalid subscription type!';
+//   }
+//   return price;
+// }
+
+// console.log(getSubscriptionPrice('starter'));
+// console.log(getSubscriptionPrice('professional'));
+// console.log(getSubscriptionPrice('organization'));
+
+// ======================= //
+// ======= task-07 ======= //
+
+// Функція isNumberInRange(start, end, number) перевіряє, чи входить число у проміжок. Вона оголошує три параметри, значення яких будуть задаватися під час її виклику:
+// number - число, входження якого перевіряється
+// start - початок числового проміжку
+// end - кінець числового проміжку
+// Використовуючи оператор &&, доповни функцію isNumberInRange таким чином, щоб вона повертала результат входження number у числовий проміжок від start до end включно
+// Тобто число повинно бути одночасно і більшим або дорівнювати start, і меншим або дорівнювати end
+// Результатом виклику функції має бути буль true або false.
+
+function isNumberInRange(start, end, number) {
+  return number >= start && number <= end;
 }
 
-console.log(getSubscriptionPrice('starter'));
-console.log(getSubscriptionPrice('professional'));
-console.log(getSubscriptionPrice('organization'));
+console.log(isNumberInRange(0, 100, 55));
+console.log(isNumberInRange(90, 100, 55));
 
 // ======================= //
-// ======= task-06 ======= //
+// ======= task-08 ======= //
 // ======================= //
-// ======= task-06 ======= //
+// ======= task-09 ======= //
 // ======================= //
-// ======= task-06 ======= //
-// ======================= //
-// ======= task-06 ======= //
+// ======= task-10 ======= //
 // ======================= //
