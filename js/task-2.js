@@ -211,21 +211,36 @@
 // Якщо значення параметра to — це рядок "upper", то функція повертала копію рядка input, але у верхньому регістрі
 // В іншому разі, функція повертала копію рядка inputу нижньому регістрі
 
-function normalizeInput(input, to) {
-  if (to === 'upper') {
-    return input.toUpperCase();
-  } else if (to === 'lower') {
-    return input.toLowerCase();
-  }
-  return 'Invalid value: must be "upper" or "lower"';
-}
+// function normalizeInput(input, to) {
+//   if (to === 'upper') {
+//     return input.toUpperCase();
+//   } else if (to === 'lower') {
+//     return input.toLowerCase();
+//   }
+//   return 'Invalid value: must be "upper" or "lower"';
+// }
 
-console.log(normalizeInput('Доповни код функції', 'upper'));
-console.log(normalizeInput('Доповни код функції', 'input'));
-console.log(normalizeInput('Доповни код функції', 'lower'));
+// console.log(normalizeInput('Доповни код функції', 'upper'));
+// console.log(normalizeInput('Доповни код функції', 'input'));
+// console.log(normalizeInput('Доповни код функції', 'lower'));
 
 // ======================= //
 // ======= task-12 ======= //
+
+// Функція checkForName(fullName, firstName) приймає два параметри та повертає буль true або false - результат перевірки входження підрядка firstName у рядок fullName.
+// fullName - рядок, що містить повне ім'я
+// firstName - рядок, що містить ім'я для перевірки його входження в повне ім'я
+// Доповни тіло функції таким чином, щоб вона повертала результат перевірки входження імені (параметр firstName), у повне ім'я (параметр fullName)
+// Врахуй, що регістр символів в параметрах fullName і firstName наперед не відомий
+// Перед перевіркою входження не забудь прирівняти їх до однакового регістру
+
+function checkForName(fullName, firstName) {
+  return fullName.toLowerCase().includes(firstName.toLowerCase());
+}
+
+console.log(checkForName('Serhii Taran', 'sErHIi'));
+console.log(checkForName('Serhii Taran', 'Mykola'));
+
 // ======================= //
 // ======= task-13 ======= //
 // ======================= //
