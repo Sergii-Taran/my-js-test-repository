@@ -308,19 +308,36 @@
 // Функція calculateTotal(number) приймає ціле число (параметр number)
 // Використовуючи цикл for, доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
 
-function calculateTotal(number) {
+// function calculateTotal(number) {
+//   let sum = 0;
+
+//   for (let i = 1; i <= number; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotal(15));
+
+// ======================= //
+// ======= task-17 ======= //
+
+// Функція calculateEvenTotal(number) приймає ціле число (параметр number)
+// Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно
+
+function calculateEvenTotal(number) {
   let sum = 0;
 
   for (let i = 1; i <= number; i++) {
-    sum += i;
+    if (i % 2 === 0) {
+      sum += i;
+    }
   }
   return sum;
 }
 
-console.log(calculateTotal(15));
+console.log(calculateEvenTotal(15));
 
-// ======================= //
-// ======= task-17 ======= //
 // ======================= //
 // ======= task-18 ======= //
 // ======================= //
