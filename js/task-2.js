@@ -146,15 +146,29 @@
 // Тобто число повинно бути одночасно і більшим або дорівнювати start, і меншим або дорівнювати end
 // Результатом виклику функції має бути буль true або false.
 
-function isNumberInRange(start, end, number) {
-  return number >= start && number <= end;
-}
+// function isNumberInRange(start, end, number) {
+//   return number >= start && number <= end;
+// }
 
-console.log(isNumberInRange(0, 100, 55));
-console.log(isNumberInRange(90, 100, 55));
+// console.log(isNumberInRange(0, 100, 55));
+// console.log(isNumberInRange(90, 100, 55));
 
 // ======================= //
 // ======= task-08 ======= //
+
+// Функція checkAccess(subType) перевіряє, чи може користувач отримати доступ до контенту
+// Перевірка відбувається за типом передплати.
+// Використовуючи оператор "АБО", доповни код функції так, щоб якщо значення параметра subType дорівнює рядкам "pro" або "vip", то функція повертала true і користувач отримував доступ
+// В іншому випадку повертала false.
+
+function checkAccess(subType) {
+  return subType === 'pro' || subType === 'vip';
+}
+
+console.log(checkAccess('pro'));
+console.log(checkAccess('start'));
+console.log(checkAccess('vip'));
+
 // ======================= //
 // ======= task-09 ======= //
 // ======================= //
