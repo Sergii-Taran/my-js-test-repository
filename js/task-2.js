@@ -272,18 +272,35 @@
 // Використовуючи синтаксис шаблонних рядків і метод trim(), доповни код функції таким чином, щоб вона повертала повне (об'єднане) ім'я файлу з доданим розширенням, зазначеним у параметрі ext у форматі ім'я.розширення
 // Також повне ім'я файлу не повинно містити зайвих пробілів на початку або наприкінці
 
-function createFileName(name, ext) {
-  return `${name.trim()}.${ext.trim()}`;
-}
+// function createFileName(name, ext) {
+//   return `${name.trim()}.${ext.trim()}`;
+// }
 
-console.log(createFileName('order', 'xsls'));
+// console.log(createFileName('order', 'xsls'));
 
 // ======================= //
 // ======= task-15 ======= //
 
 // Функція calculateTotal(number) приймає ціле число (параметр number)
 // Доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
-// Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+// Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6
+
+function calculateTotal(number) {
+  let sum = 0;
+  let i = 1;
+
+  while (i <= number) {
+    sum += i;
+    i++;
+  }
+
+  return sum;
+}
+
+console.log(calculateTotal(15));
+console.log(calculateTotal(99));
+console.log(calculateTotal(0));
+console.log(calculateTotal(77));
 
 // ======================= //
 // ======= task-16 ======= //
