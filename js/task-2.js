@@ -343,21 +343,37 @@
 
 // Доповни код таким чином, щоб у змінну number записувалося перше число у проміжку від start до end, яке ділиться на 5 без остачі
 
-const start = 7;
-const end = 29;
-let number;
+// const start = 7;
+// const end = 29;
+// let number;
 
-for (let i = start; i <= end; i++) {
-  if (i % 5 === 0) {
-    number = i;
-    break;
-  }
-}
+// for (let i = start; i <= end; i++) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
 
-console.log(number);
+// console.log(number);
 
 // ======================= //
 // ======= task-19 ======= //
+
+// Функція findNumber(start, end, divisor) приймає три параметра, які є цілими числами.
+// Доповни код функції таким чином, щоб вона:
+// повертала перше число у діапазоні від start до end включно, яке ділиться на divisor без остачі
+// не використовуй оператор break
+
+function findNumber(start, end, divisor) {
+  for (let i = start; i <= end; i++) {
+    if (i % divisor === 0) {
+      return i;
+    }
+  }
+}
+
+console.log(findNumber(3, 56, 12));
+
 // ======================= //
 // ======= task-20 ======= //
 // ======================= //
