@@ -10,21 +10,21 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
 
-const input = prompt('Enter a number:');
+// const input = prompt('Enter a number:');
 
-if (input === null) {
-  alert('You canceled the entry!');
-} else {
-  const number = Number(input);
+// if (input === null) {
+//   alert('You canceled the entry!');
+// } else {
+//   const number = Number(input);
 
-  if (Number.isNaN(number)) {
-    alert('You entered not a number');
-  } else if (number === 10) {
-    alert('True');
-  } else {
-    alert('False');
-  }
-}
+//   if (Number.isNaN(number)) {
+//     alert('You entered not a number');
+//   } else if (number === 10) {
+//     alert('True');
+//   } else {
+//     alert('False');
+//   }
+// }
 
 // ================ ======== //
 // ======== task-02 ======== //
@@ -34,6 +34,25 @@ if (input === null) {
 // це число (у першу, другу, третю чи четверту).
 // Виведіть в alert відповідне повідомлення, наприклад:
 // "10 входить в першу чверть"
+
+// const min = Math.floor(Math.random() * 60);
+
+// switch (true) {
+//   case min < 15:
+//     alert(`The number ${min} is in the first quoter`);
+//     break;
+
+//   case min < 30:
+//     alert(`The number ${min} is in the second quoter`);
+//     break;
+
+//   case min < 45:
+//     alert(`The number ${min} is in the third quoter`);
+//     break;
+
+//   default:
+//     alert(`The number ${min} is in the fourth quoter`);
+// }
 
 // ================ ======== //
 // ======== task-03 ======== //
@@ -47,6 +66,33 @@ if (input === null) {
 // введе в prompt щось інше. В такому випадку result має набувати значення:
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
+
+const num = Number(prompt('Enter a number from 1 to 4:'));
+
+let result;
+
+switch (num) {
+  case 1:
+    result = 'winter';
+    break;
+
+  case 2:
+    result = 'spring';
+    break;
+
+  case 3:
+    result = 'summer';
+    break;
+
+  case 4:
+    result = 'autumn';
+    break;
+
+  default:
+    result = 'Sorry, but you must enter a value between 1 and 4 inclusive';
+}
+
+console.log(result);
 
 // ================ ======== //
 // ======== task-04 ======== //
