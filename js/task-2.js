@@ -435,22 +435,67 @@
 // Якщо знайдено заборонене слово (spam або sale), то функція повертає буль true
 // Якщо в рядку відсутні заборонені слова, функція повертає буль false
 
-function checkForSpam(message) {
-  const normalize = message.toLowerCase();
+// function checkForSpam(message) {
+//   const normalize = message.toLowerCase();
 
-  return normalize.includes('spam') || normalize.includes('sale')
-    ? true
-    : false;
-}
+//   return normalize.includes('spam') || normalize.includes('sale')
+//     ? true
+//     : false;
+// }
 
-console.log(checkForSpam('Latest technology news'));
-console.log(checkForSpam('JavaScript weekly newsletter'));
-console.log(checkForSpam('Get best sale offers now!'));
-console.log(checkForSpam('Amazing SalE, only tonight!'));
-console.log(checkForSpam('Trust me, this is not a spam message'));
-console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
-console.log(checkForSpam('[SPAM] How to earn fast money?'));
+// console.log(checkForSpam('Latest technology news'));
+// console.log(checkForSpam('JavaScript weekly newsletter'));
+// console.log(checkForSpam('Get best sale offers now!'));
+// console.log(checkForSpam('Amazing SalE, only tonight!'));
+// console.log(checkForSpam('Trust me, this is not a spam message'));
+// console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
+// console.log(checkForSpam('[SPAM] How to earn fast money?'));
 
 // =========================== //
 // ======= homework-04 ======= //
+
+// Оголоси функцію getShippingCost(country), яка повинна перевіряти можливість доставки товару в країну користувача (параметр country) і повертати повідомлення про результат
+// Обов'язково використовуй інструкцію switch
+// Формат рядка, що повертається "Shipping to <country> will cost <price> credits", де замість <country> і <price> необхідно підставити відповідні значення
+// Список країн і вартість доставки:
+// China — 100 кредитів
+// Chile — 250 кредитів
+// Australia — 170 кредитів
+// Jamaica — 120 кредитів
+// Зі списку видно, що доставка можлива не скрізь
+// Якщо зазначена країна відсутня у списку, то функція повинна повернути рядок "Sorry, there is no delivery to your country"
+
+function getShippingCost(country) {
+  let price;
+
+  switch (country) {
+    case 'China':
+      price = 100;
+      break;
+
+    case 'Chile':
+      price = 250;
+      break;
+
+    case 'Australia':
+      price = 170;
+      break;
+
+    case 'Jamaica':
+      price = 120;
+      break;
+
+    default:
+      return 'Sorry, there is no delivery to your country';
+  }
+  return `Shipping to ${country} will cost ${price} credits`;
+}
+
+console.log(getShippingCost('China'));
+console.log(getShippingCost('Chile'));
+console.log(getShippingCost('Australia'));
+console.log(getShippingCost('Jamaica'));
+console.log(getShippingCost('Ukraine'));
+console.log(getShippingCost('USA'));
+
 // =========================== //
