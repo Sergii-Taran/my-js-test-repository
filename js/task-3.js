@@ -1,48 +1,43 @@
-function slugify(title) {
-  const arr = title.toLowerCase().split(' ');
-  const slugTitle = arr.join('-');
-  return slugTitle;
-}
+// ======= task-01 ======= //
 
-console.log(slugify('Arrays for beginners')); // "arrays-for-beginners"
-console.log(slugify('English for developer')); // "english-for-developer"
-console.log(slugify('Ten secrets of JavaScript')); // "ten-secrets-of-javascript"
-console.log(slugify('How to become a JUNIOR developer in TWO WEEKS')); // "how-to-become-a-junior-developer-in-two-weeks"
+// Функція getLastElementMeta(array) приймає один параметр array - масив довільних значень
+// Доповни код функції таким чином, щоб вона повертала новий масив з двох елементів:
+// перший елемент - це індекс останнього елементу у масиві array
+// другий елемент - це значення останнього елементу у масиві array
 
-// -----------------
-
-function makeArray(firstArray, secondArray, maxLength) {
-  const newArray = firstArray.concat(secondArray);
-
-  if (newArray.length > maxLength) {
-    return newArray.slice(0, maxLength);
-  } else {
-    return newArray;
+function getLastElementMeta(array) {
+  if (array.length === 0) {
+    return [null, null];
   }
+
+  const lastIndex = array.length - 1;
+  const lastValue = array[lastIndex];
+
+  return [lastIndex, lastValue];
 }
 
-console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); // ["Mango", "Poly", "Ajax"]
-console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
-console.log(makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3)); // ["Mango", "Ajax", "Chelsea"]
-console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2)); // ["Earth", "Jupiter"]
-console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
-console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0)); // []
+console.log(getLastElementMeta([1, 2, 3, 4, 5]));
 
-// -----------------
-
-function filterArray(numbers, value) {
-  const newArr = [];
-
-  for (const num of numbers) {
-    if (num > value) {
-      newArr.push(num);
-    }
-  }
-  return newArr;
-}
-
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+// ======================= //
+// ======= task-02 ======= //
+// ======================= //
+// ======= task-03 ======= //
+// ======================= //
+// ======= task-04 ======= //
+// ======================= //
+// ======= task-05 ======= //
+// ======================= //
+// ======= task-06 ======= //
+// ======================= //
+// ======= task-07 ======= //
+// ======================= //
+// ======= task-08 ======= //
+// ======================= //
+// ======= task-09 ======= //
+// ======================= //
+// ======= task-10 ======= //
+// ======================= //
+// ======= task-11 ======= //
+// ======================= //
+// ======= task-12 ======= //
+// ======================= //

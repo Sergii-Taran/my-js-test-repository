@@ -67,32 +67,32 @@
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
 
-const num = Number(prompt('Enter a number from 1 to 4:'));
+// const num = Number(prompt('Enter a number from 1 to 4:'));
 
-let result;
+// let result;
 
-switch (num) {
-  case 1:
-    result = 'winter';
-    break;
+// switch (num) {
+//   case 1:
+//     result = 'winter';
+//     break;
 
-  case 2:
-    result = 'spring';
-    break;
+//   case 2:
+//     result = 'spring';
+//     break;
 
-  case 3:
-    result = 'summer';
-    break;
+//   case 3:
+//     result = 'summer';
+//     break;
 
-  case 4:
-    result = 'autumn';
-    break;
+//   case 4:
+//     result = 'autumn';
+//     break;
 
-  default:
-    result = 'Sorry, but you must enter a value between 1 and 4 inclusive';
-}
+//   default:
+//     result = 'Sorry, but you must enter a value between 1 and 4 inclusive';
+// }
 
-console.log(result);
+// console.log(result);
 
 // ================ ======== //
 // ======== task-04 ======== //
