@@ -225,13 +225,13 @@
 
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
-let count = 0;
+// let count = 0;
 
-while (count <= 20) {
-  console.log(`Count: ${count}`);
+// while (count <= 20) {
+//   console.log(`Count: ${count}`);
 
-  count += 1;
-}
+//   count += 1;
+// }
 
 // ========================= //
 // ======== task-07 ======== //
@@ -242,6 +242,26 @@ while (count <= 20) {
 // всі числа від max до min за спаданням.
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
+
+function getNumbers(min, max) {
+  if (!Number.isFinite(min) || !Number.isFinite(max)) {
+    console.log('Error: Values ​​must be numbers!');
+    return;
+  }
+
+  let sum = 0;
+
+  for (let i = max; i >= min; i--) {
+    console.log(i);
+
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(getNumbers(5, 20));
 
 // ========================= //
 // ======== task-08 ======== //
