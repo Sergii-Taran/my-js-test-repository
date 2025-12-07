@@ -103,20 +103,20 @@
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
 
-const input = prompt('Enter minutes:');
-const totalMinutes = parseInt(input);
+// const input = prompt('Enter minutes:');
+// const totalMinutes = parseInt(input);
 
-if (isNaN(totalMinutes) || totalMinutes < 0) {
-  console.log('Please enter a valid positive number!');
-} else {
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = totalMinutes % 60;
+// if (isNaN(totalMinutes) || totalMinutes < 0) {
+//   console.log('Please enter a valid positive number!');
+// } else {
+//   const hours = Math.floor(totalMinutes / 60);
+//   const minutes = totalMinutes % 60;
 
-  const formatted =
-    String(hours).padStart(2, 0) + ':' + String(minutes).padStart(2, 0);
+//   const formatted =
+//     String(hours).padStart(2, 0) + ':' + String(minutes).padStart(2, 0);
 
-  console.log(formatted);
-}
+//   console.log(formatted);
+// }
 
 // ========================= //
 // ======== task-05 ======== //
@@ -138,7 +138,56 @@ if (isNaN(totalMinutes) || totalMinutes < 0) {
 
 // ======== var.01 (if...else) ======== //
 
+// let login = prompt('Enter your login:');
+
+// if (login === 'Admin') {
+//   let password = prompt('Enter login:');
+
+//   if (password === 'I am the BOSS!') {
+//     alert('Hello!');
+//   } else if (password === '' || password === null) {
+//     alert('Cancelled');
+//   } else {
+//     alert('Incorrect password!');
+//   }
+// } else if (login === '' || login === null) {
+//   alert('Cancelled');
+// } else {
+//   alert('I do not know you!');
+// }
+
+// console.log('Entered login:', login);
+
 // ======== var.02 (function) ======== //
+
+// Функція для перевірки логіну
+function checkLogin(login) {
+  if (login === null || login === '') {
+    alert('Cancelled');
+  } else if (login === 'Admin') {
+    checkPassword();
+  } else {
+    alert('I do not know you~');
+  }
+}
+
+// Функція для перевірки пароля
+function checkPassword() {
+  let password = prompt('Enyer password:');
+
+  if (password === null || password === '') {
+    alert('Cancelled');
+  } else if (password === 'I am the BOSS!') {
+    alert('Hello!');
+  } else {
+    alert('Incorrect password!');
+  }
+}
+
+// Основний код
+let login = prompt('Enter your login:');
+console.log('Entered login:', login);
+checkLogin(login);
 
 // ======== var.03 (function) ======== //
 
