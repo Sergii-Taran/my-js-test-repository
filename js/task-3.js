@@ -5,21 +5,35 @@
 // перший елемент - це індекс останнього елементу у масиві array
 // другий елемент - це значення останнього елементу у масиві array
 
-function getLastElementMeta(array) {
-  if (array.length === 0) {
-    return [null, null];
-  }
+// function getLastElementMeta(array) {
+//   if (array.length === 0) {
+//     return [null, null];
+//   }
 
-  const lastIndex = array.length - 1;
-  const lastValue = array[lastIndex];
+//   const lastIndex = array.length - 1;
+//   const lastValue = array[lastIndex];
 
-  return [lastIndex, lastValue];
-}
+//   return [lastIndex, lastValue];
+// }
 
-console.log(getLastElementMeta([1, 2, 3, 4, 5]));
+// console.log(getLastElementMeta([1, 2, 3, 4, 5]));
 
 // ======================= //
 // ======= task-02 ======= //
+
+// Функція getLength(array) очікує один параметр array - масив довільних значень
+// Доповни код функції так, щоб вона перетворювала масив у рядок, без роздільників, і повертала кількість символів в отриманому рядку.
+
+function getLength(array) {
+  if (!Array.isArray(array)) {
+    return 0;
+  }
+
+  return array.join('').length;
+}
+
+console.log(getLength([1, 2, 3, 4, 5]));
+
 // ======================= //
 // ======= task-03 ======= //
 // ======================= //
