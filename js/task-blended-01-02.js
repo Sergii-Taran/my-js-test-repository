@@ -161,35 +161,64 @@
 // ======== var.02 (function) ======== //
 
 // Функція для перевірки логіну
-function checkLogin(login) {
-  if (login === null || login === '') {
-    alert('Cancelled');
-  } else if (login === 'Admin') {
-    checkPassword();
-  } else {
-    alert('I do not know you~');
-  }
-}
+// function checkLogin(login) {
+//   if (login === null || login === '') {
+//     alert('Cancelled');
+//   } else if (login === 'Admin') {
+//     checkPassword();
+//   } else {
+//     alert('I do not know you~');
+//   }
+// }
 
 // Функція для перевірки пароля
-function checkPassword() {
-  let password = prompt('Enyer password:');
+// function checkPassword() {
+//   let password = prompt('Enеуr password:');
 
-  if (password === null || password === '') {
-    alert('Cancelled');
-  } else if (password === 'I am the BOSS!') {
-    alert('Hello!');
-  } else {
-    alert('Incorrect password!');
+//   if (password === null || password === '') {
+//     alert('Cancelled');
+//   } else if (password === 'I am the BOSS!') {
+//     alert('Hello!');
+//   } else {
+//     alert('Incorrect password!');
+//   }
+// }
+
+// Основний код
+// let login = prompt('Enter your login:');
+// console.log('Entered login:', login);
+// checkLogin(login);
+
+// ======== var.03 (function) ======== //
+
+// Функція для перевірки логіну та пароля
+function authenticateUser(login, passwordPrompt = true) {
+  if (login === null || login === '') {
+    return 'Cancelled';
   }
+
+  if (login === 'Адмін') {
+    if (!passwordPrompt) return 'Cancelled';
+
+    let password = prompt('Введіть пароль:');
+    if (password === null || password === '') {
+      return 'Cancelled';
+    } else if (password === 'I am the BOSS!') {
+      return 'Hello!';
+    } else {
+      return 'Incorrect password!';
+    }
+  }
+
+  return 'Я вас не знаю';
 }
 
 // Основний код
-let login = prompt('Enter your login:');
-console.log('Entered login:', login);
-checkLogin(login);
+let login = prompt('Введіть ваш логін:');
+console.log('Введений логін:', login);
 
-// ======== var.03 (function) ======== //
+// Виклик функції та показ результату
+alert(authenticateUser(login));
 
 // ========================= //
 // ======== task-06 ======== //
