@@ -243,25 +243,25 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-function getNumbers(min, max) {
-  if (!Number.isFinite(min) || !Number.isFinite(max)) {
-    console.log('Error: Values ​​must be numbers!');
-    return;
-  }
+// function getNumbers(min, max) {
+//   if (!Number.isFinite(min) || !Number.isFinite(max)) {
+//     console.log('Error: Values ​​must be numbers!');
+//     return;
+//   }
 
-  let sum = 0;
+//   let sum = 0;
 
-  for (let i = max; i >= min; i--) {
-    console.log(i);
+//   for (let i = max; i >= min; i--) {
+//     console.log(i);
 
-    if (i % 2 === 0) {
-      sum += i;
-    }
-  }
-  return sum;
-}
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
 
-console.log(getNumbers(5, 20));
+// console.log(getNumbers(5, 20));
 
 // ========================= //
 // ======== task-08 ======== //
@@ -270,9 +270,15 @@ console.log(getNumbers(5, 20));
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
-// ======== var.01 (function) ======== //
+function min(a, b) {
+  if (!isFinite(a) || !isFinite(b)) return 'Not a number!';
 
-// ======== var.02 (ternary operator) ======== //
+  return a < b ? a : b;
+}
+
+console.log(min(3, 7));
+console.log(min(7, 3));
+console.log(min(3, 3));
 
 // ========================= //
 // ======== task-09 ======== //
