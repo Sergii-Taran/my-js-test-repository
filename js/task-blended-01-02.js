@@ -167,7 +167,7 @@
 //   } else if (login === 'Admin') {
 //     checkPassword();
 //   } else {
-//     alert('I do not know you~');
+//     alert('I do not know you!');
 //   }
 // }
 
@@ -197,10 +197,10 @@ function authenticateUser(login, passwordPrompt = true) {
     return 'Cancelled';
   }
 
-  if (login === 'Адмін') {
+  if (login === 'Admin') {
     if (!passwordPrompt) return 'Cancelled';
 
-    let password = prompt('Введіть пароль:');
+    let password = prompt('Enter password:');
     if (password === null || password === '') {
       return 'Cancelled';
     } else if (password === 'I am the BOSS!') {
@@ -210,12 +210,12 @@ function authenticateUser(login, passwordPrompt = true) {
     }
   }
 
-  return 'Я вас не знаю';
+  return 'I do not know you!';
 }
 
 // Основний код
-let login = prompt('Введіть ваш логін:');
-console.log('Введений логін:', login);
+let login = prompt('Enter your login:');
+console.log('Entered login:', login);
 
 // Виклик функції та показ результату
 alert(authenticateUser(login));
