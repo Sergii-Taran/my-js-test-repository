@@ -270,15 +270,15 @@
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
-function min(a, b) {
-  if (!isFinite(a) || !isFinite(b)) return 'Not a number!';
+// function min(a, b) {
+//   if (!isFinite(a) || !isFinite(b)) return 'Not a number!';
 
-  return a < b ? a : b;
-}
+//   return a < b ? a : b;
+// }
 
-console.log(min(3, 7));
-console.log(min(7, 3));
-console.log(min(3, 3));
+// console.log(min(3, 7));
+// console.log(min(7, 3));
+// console.log(min(3, 3));
 
 // ========================= //
 // ======== task-09 ======== //
@@ -288,9 +288,41 @@ console.log(min(3, 3));
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
-// ======== var.01 (easy) ======== //
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
+//   }
 
-// ======== var.02 (extended) ======== //
+//   return confirm('You are not 18. Did your parents allow it?');
+// }
+
+// console.log(isAdult(20));
+// console.log(isAdult(15));
+
+// ------- var.02 ------- //
+
+// function isAdult() {
+//   const input = prompt('Please enter your age:');
+
+//   const age = Number(input);
+
+//   if (input === null || input.trim() === '' || Number.isNaN(age)) {
+//     alert('Invalid value! Please enter a number.');
+//     return false;
+//   }
+
+//   if (age >= 18) {
+//     alert('You are of legal age!');
+//     return true;
+//   } else {
+//     alert('You are not yet 18!');
+//     const permission = confirm('Do you have parental permission?');
+//     alert(permission ? 'Access is allowed!' : 'Access is denied!');
+//     return permission;
+//   }
+// }
+
+// isAdult();
 
 // ========================= //
 // ======== task-10 ======== //
@@ -299,6 +331,22 @@ console.log(min(3, 3));
 // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+fizzBuzz(15);
 
 // ------------------------- //
 
