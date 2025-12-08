@@ -81,19 +81,45 @@
 // max - ціле число, до якого включно триватимуть обчислення
 // Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max включно
 
-function createArrayOfNumbers(min, max) {
-  const arr = [];
+// function createArrayOfNumbers(min, max) {
+//   const arr = [];
 
-  for (let i = min; i <= max; i++) {
-    arr.push(i);
-  }
-  return arr;
-}
+//   for (let i = min; i <= max; i++) {
+//     arr.push();
+//   }
+//   return arr;
+// }
 
-console.log(createArrayOfNumbers(5, 15));
+// console.log(createArrayOfNumbers(5, 15));
 
 // ======================= //
 // ======= task-06 ======= //
+
+// Функція checkStorage(storage, item) приймає два параметри:
+// storage - масив рядків, що описує доступні товари на складі
+// item - рядок з назвою товара, наявність якого потрібно перевірити
+// Доповни код функції таким чином, щоб вона перевіряла, чи присутній такий товар в масиві storage і повертала:
+// рядок "<item> is available to order!", де item - це назва товара, якщо товар було знайдено
+// рядок "Sorry! We are out of stock!", якщо такого товара немає в масиві
+// Зроби так, щоб пошук за ім'ям товару був незалежний від регістру, тобто наприклад "plum" і "pLuM" мають бути знайдені у масиві ["apple", "plum", "pear"]
+
+function checkStorage(storage, item) {
+  const normalizedStorage = storage.map((el) => el.toLowerCase());
+  const normalizedItem = item.toLowerCase();
+
+  if (normalizedStorage.includes(normalizedItem)) {
+    return `${item} is available to order!`;
+  }
+  return 'Sorry! We are out of stock!';
+}
+
+console.log(
+  checkStorage(['apple', 'plum', 'pear', 'orange', 'banana'], 'oRange')
+);
+console.log(
+  checkStorage(['apple', 'plum', 'pear', 'orange', 'banana'], 'lemon')
+);
+
 // ======================= //
 // ======= task-07 ======= //
 // ======================= //
