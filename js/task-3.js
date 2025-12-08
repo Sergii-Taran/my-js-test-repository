@@ -103,25 +103,48 @@
 // рядок "Sorry! We are out of stock!", якщо такого товара немає в масиві
 // Зроби так, щоб пошук за ім'ям товару був незалежний від регістру, тобто наприклад "plum" і "pLuM" мають бути знайдені у масиві ["apple", "plum", "pear"]
 
-function checkStorage(storage, item) {
-  const normalizedStorage = storage.map((el) => el.toLowerCase());
-  const normalizedItem = item.toLowerCase();
+// function checkStorage(storage, item) {
+//   const normalizedStorage = storage.map((el) => el.toLowerCase());
+//   const normalizedItem = item.toLowerCase();
 
-  if (normalizedStorage.includes(normalizedItem)) {
-    return `${item} is available to order!`;
-  }
-  return 'Sorry! We are out of stock!';
-}
+//   if (normalizedStorage.includes(normalizedItem)) {
+//     return `${item} is available to order!`;
+//   }
+//   return 'Sorry! We are out of stock!';
+// }
 
-console.log(
-  checkStorage(['apple', 'plum', 'pear', 'orange', 'banana'], 'oRange')
-);
-console.log(
-  checkStorage(['apple', 'plum', 'pear', 'orange', 'banana'], 'lemon')
-);
+// console.log(
+//   checkStorage(['apple', 'plum', 'pear', 'orange', 'banana'], 'oRange')
+// );
+// console.log(
+//   checkStorage(['apple', 'plum', 'pear', 'orange', 'banana'], 'lemon')
+// );
 
 // ======================= //
 // ======= task-07 ======= //
+
+// Функція getCommonElements(array1, array2), приймає два масиви (array1 та array2) довільної довжини в якості параметрів
+// Доповни код функції:
+// Створи порожній масив для зберігання нового масиву.
+// Використай цикл for для ітерації кожного елемента у array1.
+// У тілі циклу перевір, чи поточний елемент існує у array2 за допомогою методу includes.
+// Якщо він існує, то додай елемент до нового масиву.
+// Поверни наповнений масив спільних елементів як результат роботи функції.
+
+function getCommonElements(array1, array2) {
+  let commonArr = [];
+
+  for (let i = 0; i < array1.length; i++) {
+    if (array2.includes(array1[i])) {
+      commonArr.push(array1[i]);
+    }
+  }
+  return commonArr;
+}
+
+console.log(getCommonElements([1, 2, 3, 4, 5, 6], [4, 5, 6, 7, 8, 9]));
+console.log(getCommonElements([1, 2, 3, 4, 5, 6], [11, 12, 13, 14, 15, 16]));
+
 // ======================= //
 // ======= task-08 ======= //
 // ======================= //
