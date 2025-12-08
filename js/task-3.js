@@ -60,21 +60,38 @@
 // порожній масив, якщо в array немає елемента зі значенням value
 // підмасив, що починається з початку array і до елемента зі значенням value включно, якщо такий елемент є в array
 
-function getSlice(array, value) {
-  const indexEl = array.indexOf(value);
-  let newArr;
+// function getSlice(array, value) {
+//   const indexEl = array.indexOf(value);
+//   let newArr;
 
-  if (indexEl === -1) {
-    return [];
-  }
-  return array.slice(0, indexEl + 1);
-}
+//   if (indexEl === -1) {
+//     return [];
+//   }
+//   return array.slice(0, indexEl + 1);
+// }
 
-console.log(getSlice(['apple', 'plum', 'pear', 'orange', 'banana'], 'lemon'));
-console.log(getSlice(['apple', 'plum', 'pear', 'orange', 'banana'], 'orange'));
+// console.log(getSlice(['apple', 'plum', 'pear', 'orange', 'banana'], 'lemon'));
+// console.log(getSlice(['apple', 'plum', 'pear', 'orange', 'banana'], 'orange'));
 
 // ======================= //
 // ======= task-05 ======= //
+
+// Функція createArrayOfNumbers(min, max) приймає два параметра:
+// min - ціле число, з якого починаються обчислення
+// max - ціле число, до якого включно триватимуть обчислення
+// Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max включно
+
+function createArrayOfNumbers(min, max) {
+  const arr = [];
+
+  for (let i = min; i <= max; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+console.log(createArrayOfNumbers(5, 15));
+
 // ======================= //
 // ======= task-06 ======= //
 // ======================= //
