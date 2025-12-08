@@ -131,22 +131,40 @@
 // Якщо він існує, то додай елемент до нового масиву.
 // Поверни наповнений масив спільних елементів як результат роботи функції.
 
-function getCommonElements(array1, array2) {
-  let commonArr = [];
+// function getCommonElements(array1, array2) {
+//   let commonArr = [];
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array2.includes(array1[i])) {
-      commonArr.push(array1[i]);
-    }
-  }
-  return commonArr;
-}
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array2.includes(array1[i])) {
+//       commonArr.push(array1[i]);
+//     }
+//   }
+//   return commonArr;
+// }
 
-console.log(getCommonElements([1, 2, 3, 4, 5, 6], [4, 5, 6, 7, 8, 9]));
-console.log(getCommonElements([1, 2, 3, 4, 5, 6], [11, 12, 13, 14, 15, 16]));
+// console.log(getCommonElements([1, 2, 3, 4, 5, 6], [4, 5, 6, 7, 8, 9]));
+// console.log(getCommonElements([1, 2, 3, 4, 5, 6], [11, 12, 13, 14, 15, 16]));
 
 // ======================= //
 // ======= task-08 ======= //
+
+// створіть масив styles з елментами "jazz" та "blues"
+// додайте "rock-n-roll" в кінець
+// замініть "blues" на "classical"
+// видаліть перший елемент та виведіть його в консоль
+// вставте "rap" та "reggae" на початок масиву
+
+const styles = ['jazz', 'blues'];
+styles.push('rock-n-roll');
+styles.splice(1, 1, 'classical');
+
+const firstEl = styles.shift();
+
+styles.splice(0, 0, 'rap', 'reggae');
+
+console.log(styles);
+console.log(firstEl);
+
 // ======================= //
 // ======= task-09 ======= //
 // ======================= //
