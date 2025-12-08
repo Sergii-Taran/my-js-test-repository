@@ -24,18 +24,32 @@
 // Функція getLength(array) очікує один параметр array - масив довільних значень
 // Доповни код функції так, щоб вона перетворювала масив у рядок, без роздільників, і повертала кількість символів в отриманому рядку.
 
-function getLength(array) {
-  if (!Array.isArray(array)) {
-    return 0;
-  }
+// function getLength(array) {
+//   const arrayAsString = array.join('');
 
-  return array.join('').length;
-}
-
-console.log(getLength([1, 2, 3, 4, 5]));
+//   return arrayAsString.length;
+// }
+// console.log(getLength([1, 2, 3, 4, 5]));
+// console.log(getLength(['Serhii', 'Taran']));
 
 // ======================= //
 // ======= task-03 ======= //
+
+// Сервісу гравірування прикрас потрібна функція, яка б автоматично рахувала ціну гравірування, залежно від кількості слів і ціни за слово
+// Оголошена функція calculateEngravingPrice(message, pricePerWord)
+// Ця функція приймає першим параметром рядок, що складається зі слів, розділених лише пробілами (параметр message) та другим параметром - число, що містить ціну гравірування за одне слово (параметр pricePerWord)
+// Доповни тіло функції так, щоб вона повертала загальну вартість гравірування усіх слів в рядку
+
+function calculateEngravingPrice(message, pricePerWord) {
+  const words = message.split(' ');
+
+  return words.length * pricePerWord;
+}
+
+console.log(
+  calculateEngravingPrice('Ця функція приймає першим параметром рядок', 50)
+);
+
 // ======================= //
 // ======= task-04 ======= //
 // ======================= //
