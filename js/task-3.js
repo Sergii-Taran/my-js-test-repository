@@ -40,18 +40,39 @@
 // Ця функція приймає першим параметром рядок, що складається зі слів, розділених лише пробілами (параметр message) та другим параметром - число, що містить ціну гравірування за одне слово (параметр pricePerWord)
 // Доповни тіло функції так, щоб вона повертала загальну вартість гравірування усіх слів в рядку
 
-function calculateEngravingPrice(message, pricePerWord) {
-  const words = message.split(' ');
+// function calculateEngravingPrice(message, pricePerWord) {
+//   const words = message.split(' ');
 
-  return words.length * pricePerWord;
-}
+//   return words.length * pricePerWord;
+// }
 
-console.log(
-  calculateEngravingPrice('Ця функція приймає першим параметром рядок', 50)
-);
+// console.log(
+//   calculateEngravingPrice('Ця функція приймає першим параметром рядок', 50)
+// );
 
 // ======================= //
 // ======= task-04 ======= //
+
+// Функція getSlice(array, value) приймає два параметра:
+// array - масив довільних елементів
+// value - значення елемента масиву для пошуку
+// Доповни код функції getSlice(array, value) так, щоб вона виконувала пошук значення value у масиві array і повертала:
+// порожній масив, якщо в array немає елемента зі значенням value
+// підмасив, що починається з початку array і до елемента зі значенням value включно, якщо такий елемент є в array
+
+function getSlice(array, value) {
+  const indexEl = array.indexOf(value);
+  let newArr;
+
+  if (indexEl === -1) {
+    return [];
+  }
+  return array.slice(0, indexEl + 1);
+}
+
+console.log(getSlice(['apple', 'plum', 'pear', 'orange', 'banana'], 'lemon'));
+console.log(getSlice(['apple', 'plum', 'pear', 'orange', 'banana'], 'orange'));
+
 // ======================= //
 // ======= task-05 ======= //
 // ======================= //
