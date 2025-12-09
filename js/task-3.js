@@ -180,7 +180,7 @@
 //   return sum;
 // }
 
-// console.log(calculateTotalPrice(order));
+// console.log(calculateTotalPrice([11, 12, 13, 14, 15, 16]));
 
 // ======================= //
 // ======= task-10 ======= //
@@ -208,22 +208,36 @@
 // ======================= //
 // ======= task-11 ======= //
 
-// Функція calculateTotalPrice(order) приймає один параметр order - масив чисел
-// Доповни функцію так, щоб вона повертала загальну суму елементів з масиву order.
+// Доповни код функції calculateTotalPrice(order) так, щоб вона повертала загальну суму чисел в масиві order
+// Використай цикл for...of для перебору масиву
 
 function calculateTotalPrice(order) {
-  let total = 0;
+  let sum = 0;
 
-  for (let i = 0; i < order.length; i++) {
-    total += order[i];
+  for (const number of order) {
+    if (typeof number !== 'number') {
+      return 'The array must contain only numbers!';
+    }
+    sum += number;
   }
-
-  return total;
+  return sum;
 }
 
-console.log(calculateTotalPrice([1, 2, 3, 4, 5, 6]));
-console.log(calculateTotalPrice([]));
+console.log(calculateTotalPrice([11, 12, 13, 14, 15, 16]));
+console.log(calculateTotalPrice(['1', '2', '3']));
 
 // ======================= //
 // ======= task-12 ======= //
+// ======================= //
+// ======= task-13 ======= //
+// ======================= //
+// ======= task-14 ======= //
+// ======================= //
+// ======= task-15 ======= //
+// ======================= //
+// ======= task-16 ======= //
+// ======================= //
+// ======= task-17 ======= //
+// ======================= //
+// ======= task-18 ======= //
 // ======================= //
