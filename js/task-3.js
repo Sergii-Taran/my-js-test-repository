@@ -154,23 +154,76 @@
 // видаліть перший елемент та виведіть його в консоль
 // вставте "rap" та "reggae" на початок масиву
 
-const styles = ['jazz', 'blues'];
-styles.push('rock-n-roll');
-styles.splice(1, 1, 'classical');
+// const styles = ['jazz', 'blues'];
+// styles.push('rock-n-roll');
+// styles.splice(1, 1, 'classical');
 
-const firstEl = styles.shift();
+// const firstEl = styles.shift();
 
-styles.splice(0, 0, 'rap', 'reggae');
+// styles.splice(0, 0, 'rap', 'reggae');
 
-console.log(styles);
-console.log(firstEl);
+// console.log(styles);
+// console.log(firstEl);
 
 // ======================= //
 // ======= task-09 ======= //
+
+// Функція calculateTotalPrice(order) приймає один параметр order - масив чисел
+// Доповни функцію так, щоб вона повертала загальну суму елементів з масиву order
+
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+
+//   for (let i = 0; i < array.length; i++) {
+//     sum += order[i];
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotalPrice(order));
+
 // ======================= //
 // ======= task-10 ======= //
+
+// Функція getEvenNumbers(start, end) має два параметри start та end, які є цілими числами
+// Доповни код функції так, щоб вона повертала масив усіх парних чисел від start до end
+// Якщо жодного парного числа немає, то масив має бути пустим
+// Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0). Використовуй цикл for.
+
+// function getEvenNumbers(start, end) {
+//   let evenArr = [];
+
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//       evenArr.push(i);
+//     }
+//   }
+
+//   return evenArr;
+// }
+
+// console.log(getEvenNumbers(1, 10));
+// console.log(getEvenNumbers(5, 5));
+
 // ======================= //
 // ======= task-11 ======= //
+
+// Функція calculateTotalPrice(order) приймає один параметр order - масив чисел
+// Доповни функцію так, щоб вона повертала загальну суму елементів з масиву order.
+
+function calculateTotalPrice(order) {
+  let total = 0;
+
+  for (let i = 0; i < order.length; i++) {
+    total += order[i];
+  }
+
+  return total;
+}
+
+console.log(calculateTotalPrice([1, 2, 3, 4, 5, 6]));
+console.log(calculateTotalPrice([]));
+
 // ======================= //
 // ======= task-12 ======= //
 // ======================= //
