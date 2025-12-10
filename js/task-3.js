@@ -210,19 +210,35 @@
 
 // Напиши функцію add для складання довільної кількості аргументів (чисел)
 
-function add() {
-  let sum = 0;
+// function add() {
+//   let sum = 0;
 
-  for (const arg of arguments) {
-    sum += arg;
-  }
-  return sum;
-}
+//   for (const arg of arguments) {
+//     sum += arg;
+//   }
+//   return sum;
+// }
 
-console.log(add(1, 2, 3, 4, 5));
+// console.log(add(1, 2, 3, 4, 5));
 
 // ======================= //
 // ======= task-12 ======= //
+
+// Напиши функцію calAverage(), яка пиймає довільну кількість аргументів і повертає їх середнє значення
+// Усі аргументи будуть лише числами
+
+function calAverage() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total / arguments.length;
+}
+
+console.log(calAverage(1, 2, 3, 4, 5, 6));
+console.log(calAverage(0));
+console.log(calAverage(122, 56, 88, 73, 64, 38, 91));
+
 // ======================= //
 // ======= task-13 ======= //
 // ======================= //
