@@ -267,27 +267,42 @@
 // taxRate - число, податкова ставка. Необов'язковий параметр. За замовчуванням його значення має бути 0.2
 // Доповни код функції так, щоб вона повертала суму податку - результат множення суми на податкову ставку
 
-function calculateTax(amount, taxRate = 0.2) {
-  if (typeof amount !== 'number' || amount < 0) {
-    throw new Error('invalid amount! It must be a non negative number');
-  }
+// function calculateTax(amount, taxRate = 0.2) {
+//   if (typeof amount !== 'number' || amount < 0) {
+//     throw new Error('invalid amount! It must be a non negative number');
+//   }
 
-  if (typeof taxRate !== 'number' || taxRate < 0 || taxRate > 1) {
-    throw new Error('invalid tax rate! It must be a number between 0 and 1');
-  }
+//   if (typeof taxRate !== 'number' || taxRate < 0 || taxRate > 1) {
+//     throw new Error('invalid tax rate! It must be a number between 0 and 1');
+//   }
 
-  return amount * taxRate;
+//   return amount * taxRate;
+// }
+
+// console.log(calculateTax(15000, 0.15));
+// console.log(calculateTax(20000));
+
+// ===================== //
+// ======= hw-01 ======= //
+
+// Напиши функцію slugify(title), яка приймає заголовок статті, параметр title і повертає slug, створений із цього рядка
+// Значенням параметра title будуть рядки, слова яких розділені лише пробілами
+// Усі символи slug повинні бути в нижньому регістрі
+// Усі слова slug повинні бути розділені тире
+
+function slugify(title) {
+  return title.toLowerCase().trim().split(/\s+/).join('-');
 }
 
-console.log(calculateTax(15000, 0.15));
-console.log(calculateTax(20000));
+console.log(slugify('Arrays for beginners'));
+console.log(slugify('English for developer'));
+console.log(slugify('Ten secrets of JavaScript'));
+console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
 
-// ======================= //
-// ======= task-15 ======= //
-// ======================= //
-// ======= task-16 ======= //
-// ======================= //
-// ======= task-17 ======= //
+// ===================== //
+// ======= hw-02 ======= //
+// ===================== //
+// ======= hw-03 ======= //
 // ======================= //
 // ======= task-18 ======= //
 // ======================= //
