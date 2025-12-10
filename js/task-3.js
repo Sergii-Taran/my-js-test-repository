@@ -227,20 +227,38 @@
 // Напиши функцію calAverage(), яка пиймає довільну кількість аргументів і повертає їх середнє значення
 // Усі аргументи будуть лише числами
 
-function calAverage() {
-  let total = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    total += arguments[i];
-  }
-  return total / arguments.length;
-}
+// function calAverage() {
+//   let total = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     total += arguments[i];
+//   }
+//   return total / arguments.length;
+// }
 
-console.log(calAverage(1, 2, 3, 4, 5, 6));
-console.log(calAverage(0));
-console.log(calAverage(122, 56, 88, 73, 64, 38, 91));
+// console.log(calAverage(1, 2, 3, 4, 5, 6));
+// console.log(calAverage(0));
+// console.log(calAverage(122, 56, 88, 73, 64, 38, 91));
 
 // ======================= //
 // ======= task-13 ======= //
+
+// Функція createReversedArray() може приймати довільну кількість аргументів
+// Доповни код функції так, щоб вона повертала масив усіх аргументів, але в масиві вони повинні йти у зворотному порядку
+// Тобто, при виклику createReversedArray(1, 2, 3), функція має повернути масив [3, 2, 1]
+// Використовуй цикл або метод масиву toReversed(), який застосовується до масиву і результатом роботи повертає новий масив з елементами у зворотньому порядку
+
+function createReversedArray() {
+  const arr = [];
+
+  for (const arg of arguments) {
+    arr.push(arg);
+  }
+
+  return arr.toReversed();
+}
+
+console.log(createReversedArray(11, 12, 13, 14, 15, 16));
+
 // ======================= //
 // ======= task-14 ======= //
 // ======================= //
