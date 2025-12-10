@@ -1,80 +1,56 @@
-function isEnoughCapacity(products, containerSize) {
-  let totalSum = 0;
+// ======================= //
+// ======= task-01 ======= //
 
-  for (const number of Object.values(products)) {
-    totalSum += number;
-  }
+// Об'єкт apartment описує квартиру 6 властивостями: шлях до зображення, опис, рейтинг, ціна, теги і власник
+// Властивість owner (власник) також є об'єктом
+// Оголошено шість змінних, значення яких це значення відповідних властивостей об'єкту apartment.
+// Доповни код, задавши оголошеним змінним вирази звернення до відповідних властивостей об'єкта apartment.
+// ownerName - ім'я власника;
+// ownerPhone - телефон власника;
+// ownerEmail - пошта власника;
+// numberOfTags - кількість елементів масиву у властивості tags;
+// firstTag - перший елемент масиву у властивості tags;
+// lastTag - останній елемент масиву у властивості tags.
 
-  if (totalSum <= containerSize) {
-    return true;
-  }
-  return false;
-}
-
-console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
-console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
-console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)); // true
-console.log(isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)); // false
-
-// =====================================
-
-function calcAverageCalories(days) {
-  let totalSum = 0;
-
-  for (const day of days) {
-    totalSum += day.calories;
-  }
-  return totalSum / 7;
-}
-
-console.log(
-  calcAverageCalories([
-    { day: 'monday', calories: 3010 },
-    { day: 'tuesday', calories: 3200 },
-    { day: 'wednesday', calories: 3120 },
-    { day: 'thursday', calories: 2900 },
-    { day: 'friday', calories: 3450 },
-    { day: 'saturday', calories: 3280 },
-    { day: 'sunday', calories: 3300 },
-  ])
-); // 3180
-
-console.log(
-  calcAverageCalories([
-    { day: 'monday', calories: 2040 },
-    { day: 'tuesday', calories: 2270 },
-    { day: 'wednesday', calories: 2420 },
-    { day: 'thursday', calories: 1900 },
-    { day: 'friday', calories: 2370 },
-    { day: 'saturday', calories: 2280 },
-    { day: 'sunday', calories: 2610 },
-  ])
-); // 2270
-
-console.log(calcAverageCalories([])); // 0
-
-// =====================================
-
-const profile = {
-  username: 'Jacob',
-  playTime: 300,
-
-  changeUsername(newName) {
-    this.username = newName;
-  },
-
-  updatePlayTime(hours) {
-    this.playTime += hours;
-  },
-
-  getInfo() {
-    return `${this.username} has ${this.playTime} active hours!`;
+const apartment = {
+  imgUrl: 'https://via.placeholder.com/640x480',
+  descr: 'Spacious apartment in the city center',
+  rating: 4,
+  price: 2153,
+  tags: ['premium', 'promoted', 'top'],
+  owner: {
+    name: 'Henry',
+    phone: '982-126-1588',
+    email: 'henry.carter@aptmail.com',
   },
 };
 
-console.log(profile);
-profile.changeUsername('Kimi');
-console.log(profile);
-profile.updatePlayTime(200);
-console.log(profile);
-console.log(profile.getInfo());
+const ownerName = apartment.owner.name;
+const ownerPhone = apartment.owner.phone;
+const ownerEmail = apartment.owner.email;
+const numberOfTags = apartment.tags.length;
+const firstTag = apartment.tags[0];
+const lastTag = apartment.tags[apartment.tags.length - 1];
+
+console.log(ownerName);
+console.log(ownerPhone);
+console.log(ownerEmail);
+console.log(numberOfTags);
+console.log(firstTag);
+console.log(lastTag);
+
+// ======================= //
+// ======= task-02 ======= //
+// ======================= //
+// ======= task-03 ======= //
+// ======================= //
+// ======= task-04 ======= //
+// ======================= //
+// ======= task-05 ======= //
+// ======================= //
+// ======= task-06 ======= //
+// ======================= //
+// ======= task-07 ======= //
+// ======================= //
+// ======= task-08 ======= //
+// ======================= //
