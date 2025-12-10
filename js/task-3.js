@@ -290,17 +290,38 @@
 // Усі символи slug повинні бути в нижньому регістрі
 // Усі слова slug повинні бути розділені тире
 
-function slugify(title) {
-  return title.toLowerCase().trim().split(/\s+/).join('-');
-}
+// function slugify(title) {
+//   return title.toLowerCase().trim().split(/\s+/).join('-');
+// }
 
-console.log(slugify('Arrays for beginners'));
-console.log(slugify('English for developer'));
-console.log(slugify('Ten secrets of JavaScript'));
-console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
+// console.log(slugify('Arrays for beginners'));
+// console.log(slugify('English for developer'));
+// console.log(slugify('Ten secrets of JavaScript'));
+// console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
 
 // ===================== //
 // ======= hw-02 ======= //
+
+// Напиши функцію під назвою makeArray, яка приймає три параметри: firstArray (масив), secondArray (масив) і maxLength (число)
+// Функція повинна створювати новий масив, який містить усі елементи з firstArray, а потім усі елементи з secondArray.
+// Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною maxLength елементів
+// В іншому випадку функція повинна повернути весь новий масив
+
+function makeArray(firstArray, secondArray, maxLength) {
+  const newArray = firstArray.concat(secondArray);
+
+  if (newArray.length <= maxLength) {
+    return newArray;
+  }
+  return newArray.slice(0, maxLength);
+}
+
+console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3));
+console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4));
+console.log(makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0));
 // ===================== //
 // ======= hw-03 ======= //
 // ======================= //
