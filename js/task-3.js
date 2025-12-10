@@ -208,23 +208,18 @@
 // ======================= //
 // ======= task-11 ======= //
 
-// Доповни код функції calculateTotalPrice(order) так, щоб вона повертала загальну суму чисел в масиві order
-// Використай цикл for...of для перебору масиву
+// Напиши функцію add для складання довільної кількості аргументів (чисел)
 
-function calculateTotalPrice(order) {
+function add() {
   let sum = 0;
 
-  for (const number of order) {
-    if (typeof number !== 'number') {
-      return 'The array must contain only numbers!';
-    }
-    sum += number;
+  for (const arg of arguments) {
+    sum += arg;
   }
   return sum;
 }
 
-console.log(calculateTotalPrice([11, 12, 13, 14, 15, 16]));
-console.log(calculateTotalPrice(['1', '2', '3']));
+console.log(add(1, 2, 3, 4, 5));
 
 // ======================= //
 // ======= task-12 ======= //
