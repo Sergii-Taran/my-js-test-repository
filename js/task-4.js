@@ -103,15 +103,32 @@
 //   return propCount;
 // }
 
-function countProps(object) {
-  return Object.keys(object).length;
-}
+// function countProps(object) {
+//   return Object.keys(object).length;
+// }
 
-console.log(countProps({ name: 'Mango', age: 2 }));
-console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
+// console.log(countProps({ name: 'Mango', age: 2 }));
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
 
 // ======================= //
 // ======= task-05 ======= //
+
+// Функція countTotalSalary(salaries) приймає об'єкт зарплат (salaries) в якості параметра. Кожна властивість об'єкта salaries — це ключ, що містить ім'я співробітника, та значення - його відповідна зарплатня.
+// Доповни код функції countTotalSalary(salaries) так, щоб вона повертала загальну суму зарплат всіх співробітників
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+
+  for (const salary of Object.values(salaries)) {
+    totalSalary += salary;
+  }
+  return totalSalary;
+}
+
+console.log(countTotalSalary({}));
+console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
 // ======================= //
 // ======= task-06 ======= //
 // ======================= //
