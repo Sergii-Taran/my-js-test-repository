@@ -44,27 +44,47 @@
 
 // Перебери об'єкт apartment, використовуючи цикл for...in, і запиши в масив keys всі його ключі, а в масив values всі значення його властивостей
 
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+
+// const keys = [];
+// const values = [];
+
+// for (const key in apartment) {
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+// }
+
+// console.log(keys);
+// console.log(values);
+
+// ======================= //
+// ======= task-03 ======= //
+
+// Перебери об'єкт apartment, використовуючи метод Object.keys() і цикл for...of
+// Запиши у змінну keys масив ключів властивостей об'єкта apartment, і додай в масив values всі значення його властивостей
+
 const apartment = {
   descr: 'Spacious apartment in the city center',
   rating: 4,
   price: 2153,
 };
 
-const keys = [];
+const keys = Object.keys(apartment);
 const values = [];
 
-for (const key in apartment) {
-  if (apartment.hasOwnProperty(key)) {
-    keys.push(key);
-    values.push(apartment[key]);
-  }
+for (const key of keys) {
+  values.push(apartment[key]);
 }
 
 console.log(keys);
 console.log(values);
 
-// ======================= //
-// ======= task-03 ======= //
 // ======================= //
 // ======= task-04 ======= //
 // ======================= //
