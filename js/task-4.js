@@ -116,21 +116,45 @@
 // Функція countTotalSalary(salaries) приймає об'єкт зарплат (salaries) в якості параметра. Кожна властивість об'єкта salaries — це ключ, що містить ім'я співробітника, та значення - його відповідна зарплатня.
 // Доповни код функції countTotalSalary(salaries) так, щоб вона повертала загальну суму зарплат всіх співробітників
 
-function countTotalSalary(salaries) {
-  let totalSalary = 0;
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
 
-  for (const salary of Object.values(salaries)) {
-    totalSalary += salary;
-  }
-  return totalSalary;
-}
+//   for (const salary of Object.values(salaries)) {
+//     totalSalary += salary;
+//   }
+//   return totalSalary;
+// }
 
-console.log(countTotalSalary({}));
-console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
-console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+// console.log(countTotalSalary({}));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
 
 // ======================= //
 // ======= task-06 ======= //
+
+// Масив colors містить колекцію кольорів
+// Кожен колір представлений об'єктом і має властивості hex і rgb з відповідними для цього формату і кольору значеннями
+// Перебери масив об'єктів colors, використовуючи цикл for...of
+// Додай у масив hexColors значення властивостей hex, а в масив rgbColors - значення властивостей rgb з усіх об'єктів масиву colors
+
+const colors = [
+  { hex: '#f44336', rgb: '244,67,54' },
+  { hex: '#2196f3', rgb: '33,150,243' },
+  { hex: '#4caf50', rgb: '76,175,80' },
+  { hex: '#ffeb3b', rgb: '255,235,59' },
+];
+
+const hexColors = [];
+const rgbColors = [];
+
+for (const color of colors) {
+  hexColors.push(color.hex);
+  rgbColors.push(color.rgb);
+}
+
+console.log(hexColors);
+console.log(rgbColors);
+
 // ======================= //
 // ======= task-07 ======= //
 // ======================= //
