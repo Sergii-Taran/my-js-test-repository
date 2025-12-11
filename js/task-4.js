@@ -193,7 +193,39 @@
 // Функція повинна повернути масив усіх значень властивості з таким ім'ям з кожного об'єкта в масиві products
 // Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
 
-function getAllPropValues(propName) {
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
+
+//   const result = [];
+
+//   for (const product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       result.push(product[propName]);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(getAllPropValues('name'));
+// console.log(getAllPropValues('quantity'));
+// console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('category'));
+
+// ======================= //
+// ======= task-09 ======= //
+
+// Функція calculateTotalPrice(productName) приймає один параметр productName- назва товару
+// Функція містить масив об'єктів products з такими властивостями, як name — ім'я товару, price — ціна і quantity — кількість
+// Доповни код функції так, щоб вона повертала загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products
+// Якщо продукту з такою назвою немає, то функція повинна повертати рядок "Product <productName> not found!" , де <productName> — це ім'я товару
+
+function calculateTotalPrice(productName) {
   const products = [
     { name: 'Radar', price: 1300, quantity: 4 },
     { name: 'Scanner', price: 2700, quantity: 3 },
@@ -201,24 +233,21 @@ function getAllPropValues(propName) {
     { name: 'Grip', price: 1200, quantity: 9 },
   ];
 
-  const result = [];
-
   for (const product of products) {
-    if (product.hasOwnProperty(propName)) {
-      result.push(product[propName]);
+    if (productName === product.name) {
+      return product.price * product.quantity;
     }
   }
 
-  return result;
+  return `Product ${productName} not found!`;
 }
 
-console.log(getAllPropValues('name'));
-console.log(getAllPropValues('quantity'));
-console.log(getAllPropValues('price'));
-console.log(getAllPropValues('category'));
+console.log(calculateTotalPrice('Blaster'));
+console.log(calculateTotalPrice('Radar'));
+console.log(calculateTotalPrice('Droid'));
+console.log(calculateTotalPrice('Grip'));
+console.log(calculateTotalPrice('Scanner'));
 
-// ======================= //
-// ======= task-09 ======= //
 // ======================= //
 // ======= task-10 ======= //
 // ======================= //
