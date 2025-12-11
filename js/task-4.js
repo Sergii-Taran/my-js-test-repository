@@ -225,31 +225,45 @@
 // Доповни код функції так, щоб вона повертала загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products
 // Якщо продукту з такою назвою немає, то функція повинна повертати рядок "Product <productName> not found!" , де <productName> — це ім'я товару
 
-function calculateTotalPrice(productName) {
-  const products = [
-    { name: 'Radar', price: 1300, quantity: 4 },
-    { name: 'Scanner', price: 2700, quantity: 3 },
-    { name: 'Droid', price: 400, quantity: 7 },
-    { name: 'Grip', price: 1200, quantity: 9 },
-  ];
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
 
-  for (const product of products) {
-    if (productName === product.name) {
-      return product.price * product.quantity;
-    }
-  }
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       return product.price * product.quantity;
+//     }
+//   }
 
-  return `Product ${productName} not found!`;
-}
+//   return `Product ${productName} not found!`;
+// }
 
-console.log(calculateTotalPrice('Blaster'));
-console.log(calculateTotalPrice('Radar'));
-console.log(calculateTotalPrice('Droid'));
-console.log(calculateTotalPrice('Grip'));
-console.log(calculateTotalPrice('Scanner'));
+// console.log(calculateTotalPrice('Blaster'));
+// console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Droid'));
+// console.log(calculateTotalPrice('Grip'));
+// console.log(calculateTotalPrice('Scanner'));
 
 // ======================= //
 // ======= task-10 ======= //
+
+function add(...args) {
+  let sum = 0;
+
+  for (const num of args) {
+    sum += num;
+  }
+  return sum;
+}
+
+console.log(add(15, 27));
+console.log(add(12, 4, 11, 48));
+console.log(add(32, 6, 13, 19, 8));
+
 // ======================= //
 // ======= task-11 ======= //
 // ======================= //
