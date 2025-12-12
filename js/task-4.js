@@ -277,24 +277,45 @@
 // Перевір, чи кожен аргумент більший за вказане число, і якщо так, додай його до загальної суми
 // На завершення поверни загальну суму
 
-function addOverNum(value, ...args) {
-  let sum = 0;
+// function addOverNum(value, ...args) {
+//   let sum = 0;
 
-  for (const num of args) {
-    if (num > value) {
-      sum += num;
-    }
-  }
-  return sum;
-}
+//   for (const num of args) {
+//     if (num > value) {
+//       sum += num;
+//     }
+//   }
+//   return sum;
+// }
 
-console.log(addOverNum(50, 15, 27));
-console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
-console.log(addOverNum(15, 32, 6, 13, 19, 8));
-console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+// console.log(addOverNum(15, 32, 6, 13, 19, 8));
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
 
 // ======================= //
 // ======= task-12 ======= //
+
+// Функція getExtremeScores(scores) приймає масив оцінок (чисел) у параметрі scores
+// Доповни код функції так, щоб вона повертала об'єкт із двома властивостями:
+// Властивість best має містити найбільше число з масиву scores
+// Властивість worst має містити найменше число з масиву scores
+// Використовуй оператор (...spread) і методи Math.max() і Math.min()
+
+function getExtremeScores(scores) {
+  if (scores.length === 0) {
+    return { best: null, worst: null };
+  }
+
+  return {
+    best: Math.max(...scores),
+    worst: Math.min(...scores),
+  };
+}
+
+console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
+
 // ======================= //
 // ======= task-13 ======= //
 // ======================= //
