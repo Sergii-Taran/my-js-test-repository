@@ -302,22 +302,45 @@
 // Властивість worst має містити найменше число з масиву scores
 // Використовуй оператор (...spread) і методи Math.max() і Math.min()
 
-function getExtremeScores(scores) {
-  if (scores.length === 0) {
-    return { best: null, worst: null };
-  }
+// function getExtremeScores(scores) {
+//   if (scores.length === 0) {
+//     return { best: null, worst: null };
+//   }
 
-  return {
-    best: Math.max(...scores),
-    worst: Math.min(...scores),
-  };
-}
+//   return {
+//     best: Math.max(...scores),
+//     worst: Math.min(...scores),
+//   };
+// }
 
-console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
-console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+// console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
 
 // ======================= //
 // ======= task-13 ======= //
+
+// У змінних firstGroupScores, secondGroupScores і thirdGroupScores зберігаються результати тестування окремих груп
+// Використовуючи розпилення, доповни код таким чином, щоб:
+// У змінній allScores зберігався масив всіх результатів від першої до третьої групи включно
+// У змінній bestScore був найвищий загальний бал
+// У змінній worstScore був найнижчий загальний бал
+
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+
+const allScores = [
+  ...firstGroupScores,
+  ...secondGroupScores,
+  ...thirdGroupScores,
+];
+const bestScore = Math.max(...allScores);
+const worstScore = Math.min(...allScores);
+
+console.log(allScores);
+console.log(bestScore);
+console.log(worstScore);
+
 // ======================= //
 // ======= task-14 ======= //
 // ======================= //
