@@ -10,28 +10,53 @@
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
 
-const styles = ['jazz', 'blues'];
-console.log(styles);
+// const styles = ['jazz', 'blues'];
+// console.log(styles);
 
-styles.push('rock-n-roll');
-console.log(styles);
+// styles.push('rock-n-roll');
+// console.log(styles);
 
-const index = styles.indexOf('blues');
-if (index !== -1) {
-  styles[index] = 'classic';
-}
-console.log(styles);
+// const index = styles.indexOf('blues');
+// if (index !== -1) {
+//   styles[index] = 'classic';
+// }
+// console.log(styles);
 
-function logItems(array) {
-  for (let i = 0; i < array.length; i++) {
-    console.table(`${[i + 1]} - ${array[i]}`);
-  }
-}
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(`${i + 1} - ${array[i]}`);
 
-logItems(styles);
+//   }
+// }
+
+// logItems(styles);
 
 // ========================= //
 // ======== task-02 ======== //
+
+// Напишіть функцію checkLogin(array), яка:
+// Приймає масив логінів як аргумент.
+// Запитує ім'я користувача через prompt.
+// Перевіряє, чи є введене ім'я у переданому масиві.
+// Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
+// Якщо ім'я відсутнє – виводить повідомлення: "User not found".
+
+const logins = ['Peter', 'John', 'Igor', 'Sasha'];
+
+function checkLogin(array) {
+  const input = prompt('Enter your name:');
+
+  if (!input) return alert('User not found');
+
+  const normalized = input.trim().toLowerCase();
+
+  const isFound = array.some((name) => name.toLowerCase() === normalized);
+
+  alert(isFound ? `Welcome, ${input.trim()}!` : 'User not found');
+}
+
+checkLogin(logins);
+
 // ========================= //
 // ======== task-03 ======== //
 // ========================= //
