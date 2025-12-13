@@ -325,22 +325,81 @@
 // У змінній bestScore був найвищий загальний бал
 // У змінній worstScore був найнижчий загальний бал
 
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
 
-const allScores = [
-  ...firstGroupScores,
-  ...secondGroupScores,
-  ...thirdGroupScores,
-];
-const bestScore = Math.max(...allScores);
-const worstScore = Math.min(...allScores);
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
 
-console.log(allScores);
-console.log(bestScore);
-console.log(worstScore);
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
 
 // ======================= //
 // ======= task-14 ======= //
+
+// В конструкторі можна створювати нові тести, для яких є налаштування за замовчуванням, які зберігаються у змінній defaultSettings
+// Під час створення тесту, усі або частину налаштувань можна перевизначити, користувацькі налаштування зберігаються у змінній overrideSettings
+// Для того щоб отримати фінальні налаштування тесту, необхідно взяти налаштування за замовчуванням і поверх них застосувати перевизначені користувацькі налаштування
+// Доповни код таким чином, щоб у змінній finalSettings утворився об'єкт фінальних налаштувань тесту
+
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// console.log(finalSettings);
+
+// ======================= //
+// ======== hw-01 ======== //
+
+// Напиши функцію isEnoughCapacity(products, containerSize), яка обчислює, чи помістяться всі товари в контейнер при пакуванні
+// Функція оголошує два параметри:
+// products — об’єкт, у якому ключі містять назви товарів, а їхні значення — кількість цих товарів. Наприклад, { apples: 2, grapes: 4 }
+// containerSize — число, максимальна кількість одиниць товарів, яку в себе може вмістити контейнер
+// Функція має повернути результат перевірки, чи помістяться всі товари в контейнер, тобто порахувати загальну кількість товарів в об’єкті products і повернути true, якщо вона менше або дорівнює containerSize, і false, якщо ні
+
+function isEnoughCapacity(products, containerSize) {
+  if (typeof containerSize !== 'number') return false;
+
+  let totalAmount = 0;
+
+  for (const number of Object.values(products)) {
+    if (typeof number !== 'number') continue;
+    totalAmount += number;
+  }
+
+  if (totalAmount <= containerSize) {
+    return true;
+  }
+
+  return false;
+}
+
+console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8));
+console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12));
+console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14));
+console.log(isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7));
+
+// ======================= //
+// ======== hw-02 ======== //
+// ======================= //
+// ======== hw-03 ======== //
 // ======================= //
