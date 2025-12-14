@@ -218,27 +218,52 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 // ------- var.03 ------- //
 
-function findLongestWord(string) {
-  if (typeof string !== 'string') {
-    return 'This is not a string!';
-  }
+// function findLongestWord(string) {
+//   if (typeof string !== 'string') {
+//     return 'This is not a string!';
+//   }
 
-  const words = string.trim().split(/\s+/);
+//   const words = string.trim().split(/\s+/);
 
-  let longestWord = '';
+//   let longestWord = '';
 
-  for (const word of words) {
-    if (word.length > longestWord.length) {
-      longestWord = word;
-    }
-  }
-  return longestWord;
-}
+//   for (const word of words) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
 
-console.log(findLongestWord('London is the capital of Great Britain'));
+// console.log(findLongestWord('London is the capital of Great Britain'));
 
 // ========================= //
 // ======== task-07 ======== //
+
+// Напишіть скрипт, який для об'єкту user, послідовно:
+// 1 - додасть поле mood зі значенням 'happy',
+// 2 - замінить hobby на 'skydiving',
+// 3 - замінить значення premium на false,
+// 4 - виведе зміст об'єкта user у форматі
+// '<ключ>:<значення>' використовуя Object.keys() та for...of
+
+const user = {
+  name: 'John',
+  age: 20,
+  hobby: 'tenis',
+  premium: true,
+};
+
+user.mood = 'happy';
+user.hobby = 'skydiving';
+user.premium = false;
+
+const keys = Object.keys(user);
+
+for (const key of keys) {
+  console.log(`${key}: ${user[key]}`);
+}
+
 // ========================= //
 // ======== task-08 ======== //
 // ========================= //
