@@ -65,26 +65,47 @@
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
 
-function calculateAverage(...args) {
-  if (args.length === 0) return 0;
+// function calculateAverage(...args) {
+//   if (args.length === 0) return 0;
 
-  let totalSum = 0;
+//   let totalSum = 0;
 
-  for (const arg of args) {
-    if (typeof arg !== 'number' || Number.isNaN(arg)) {
-      return 'Not a number!';
-    }
-    totalSum += arg;
-  }
+//   for (const arg of args) {
+//     if (typeof arg !== 'number' || Number.isNaN(arg)) {
+//       return 'Not a number!';
+//     }
+//     totalSum += arg;
+//   }
 
-  return totalSum / args.length;
-}
+//   return totalSum / args.length;
+// }
 
-console.log(calculateAverage(1, 2, 3));
-console.log(calculateAverage(9, 18, 27, 36, 45, 54, 63, 72, 81, 90));
+// console.log(calculateAverage(1, 2, 3));
+// console.log(calculateAverage(9, 18, 27, 36, 45, 54, 63, 72, 81, 90));
 
 // ========================= //
 // ======== task-04 ======== //
+
+// Напишіть функцію, яка сумуватиме сусідні числа
+// і пушитиме їх в новий масив.
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// уточнення: складати необхідно перше число з другим, потім друге - з третім,
+// третє - з четвертим і так до кінця.
+// В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29]
+
+const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+function addAdjacentNumbers(array) {
+  let newArr = [];
+
+  for (let i = 0; i < array.length - 1; i++) {
+    newArr.push(array[i] + array[i + 1]);
+  }
+  return newArr;
+}
+
+console.log(addAdjacentNumbers(someArr));
+
 // ========================= //
 // ======== task-05 ======== //
 // ========================= //
