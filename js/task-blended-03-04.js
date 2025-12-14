@@ -340,43 +340,74 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
 
-const calculator = {
-  read(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
-      return 'Arguments must be numbers';
-    }
+// const calculator = {
+//   read(a, b) {
+//     if (typeof a !== 'number' || typeof b !== 'number') {
+//       return 'Arguments must be numbers';
+//     }
 
-    this.a = a;
-    this.b = b;
-  },
+//     this.a = a;
+//     this.b = b;
+//   },
 
-  exist() {
-    return Object.hasOwn(this, 'a') && Object.hasOwn(this, 'b');
-  },
+//   exist() {
+//     return Object.hasOwn(this, 'a') && Object.hasOwn(this, 'b');
+//   },
 
-  sum() {
-    if (!this.exist()) {
-      return 'No such propeties!';
-    }
-    return this.a + this.b;
-  },
+//   sum() {
+//     if (!this.exist()) {
+//       return 'No such propeties!';
+//     }
+//     return this.a + this.b;
+//   },
 
-  mult() {
-    if (!this.exist()) {
-      return 'No such propeties!';
-    }
-    return this.a * this.b;
-  },
-};
+//   mult() {
+//     if (!this.exist()) {
+//       return 'No such propeties!';
+//     }
+//     return this.a * this.b;
+//   },
+// };
 
-console.log(calculator.sum());
-console.log(calculator.mult());
+// console.log(calculator.sum());
+// console.log(calculator.mult());
 
-calculator.read(3, 4);
+// calculator.read(3, 4);
 
-console.log(calculator.sum());
-console.log(calculator.mult());
+// console.log(calculator.sum());
+// console.log(calculator.mult());
 
 // ========================= //
 // ======== task-10 ======== //
+
+// Напишіть функцію calcTotalPrice(fruits, fruitName),
+// яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
+// Функція рахує і повертає загальну вартість фрукта
+// з таким ім'ям, ціною та кількістю з об'єкта.
+// Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
+// назвою фрукта, це також треба урахувати.
+
+const fruits = [
+  { name: 'Яблуко', price: 45, quantity: 7 },
+  { name: 'Апельсин', price: 60, quantity: 4 },
+  { name: 'Банан', price: 125, quantity: 8 },
+  { name: 'Груша', price: 350, quantity: 2 },
+  { name: 'Виноград', price: 440, quantity: 3 },
+  { name: 'Банан', price: 125, quantity: 3 },
+];
+
+function calcTotalPrice(fruits, fruitName) {
+  let totalPrice = 0;
+
+  for (const fruit of fruits) {
+    if (fruit.name === fruitName) {
+      totalPrice += fruit.price * fruit.quantity;
+    }
+  }
+
+  return totalPrice;
+}
+
+console.log(calcTotalPrice(fruits, 'Банан'));
+
 // ========================= //
