@@ -93,21 +93,92 @@
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29]
 
-const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
-function addAdjacentNumbers(array) {
-  let newArr = [];
+// function addAdjacentNumbers(array) {
+//   let newArr = [];
 
-  for (let i = 0; i < array.length - 1; i++) {
-    newArr.push(array[i] + array[i + 1]);
-  }
-  return newArr;
-}
+//   for (let i = 0; i < array.length - 1; i++) {
+//     newArr.push(array[i] + array[i + 1]);
+//   }
+//   return newArr;
+// }
 
-console.log(addAdjacentNumbers(someArr));
+// console.log(addAdjacentNumbers(someArr));
 
 // ========================= //
 // ======== task-05 ======== //
+
+// Напишіть функцію findSmallestNumber(numbers),
+// яка шукає найменше число в масиві.
+// Додайте перевірку, що функція отримує саме масив, і
+// якщо функція отримує масив - поверніть з функції найменше число,
+// в іншому випадку - поверніть 'Sorry, it is not an array!'.
+
+const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// ------- var.01 ------- //
+
+// function findSmallestNumber(array) {
+//   if (!Array.isArray(array)) {
+//     return 'Sorry, it is not an array!';
+//   }
+
+//   let min = array[0];
+
+//   for (let i = 1; i < array.length; i++) {
+//     if (array[i] < min) {
+//       min = array[i];
+//     }
+//   }
+//   return min;
+// }
+
+// ------- var.02 ------- //
+
+// function findSmallestNumber(array) {
+//   if (!Array.isArray(array)) {
+//     return 'Sorry, it is not an array!';
+//   }
+
+//   if (array.length === 0) {
+//     return 'Array is empty';
+//   }
+
+//   if (!array.every((num) => typeof num === 'number' && !Number.isNaN(num))) {
+//     return 'Array must contain only numbers';
+//   }
+
+//   const min = Math.min(...array);
+
+//   return min;
+// }
+
+// ------- var.03 ------- //
+
+function findSmallestNumber(array) {
+  if (!Array.isArray(array)) {
+    return 'Sorry, it is not an array!';
+  }
+
+  if (array.length === 0) {
+    return 'Array is empty';
+  }
+
+  let min = array[0];
+
+  for (const num of array) {
+    if (typeof num !== 'number' || Number.isNaN(num)) {
+      return 'Array must contain only numbers';
+    }
+    if (num < min) min = num;
+  }
+
+  return min;
+}
+
+console.log(findSmallestNumber(numbers));
+
 // ========================= //
 // ======== task-06 ======== //
 // ========================= //
