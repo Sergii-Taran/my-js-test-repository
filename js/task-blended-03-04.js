@@ -274,21 +274,21 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 // ------- var.01 ------- //
 
-const salaries1 = {
-  Mango: 100,
-  Poly: 160,
-  Ajax: 1470,
-};
+// const salaries1 = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
 
-const salaries2 = {};
+// const salaries2 = {};
 
-const salaries3 = {
-  Mango: 100,
-  Poly: '160',
-  Ajax: 1470,
-};
+// const salaries3 = {
+//   Mango: 100,
+//   Poly: '160',
+//   Ajax: 1470,
+// };
 
-const salaries4 = null;
+// const salaries4 = null;
 
 // let sum = 0;
 
@@ -302,35 +302,81 @@ const salaries4 = null;
 
 // ------- var.02 ------- //
 
-function calculateTotalSalary(obj) {
-  if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
-    return 'Invalid input: not an object';
-  }
+// function calculateTotalSalary(obj) {
+//   if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+//     return 'Invalid input: not an object';
+//   }
 
-  const values = Object.values(obj);
+//   const values = Object.values(obj);
 
-  if (values.length === 0) {
-    return 0;
-  }
+//   if (values.length === 0) {
+//     return 0;
+//   }
 
-  let sum = 0;
+//   let sum = 0;
 
-  for (const value of values) {
-    if (typeof value !== 'number' || Number.isNaN(value)) {
-      return 'Invalid salary value';
-    }
-    sum += value;
-  }
-  return sum;
-}
+//   for (const value of values) {
+//     if (typeof value !== 'number' || Number.isNaN(value)) {
+//       return 'Invalid salary value';
+//     }
+//     sum += value;
+//   }
+//   return sum;
+// }
 
-console.log(calculateTotalSalary(salaries1));
-console.log(calculateTotalSalary(salaries2));
-console.log(calculateTotalSalary(salaries3));
-console.log(calculateTotalSalary(salaries4));
+// console.log(calculateTotalSalary(salaries1));
+// console.log(calculateTotalSalary(salaries2));
+// console.log(calculateTotalSalary(salaries3));
+// console.log(calculateTotalSalary(salaries4));
 
 // ========================= //
 // ======== task-09 ======== //
+
+// Створіть об'єкт calculator з наступними методами:
+// read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
+// sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
+// mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
+// винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
+// Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
+// методи sum і mult мають повертати рядок 'No such propeties'
+
+const calculator = {
+  read(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      return 'Arguments must be numbers';
+    }
+
+    this.a = a;
+    this.b = b;
+  },
+
+  exist() {
+    return Object.hasOwn(this, 'a') && Object.hasOwn(this, 'b');
+  },
+
+  sum() {
+    if (!this.exist()) {
+      return 'No such propeties!';
+    }
+    return this.a + this.b;
+  },
+
+  mult() {
+    if (!this.exist()) {
+      return 'No such propeties!';
+    }
+    return this.a * this.b;
+  },
+};
+
+console.log(calculator.sum());
+console.log(calculator.mult());
+
+calculator.read(3, 4);
+
+console.log(calculator.sum());
+console.log(calculator.mult());
+
 // ========================= //
 // ======== task-10 ======== //
 // ========================= //
