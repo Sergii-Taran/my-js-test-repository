@@ -204,8 +204,27 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 // ------- var.02 ------- //
 
+// function findLongestWord(string) {
+//   const words = string.split(' ');
+//   let longestWord = '';
+
+//   for (const word of words) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
+
+// ------- var.03 ------- //
+
 function findLongestWord(string) {
-  const words = string.split(' ');
+  if (typeof string !== 'string') {
+    return 'This is not a string!';
+  }
+
+  const words = string.trim().split(/\s+/);
+
   let longestWord = '';
 
   for (const word of words) {
