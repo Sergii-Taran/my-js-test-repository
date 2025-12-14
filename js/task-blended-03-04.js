@@ -41,24 +41,48 @@
 // Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 
-const logins = ['Peter', 'John', 'Igor', 'Sasha'];
+// const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 
-function checkLogin(array) {
-  const input = prompt('Enter your name:');
+// function checkLogin(array) {
+//   const input = prompt('Enter your name:');
 
-  if (!input) return alert('User not found');
+//   if (!input) return alert('User not found');
 
-  const normalized = input.trim().toLowerCase();
+//   const normalized = input.trim().toLowerCase();
 
-  const isFound = array.some((name) => name.toLowerCase() === normalized);
+//   const isFound = array.some((name) => name.toLowerCase() === normalized);
 
-  alert(isFound ? `Welcome, ${input.trim()}!` : 'User not found');
-}
+//   alert(isFound ? `Welcome, ${input.trim()}!` : 'User not found');
+// }
 
-checkLogin(logins);
+// checkLogin(logins);
 
 // ========================= //
 // ======== task-03 ======== //
+
+// Напишіть функцію calculateAverage(),
+// яка приймає довільну кількість
+// аргументів і повертає їхнє середнє значення.
+// Додайте перевірку, що аргументи - це числа.
+
+function calculateAverage(...args) {
+  if (args.length === 0) return 0;
+
+  let totalSum = 0;
+
+  for (const arg of args) {
+    if (typeof arg !== 'number' || Number.isNaN(arg)) {
+      return 'Not a number!';
+    }
+    totalSum += arg;
+  }
+
+  return totalSum / args.length;
+}
+
+console.log(calculateAverage(1, 2, 3));
+console.log(calculateAverage(9, 18, 27, 36, 45, 54, 63, 72, 81, 90));
+
 // ========================= //
 // ======== task-04 ======== //
 // ========================= //
