@@ -156,31 +156,54 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 // ------- var.03 ------- //
 
-function findSmallestNumber(array) {
-  if (!Array.isArray(array)) {
-    return 'Sorry, it is not an array!';
-  }
+// function findSmallestNumber(array) {
+//   if (!Array.isArray(array)) {
+//     return 'Sorry, it is not an array!';
+//   }
 
-  if (array.length === 0) {
-    return 'Array is empty';
-  }
+//   if (array.length === 0) {
+//     return 'Array is empty';
+//   }
 
-  let min = array[0];
+//   let min = array[0];
 
-  for (const num of array) {
-    if (typeof num !== 'number' || Number.isNaN(num)) {
-      return 'Array must contain only numbers';
-    }
-    if (num < min) min = num;
-  }
+//   for (const num of array) {
+//     if (typeof num !== 'number' || Number.isNaN(num)) {
+//       return 'Array must contain only numbers';
+//     }
+//     if (num < min) min = num;
+//   }
 
-  return min;
-}
+//   return min;
+// }
 
-console.log(findSmallestNumber(numbers));
+// console.log(findSmallestNumber(numbers));
 
 // ========================= //
 // ======== task-06 ======== //
+
+// Напишіть функцію findLongestWord(string), яка
+// приймає довільний рядок, що складається лише зі слів, розділених
+// пробілами (параметр string), і повертатиме найдовше слово у реченні.
+// Скористайтесь цим прикладом виклику функції для перевірки її роботи:
+// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+// ------- var.01 ------- //
+
+function findLongestWord(string) {
+  const words = string.split(' ');
+  let longestWord = words[0];
+
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+
+console.log(findLongestWord('London is the capital of Great Britain'));
+
 // ========================= //
 // ======== task-07 ======== //
 // ========================= //
