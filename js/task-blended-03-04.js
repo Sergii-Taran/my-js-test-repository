@@ -274,21 +274,60 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 // ------- var.01 ------- //
 
-const salaries = {
+const salaries1 = {
   Mango: 100,
   Poly: 160,
   Ajax: 1470,
 };
 
-let sum = 0;
+const salaries2 = {};
 
-const values = Object.values(salaries);
+const salaries3 = {
+  Mango: 100,
+  Poly: '160',
+  Ajax: 1470,
+};
 
-for (const value of values) {
-  sum += value;
+const salaries4 = null;
+
+// let sum = 0;
+
+// const values = Object.values(salaries);
+
+// for (const value of values) {
+//   sum += value;
+// }
+
+// console.log(sum);
+
+// ------- var.02 ------- //
+
+function calculateTotalSalary(obj) {
+  if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+    return 'Invalid input: not an object';
+  }
+
+  const values = Object.values(obj);
+
+  if (values.length === 0) {
+    return 0;
+  }
+
+  let sum = 0;
+
+  for (const value of values) {
+    if (typeof value !== 'number' || Number.isNaN(value)) {
+      return 'Invalid salary value';
+    }
+    sum += value;
+  }
+  return sum;
 }
 
-console.log(sum);
+console.log(calculateTotalSalary(salaries1));
+console.log(calculateTotalSalary(salaries2));
+console.log(calculateTotalSalary(salaries3));
+console.log(calculateTotalSalary(salaries4));
 
 // ========================= //
 // ======== task-09 ======== //
