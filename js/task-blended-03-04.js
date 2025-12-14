@@ -190,13 +190,27 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 // ------- var.01 ------- //
 
+// function findLongestWord(string) {
+//   const words = string.split(' ');
+//   let longestWord = words[0];
+
+//   for (let i = 1; i < words.length; i++) {
+//     if (words[i].length > longestWord.length) {
+//       longestWord = words[i];
+//     }
+//   }
+//   return longestWord;
+// }
+
+// ------- var.02 ------- //
+
 function findLongestWord(string) {
   const words = string.split(' ');
-  let longestWord = words[0];
+  let longestWord = '';
 
-  for (let i = 1; i < words.length; i++) {
-    if (words[i].length > longestWord.length) {
-      longestWord = words[i];
+  for (const word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
     }
   }
   return longestWord;
