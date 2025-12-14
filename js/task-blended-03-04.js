@@ -247,25 +247,49 @@ const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-const user = {
-  name: 'John',
-  age: 20,
-  hobby: 'tenis',
-  premium: true,
-};
+// const user = {
+//   name: 'John',
+//   age: 20,
+//   hobby: 'tenis',
+//   premium: true,
+// };
 
-user.mood = 'happy';
-user.hobby = 'skydiving';
-user.premium = false;
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
 
-const keys = Object.keys(user);
+// const keys = Object.keys(user);
 
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`);
-}
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
 
 // ========================= //
 // ======== task-08 ======== //
+
+// Є об'єкт, в якому зберігаються зарплати команди
+// Напишіть код для додавання усіх зарплат та
+// збережіть його результат в змінній sum.
+// Якщо об'єкт salaries пустий, то результат має бути 0
+
+// ------- var.01 ------- //
+
+const salaries = {
+  Mango: 100,
+  Poly: 160,
+  Ajax: 1470,
+};
+
+let sum = 0;
+
+const values = Object.values(salaries);
+
+for (const value of values) {
+  sum += value;
+}
+
+console.log(sum);
+
 // ========================= //
 // ======== task-09 ======== //
 // ========================= //
