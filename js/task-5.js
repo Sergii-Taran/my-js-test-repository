@@ -301,22 +301,46 @@
 // Доповни код таким чином, щоб у змінній totalPlayTime вийшов загальний ігровий час з масиву playtimes
 // Використовуй метод reduce()
 
-const players = {
-  mango: 1270,
-  poly: 468,
-  ajax: 710,
-  kiwi: 244,
-};
-const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
 
-const totalPlayTime = playtimes.reduce((acc, value) => acc + value, 0);
+// const totalPlayTime = playtimes.reduce((acc, value) => acc + value, 0);
 
-const averagePlayTime = totalPlayTime / playtimes.length;
+// const averagePlayTime = totalPlayTime / playtimes.length;
 
-console.log(averagePlayTime);
+// console.log(averagePlayTime);
 
 // ======================= //
 // ======= task-13 ======= //
+
+// У змінній players зберігається масив об'єктів, кожен з яких має властивості name, playtime та gamesPlayed.
+// Нашому сервісу необхідно розрахувати середній час, проведений в одній грі для кожного гравця, і отримати загальну суму цих значень часу у змінній totalAveragePlaytimePerGame
+// Розрахувати час для кожного з гравців можна, розділивши його час (властивість playtime) на кількість ігор (властивість gamesPlayed).
+// Використовуй метод reduce() для ітерації по масиву players та обчислення загальної суми середнього часу на одну гру.
+// Усередині колбек функції reduce(), поділи playtime гравця на gamesPlayed, щоб отримати середній час, витрачений на одну гру кожним гравцем.
+// Накопичуй результат у змінній acc і повертай його в кінці кожної ітерації.
+// Ініціалізуй параметр acc методу reduce() початковим значенням 0, щоб уникнути отримання NaN при виконанні обчислень.
+// В результаті змінна totalAveragePlaytimePerGame міститиме загальну суму середнього часу на одну гру для всіх гравців.
+
+const players = [
+  { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+  { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+  { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+  { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+];
+
+const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+  const averagePlaytimePerGame = player.playtime / player.gamesPlayed;
+  return acc + averagePlaytimePerGame;
+}, 0);
+
+console.log(totalAveragePlaytimePerGame);
+
 // ======================= //
 // ======= task-14 ======= //
 // ======================= //
