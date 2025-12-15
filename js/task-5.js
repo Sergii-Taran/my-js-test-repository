@@ -195,14 +195,42 @@
 // Доповни код таким чином, щоб у змінній planetsLengths вийшов масив, що буде складатися з довжин назв кожної планети з масиву planets
 // Обов'язково використовуй метод map()
 
-const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
+// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
 
-const planetsLengths = planets.map((planet) => planet.length);
+// const planetsLengths = planets.map((planet) => planet.length);
 
-console.log(planetsLengths);
+// console.log(planetsLengths);
 
 // ======================= //
 // ======= task-09 ======= //
+
+// Масив books містить колекцію об'єктів книг, кожен з яких містить властивості title, author, rating
+// Використовуючи метод map(), зроби так, щоб у змінній titles вийшов масив назв усіх книг (властивість title) з масиву books
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Tell-Tale Heart',
+    author: 'Edgar Allan Poe',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
+
+const titles = books.map((book) => book.title);
+
+console.log(titles);
+
 // ======================= //
 // ======= task-10 ======= //
 // ======================= //
