@@ -71,29 +71,57 @@
 // Якщо таких значень не буде знайдено, функція повертає порожній масив
 // Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach
 
-function filterArray(numbers, value) {
-  if (!Array.isArray(numbers)) return [];
-  if (typeof value !== 'number') return [];
+// function filterArray(numbers, value) {
+//   if (!Array.isArray(numbers)) return [];
+//   if (typeof value !== 'number') return [];
 
-  const filteredNumbers = [];
+//   const filteredNumbers = [];
 
-  numbers.forEach(function (number) {
-    if (number > value) {
-      filteredNumbers.push(number);
-    }
-  });
+//   numbers.forEach(function (number) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
 
-  return filteredNumbers;
-}
+//   return filteredNumbers;
+// }
 
-console.log(filterArray([1, 2, 3, 4, 5], 3));
-console.log(filterArray([1, 2, 3, 4, 5], 4));
-console.log(filterArray([1, 2, 3, 4, 5], 5));
-console.log(filterArray([12, 24, 8, 41, 76], 38));
-console.log(filterArray([12, 24, 8, 41, 76], 20));
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
 
 // ======================= //
 // ======= task-05 ======= //
+
+// Виконай рефакторинг функції calculateTotalPrice(orderedItems), замінивши її оголошення на стрілочну функцію
+// Також заміни колбек-функцію, передану в метод forEach(), на стрілочну функцію
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+
+const calculateTotalPrice = (orderedItems) => {
+  let totalPrice = 0;
+
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+};
+
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
 // ======================= //
 // ======= task-06 ======= //
 // ======================= //
