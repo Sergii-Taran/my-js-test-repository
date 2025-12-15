@@ -253,37 +253,68 @@
 // У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating) більший за або дорівнює значенню змінної MIN_RATING
 // У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author), яке збігається зі значенням у змінній AUTHOR
 
-const books = [
-  {
-    title: 'The Last Kingdom',
-    author: 'Bernard Cornwell',
-    rating: 8.38,
-  },
-  {
-    title: 'Beside Still Waters',
-    author: 'Robert Sheckley',
-    rating: 8.51,
-  },
-  {
-    title: 'The Dream of a Ridiculous Man',
-    author: 'Fyodor Dostoevsky',
-    rating: 7.75,
-  },
-  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
-  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
-];
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
 
-const MIN_RATING = 8;
-const AUTHOR = 'Bernard Cornwell';
+// const MIN_RATING = 8;
+// const AUTHOR = 'Bernard Cornwell';
 
-const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
-const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+// const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter((book) => book.author === AUTHOR);
 
-console.log(topRatedBooks);
-console.log(booksByAuthor);
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const NEW_AUTHOR = 'Robert Sheckley';
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === NEW_AUTHOR);
+
+// console.log(bookWithTitle);
+// console.log(bookByAuthor);
 
 // ======================= //
 // ======= task-12 ======= //
+
+// Ігровому сервісу необхідний функціонал підрахунку середнього часу, проведеного в іграх, одним гравцем
+// У змінній players зберігається об'єкт, де ключ це ім'я гравця, а значення - його ігровий час
+// У змінній playtimes зберігається масив значень об'єкта players, тобто масив ігрового часу усіх гравців
+// Значенням змінної averagePlayTime буде середній час, проведений одним гравцем в іграх
+// Доповни код таким чином, щоб у змінній totalPlayTime вийшов загальний ігровий час з масиву playtimes
+// Використовуй метод reduce()
+
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244,
+};
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+const totalPlayTime = playtimes.reduce((acc, value) => acc + value, 0);
+
+const averagePlayTime = totalPlayTime / playtimes.length;
+
+console.log(averagePlayTime);
+
 // ======================= //
 // ======= task-13 ======= //
 // ======================= //
