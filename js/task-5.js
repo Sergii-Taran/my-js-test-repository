@@ -139,25 +139,55 @@
 //   return filteredNumbers;
 // }
 
-const filterArray = (numbers, value) => {
-  const filteredNumbers = [];
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
 
-  numbers.forEach((number) => {
-    if (number > value) {
-      filteredNumbers.push(number);
-    }
-  });
-  return filteredNumbers;
-};
+//   numbers.forEach((number) => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+//   return filteredNumbers;
+// };
 
-console.log(filterArray([1, 2, 3, 4, 5], 3));
-console.log(filterArray([1, 2, 3, 4, 5], 4));
-console.log(filterArray([1, 2, 3, 4, 5], 5));
-console.log(filterArray([12, 24, 8, 41, 76], 38));
-console.log(filterArray([12, 24, 8, 41, 76], 20));
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
 
 // ======================= //
 // ======= task-07 ======= //
+
+// Функція changeEven(numbers, value) приймає масив чисел numbers і оновлює кожен елемент, значення якого - це парне число, додаючи до нього значення параметра value, який точно є числом
+// Виконай рефакторинг функції таким чином, щоб вона стала чистою - не змінювала масив чисел numbers, а створювала, наповнювала і повертала новий масив з оновленими значеннями
+
+// function changeEven(numbers, value) {
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//       numbers[i] = numbers[i] + value;
+//     }
+//   }
+// }
+
+const changeEven = (numbers, value) => {
+  let newNumbers = [];
+
+  numbers.forEach((number) => {
+    if (number % 2 === 0) {
+      newNumbers.push(number + value);
+    } else {
+      newNumbers.push(number);
+    }
+  });
+  return newNumbers;
+};
+
+console.log(changeEven([1, 2, 3, 4, 5], 10));
+console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+console.log(changeEven([17, 24, 68, 31, 42], 100));
+console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+
 // ======================= //
 // ======= task-08 ======= //
 // ======================= //
