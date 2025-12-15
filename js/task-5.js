@@ -236,17 +236,52 @@
 // Доповни код так, щоб у змінній evenNumbers був масив парних чисел із масиву numbers, а у змінній oddNumbers — масив непарних
 // Обов'язково використовуй метод filter()
 
-const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 
-const evenNumbers = numbers.filter((number) => number % 2 === 0);
+// const evenNumbers = numbers.filter((number) => number % 2 === 0);
 
-const oddNumbers = numbers.filter((number) => number % 2 !== 0);
+// const oddNumbers = numbers.filter((number) => number % 2 !== 0);
 
-console.log(evenNumbers);
-console.log(oddNumbers);
+// console.log(evenNumbers);
+// console.log(oddNumbers);
 
 // ======================= //
 // ======= task-11 ======= //
+
+// Масив books містить колекцію об'єктів книг, кожен з яких містить властивості title, author, rating
+// Використовуючи метод filter(), доповни код таким чином, щоб:
+// У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating) більший за або дорівнює значенню змінної MIN_RATING
+// У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author), яке збігається зі значенням у змінній AUTHOR
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
+
+const MIN_RATING = 8;
+const AUTHOR = 'Bernard Cornwell';
+
+const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
+const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+
+console.log(topRatedBooks);
+console.log(booksByAuthor);
+
 // ======================= //
 // ======= task-12 ======= //
 // ======================= //
