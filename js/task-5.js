@@ -170,26 +170,37 @@
 //   }
 // }
 
-const changeEven = (numbers, value) => {
-  let newNumbers = [];
+// const changeEven = (numbers, value) => {
+//   let newNumbers = [];
 
-  numbers.forEach((number) => {
-    if (number % 2 === 0) {
-      newNumbers.push(number + value);
-    } else {
-      newNumbers.push(number);
-    }
-  });
-  return newNumbers;
-};
+//   numbers.forEach((number) => {
+//     if (number % 2 === 0) {
+//       newNumbers.push(number + value);
+//     } else {
+//       newNumbers.push(number);
+//     }
+//   });
+//   return newNumbers;
+// };
 
-console.log(changeEven([1, 2, 3, 4, 5], 10));
-console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
-console.log(changeEven([17, 24, 68, 31, 42], 100));
-console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
 
 // ======================= //
 // ======= task-08 ======= //
+
+// В масиві planets зберігаються назви планет
+// Доповни код таким чином, щоб у змінній planetsLengths вийшов масив, що буде складатися з довжин назв кожної планети з масиву planets
+// Обов'язково використовуй метод map()
+
+const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
+
+const planetsLengths = planets.map((planet) => planet.length);
+
+console.log(planetsLengths);
+
 // ======================= //
 // ======= task-09 ======= //
 // ======================= //
