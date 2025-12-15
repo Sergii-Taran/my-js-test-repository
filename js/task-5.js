@@ -50,22 +50,48 @@
 // Функція calculateTotalPrice(orderedItems) приймає один параметр orderedItems - масив чисел, і розраховує загальну суму його елементів, яка зберігається у змінній totalPrice і повертається як результат роботи функції
 // Доповни виклик метода forEach, передавши йому колбек-функцію, яка на кожній ітерації додає до totalPrice значення поточного елемента масива orderedItems
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
 
-  orderedItems.forEach(function (item) {
-    totalPrice += item;
-  });
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;
+//   });
 
-  return totalPrice;
-}
+//   return totalPrice;
+// }
 
-console.log(calculateTotalPrice([12, 85, 37, 4]));
-console.log(calculateTotalPrice([164, 48, 291]));
-console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 
 // ======================= //
 // ======= task-04 ======= //
+
+// Функція filterArray(numbers, value) приймає першим параметром масив чисел numbers і повертає новий масив, в якому будуть тільки ті елементи оригінального масиву, які більші за значення другого параметра числа value
+// Якщо таких значень не буде знайдено, функція повертає порожній масив
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach
+
+function filterArray(numbers, value) {
+  if (!Array.isArray(numbers)) return [];
+  if (typeof value !== 'number') return [];
+
+  const filteredNumbers = [];
+
+  numbers.forEach(function (number) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+
+  return filteredNumbers;
+}
+
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));
+
 // ======================= //
 // ======= task-05 ======= //
 // ======================= //
