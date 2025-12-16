@@ -327,22 +327,83 @@
 // Ініціалізуй параметр acc методу reduce() початковим значенням 0, щоб уникнути отримання NaN при виконанні обчислень.
 // В результаті змінна totalAveragePlaytimePerGame міститиме загальну суму середнього часу на одну гру для всіх гравців.
 
-const players = [
-  { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
-  { name: 'Poly', playtime: 469, gamesPlayed: 2 },
-  { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
-  { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
-];
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
 
-const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
-  const averagePlaytimePerGame = player.playtime / player.gamesPlayed;
-  return acc + averagePlaytimePerGame;
-}, 0);
+// const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+//   const averagePlaytimePerGame = player.playtime / player.gamesPlayed;
+//   return acc + averagePlaytimePerGame;
+// }, 0);
 
-console.log(totalAveragePlaytimePerGame);
+// console.log(totalAveragePlaytimePerGame);
 
-// ======================= //
-// ======= task-14 ======= //
-// ======================= //
-// ======= task-15 ======= //
-// ======================= //
+// =========================== //
+// ======= homework-01 ======= //
+
+// Напиши стрілочну функцію getUserNames(users), яка прийматиме один параметр users — масив об’єктів користувачів
+// Функція має повертати масив імен усіх користувачів (властивість name) із масиву users
+
+// --------- var.01 --------- //
+
+const getUserNames = (users) => {
+  const nameArray = [];
+
+  for (const user of users) {
+    nameArray.push(user.name);
+  }
+  return nameArray;
+};
+
+// --------- var.02 --------- //
+
+console.log(
+  getUserNames([
+    {
+      name: 'Moore Hensley',
+      email: 'moorehensley@indexia.com',
+      balance: 2811,
+    },
+    {
+      name: 'Sharlene Bush',
+      email: 'sharlenebush@tubesys.com',
+      balance: 3821,
+    },
+    {
+      name: 'Ross Vazquez',
+      email: 'rossvazquez@xinware.com',
+      balance: 3793,
+    },
+    {
+      name: 'Elma Head',
+      email: 'elmahead@omatom.com',
+      balance: 2278,
+    },
+    {
+      name: 'Carey Barr',
+      email: 'careybarr@nurali.com',
+      balance: 3951,
+    },
+    {
+      name: 'Blackburn Dotson',
+      email: 'blackburndotson@furnigeer.com',
+      balance: 1498,
+    },
+    {
+      name: 'Sheree Anthony',
+      email: 'shereeanthony@kog.com',
+      balance: 2764,
+    },
+  ])
+);
+
+// =========================== //
+// ======= homework-02 ======= //
+// =========================== //
+// ======= homework-03 ======= //
+// =========================== //
+// ======= homework-04 ======= //
+// =========================== //
