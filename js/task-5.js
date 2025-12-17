@@ -349,16 +349,18 @@
 
 // --------- var.01 --------- //
 
-const getUserNames = (users) => {
-  const nameArray = [];
+// const getUserNames = (users) => {
+//   const nameArray = [];
 
-  for (const user of users) {
-    nameArray.push(user.name);
-  }
-  return nameArray;
-};
+//   for (const user of users) {
+//     nameArray.push(user.name);
+//   }
+//   return nameArray;
+// };
 
 // --------- var.02 --------- //
+
+const getUserNames = (users) => users.map((user) => user.name);
 
 console.log(
   getUserNames([
