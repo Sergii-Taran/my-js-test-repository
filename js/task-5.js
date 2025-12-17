@@ -412,46 +412,93 @@
 // Друзі кожного користувача зберігаються у властивості friends
 // Якщо користувачів, у яких є такий друг немає, то функція має повернути порожній масив
 
-const getUsersWithFriend = (users, friendName) =>
-  users.filter((user) => user.friends.includes(friendName));
+// const getUsersWithFriend = (users, friendName) =>
+//   users.filter((user) => user.friends.includes(friendName));
 
-const allUsers = [
-  {
-    name: 'Moore Hensley',
-    friends: ['Sharron Pace'],
-  },
-  {
-    name: 'Sharlene Bush',
-    friends: ['Briana Decker', 'Sharron Pace'],
-  },
-  {
-    name: 'Ross Vazquez',
-    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-  },
-  {
-    name: 'Elma Head',
-    friends: ['Goldie Gentry', 'Aisha Tran'],
-  },
-  {
-    name: 'Carey Barr',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
-  },
-  {
-    name: 'Blackburn Dotson',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
-  },
-  {
-    name: 'Sheree Anthony',
-    friends: ['Goldie Gentry', 'Briana Decker'],
-  },
-];
+// const allUsers = [
+//   {
+//     name: 'Moore Hensley',
+//     friends: ['Sharron Pace'],
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//   },
+//   {
+//     name: 'Elma Head',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//   },
+//   {
+//     name: 'Carey Barr',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//   },
+// ];
 
-console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
-console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
-console.log(getUsersWithFriend(allUsers, 'Adrian Cross'));
+// console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
+// console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
+// console.log(getUsersWithFriend(allUsers, 'Adrian Cross'));
 
 // =========================== //
 // ======= homework-03 ======= //
+
+// Напиши стрілочну функцію sortByDescendingFriendCount(users) , яка прийматиме один параметр users — масив об’єктів користувачів
+// Функція має повертати масив усіх користувачів, відсортованих за спаданням кількостій їх друзів (властивість friends)
+
+const sortByDescendingFriendCount = (users) =>
+  users.toSorted((a, b) => b.friends.length - a.friends.length);
+
+console.log(
+  sortByDescendingFriendCount([
+    {
+      name: 'Moore Hensley',
+      friends: ['Sharron Pace'],
+      gender: 'male',
+    },
+    {
+      name: 'Sharlene Bush',
+      friends: ['Briana Decker', 'Sharron Pace'],
+      gender: 'female',
+    },
+    {
+      name: 'Ross Vazquez',
+      friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+      gender: 'male',
+    },
+    {
+      name: 'Elma Head',
+      friends: ['Goldie Gentry', 'Aisha Tran'],
+      gender: 'female',
+    },
+    {
+      name: 'Carey Barr',
+      friends: ['Jordan Sampson', 'Eddie Strong'],
+      gender: 'male',
+    },
+    {
+      name: 'Blackburn Dotson',
+      friends: ['Jacklyn Lucas', 'Linda Chapman'],
+      gender: 'male',
+    },
+    {
+      name: 'Sheree Anthony',
+      friends: ['Goldie Gentry', 'Briana Decker'],
+      gender: 'female',
+    },
+  ])
+);
+
 // =========================== //
 // ======= homework-04 ======= //
 // =========================== //
