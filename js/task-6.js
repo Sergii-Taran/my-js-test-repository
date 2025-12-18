@@ -39,8 +39,10 @@ const child = Object.create(parent);
 child.name = 'Jason';
 child.age = 27;
 
-console.log(parent);
-console.log(child);
+console.log(child.name);
+console.log(child.surname);
+console.log(child.age);
+console.log(child.heritage);
 
 // ======================= //
 // ======= task-03 ======= //
