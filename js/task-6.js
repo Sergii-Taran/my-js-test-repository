@@ -55,24 +55,47 @@
 
 // Зміни код, побудувавши ланцюжок прототипів таким чином, щоб об'єкт ancestor був прототипом для parent, а той, своєю чергою, був прототипом для child
 
-const ancestor = {
-  name: 'Paul',
-  age: 83,
-  surname: 'Dawson',
-  heritage: 'Irish',
-};
+// const ancestor = {
+//   name: 'Paul',
+//   age: 83,
+//   surname: 'Dawson',
+//   heritage: 'Irish',
+// };
 
-const parent = Object.create(ancestor);
-parent.name = 'Stacey';
-parent.surname = 'Moore';
-parent.age = 54;
+// const parent = Object.create(ancestor);
+// parent.name = 'Stacey';
+// parent.surname = 'Moore';
+// parent.age = 54;
 
-const child = Object.create(parent);
-child.name = 'Jason';
-child.age = 27;
+// const child = Object.create(parent);
+// child.name = 'Jason';
+// child.age = 27;
 
 // ======================= //
 // ======= task-04 ======= //
+
+// Додай класу Car метод constructor, який приймає три параметри:
+// brand - марка автомобіля
+// model - модель автомобіля
+// price - ціна автомобіля
+// Клас Car повинен створювати об'єкт з одноіменними властивостями brand, model і price, які отримують свої значення з аргументів, переданих при створенні нового екземпляра за допомогою оператора new
+
+class Car {
+  constructor(brand, model, price) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+}
+
+const firstCar = new Car('Audi', 'Q3', 36000);
+const secondCar = new Car('BMW', 'X5', 58900);
+const thirdCar = new Car('Nissan', 'Murano', 31700);
+
+console.log(firstCar);
+console.log(secondCar);
+console.log(thirdCar);
+
 // ======================= //
 // ======= task-05 ======= //
 // ======================= //
