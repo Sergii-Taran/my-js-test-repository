@@ -124,42 +124,9 @@
 // getPrice() - повертає значення властивості price з об'єкта, який буде його викликати.
 // changePrice(newPrice) - оновлює значення властивості price в об'єкта, який буде його викликати на значення параметра newPrice
 
-class Car {
-  constructor(params) {
-    this.brand = params.brand;
-    this.model = params.model;
-    this.price = params.price;
-  }
-
-  getPrice() {
-    return this.price;
-  }
-
-  changePrice(newPrice) {
-    this.price = newPrice;
-  }
-}
-
-const firstCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
-const secondCar = new Car({ brand: 'BMW', model: 'X5', price: 58900 });
-const thirdCar = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
-
-console.log(firstCar);
-console.log(secondCar);
-console.log(thirdCar);
-
-// ======================= //
-// ======= task-07 ======= //
-
-// Виконай рефакторинг класу Car таким чином, щоб властивість brand була приватною, і додай два методи для публічного інтерфейсу, для читання і зміни цієї властивості
-// getBrand() - повертає значення приватної властивості brand
-// changeBrand(newBrand) - змінює значення приватної властивості brand на newBrand
-
 // class Car {
-//   #brand;
-
 //   constructor(params) {
-//     this.#brand = params.brand;
+//     this.brand = params.brand;
 //     this.model = params.model;
 //     this.price = params.price;
 //   }
@@ -171,14 +138,6 @@ console.log(thirdCar);
 //   changePrice(newPrice) {
 //     this.price = newPrice;
 //   }
-
-//   getBrand() {
-//     return this.#brand;
-//   }
-
-//   changeBrand(newBrand) {
-//     this.#brand = newBrand;
-//   }
 // }
 
 // const firstCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
@@ -188,6 +147,47 @@ console.log(thirdCar);
 // console.log(firstCar);
 // console.log(secondCar);
 // console.log(thirdCar);
+
+// ======================= //
+// ======= task-07 ======= //
+
+// Виконай рефакторинг класу Car таким чином, щоб властивість brand була приватною, і додай два методи для публічного інтерфейсу, для читання і зміни цієї властивості
+// getBrand() - повертає значення приватної властивості brand
+// changeBrand(newBrand) - змінює значення приватної властивості brand на newBrand
+
+class Car {
+  #brand;
+
+  constructor(params) {
+    this.#brand = params.brand;
+    this.model = params.model;
+    this.price = params.price;
+  }
+
+  getPrice() {
+    return this.price;
+  }
+
+  changePrice(newPrice) {
+    this.price = newPrice;
+  }
+
+  getBrand() {
+    return this.#brand;
+  }
+
+  changeBrand(newBrand) {
+    this.#brand = newBrand;
+  }
+}
+
+const firstCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+const secondCar = new Car({ brand: 'BMW', model: 'X5', price: 58900 });
+const thirdCar = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
+
+console.log(firstCar);
+console.log(secondCar);
+console.log(thirdCar);
 
 // ======================= //
 // ======= task-08 ======= //
