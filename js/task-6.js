@@ -279,29 +279,63 @@
 // В іншому випадку метод повинен повернути рядок "Success! Price is within acceptable limits"
 // Під оголошенням класу додано ініціалізацію екземпляра і виклики методів, щоб показати, як буде використовуватися метод checkPrice(price)
 
-class Car {
-  static #maxPrice = 50000;
+// class Car {
+//   static #maxPrice = 50000;
 
-  constructor(params) {
-    this.price = params.price;
-  }
+//   constructor(params) {
+//     this.price = params.price;
+//   }
 
-  static checkPrice(price) {
-    if (price > Car.#maxPrice) {
-      return 'Error! Price exceeds the maximum';
-    }
-    return 'Success! Price is within acceptable limits';
-  }
-}
+//   static checkPrice(price) {
+//     if (price > Car.#maxPrice) {
+//       return 'Error! Price exceeds the maximum';
+//     }
+//     return 'Success! Price is within acceptable limits';
+//   }
+// }
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
 
-console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
-console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+// console.log(Car.checkPrice(audi.price));
+// console.log(Car.checkPrice(bmw.price));
 
 // ======================= //
 // ======= task-11 ======= //
+
+// У застосунку потрібен адміністратор з можливістю додавати пошти користувачів у чорний список
+// Оголоси клас Admin, який наслідує від класу User
+// Додай класу Admin публічну статичну властивість role (рівень доступу), значення якої — це об'єкт {BASIC: "basic", SUPERUSER: "superuser"}
+
+class User {
+  constructor(email) {
+    this._email = email;
+  }
+
+  get email() {
+    return this._email;
+  }
+
+  set email(newEmail) {
+    if (typeof newEmail !== 'string' || newEmail === '') {
+      return;
+    }
+    this._email = newEmail;
+  }
+}
+
+class Admin extends User {
+  static role = {
+    BASIC: 'basic',
+    SUPERUSER: 'superuser',
+  };
+}
+
+const admin = new Admin('admin@mail.com');
+
+console.log(admin.email);
+console.log(Admin.role.SUPERUSER);
+
 // ======================= //
 // ======= task-12 ======= //
 // ======================= //
