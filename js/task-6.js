@@ -155,42 +155,83 @@
 // getBrand() - повертає значення приватної властивості brand
 // changeBrand(newBrand) - змінює значення приватної властивості brand на newBrand
 
-class Car {
-  #brand;
+// class Car {
+//   #brand;
 
-  constructor(params) {
-    this.#brand = params.brand;
-    this.model = params.model;
-    this.price = params.price;
-  }
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//   }
 
-  getPrice() {
-    return this.price;
-  }
+//   getPrice() {
+//     return this.price;
+//   }
 
-  changePrice(newPrice) {
-    this.price = newPrice;
-  }
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
 
-  getBrand() {
-    return this.#brand;
-  }
+//   getBrand() {
+//     return this.#brand;
+//   }
 
-  changeBrand(newBrand) {
-    this.#brand = newBrand;
-  }
-}
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+// }
 
-const firstCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
-const secondCar = new Car({ brand: 'BMW', model: 'X5', price: 58900 });
-const thirdCar = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
+// const firstCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+// const secondCar = new Car({ brand: 'BMW', model: 'X5', price: 58900 });
+// const thirdCar = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
 
-console.log(firstCar);
-console.log(secondCar);
-console.log(thirdCar);
+// console.log(firstCar);
+// console.log(secondCar);
+// console.log(thirdCar);
 
 // ======================= //
 // ======= task-08 ======= //
+
+// Виконай рефакторинг класу Car
+// Додатково до приватної властивості #brand зроби приватними властивості model і price
+// Стандартизуй публічний інтерфейс класу, замінивши вже оголошені методи на геттери та сеттери brand, model і price, для взаємодії з приватними властивостями
+
+class Car {
+  #brand;
+  #model;
+  #price;
+
+  constructor(params) {
+    this.#brand = params.brand;
+    this.#model = params.model;
+    this.#price = params.price;
+  }
+
+  get brand() {
+    return this.#brand;
+  }
+
+  set brand(newBrand) {
+    this.#brand = newBrand;
+  }
+
+  get model() {
+    return this.#model;
+  }
+
+  set model(newModel) {
+    this.#model = newModel;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    this.#price = newPrice;
+  }
+}
+
 // ======================= //
 // ======= task-09 ======= //
 // ======================= //
