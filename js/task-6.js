@@ -80,24 +80,43 @@
 // price - ціна автомобіля
 // Клас Car повинен створювати об'єкт з одноіменними властивостями brand, model і price, які отримують свої значення з аргументів, переданих при створенні нового екземпляра за допомогою оператора new
 
+// class Car {
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+// }
+
+// const firstCar = new Car('Audi', 'Q3', 36000);
+// const secondCar = new Car('BMW', 'X5', 58900);
+// const thirdCar = new Car('Nissan', 'Murano', 31700);
+
+// console.log(firstCar);
+// console.log(secondCar);
+// console.log(thirdCar);
+
+// ======================= //
+// ======= task-05 ======= //
+
+// Виконай рефакторинг класу Car таким чином, щоб він приймав один параметр - об'єкт з властивостями brand, model і price
+
 class Car {
-  constructor(brand, model, price) {
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
+  constructor(params) {
+    this.brand = params.brand;
+    this.model = params.model;
+    this.price = params.price;
   }
 }
 
-const firstCar = new Car('Audi', 'Q3', 36000);
-const secondCar = new Car('BMW', 'X5', 58900);
-const thirdCar = new Car('Nissan', 'Murano', 31700);
+const firstCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+const secondCar = new Car({ brand: 'BMW', model: 'X5', price: 58900 });
+const thirdCar = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
 
 console.log(firstCar);
 console.log(secondCar);
 console.log(thirdCar);
 
-// ======================= //
-// ======= task-05 ======= //
 // ======================= //
 // ======= task-06 ======= //
 // ======================= //
