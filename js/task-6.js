@@ -307,20 +307,55 @@
 // Оголоси клас Admin, який наслідує від класу User
 // Додай класу Admin публічну статичну властивість role (рівень доступу), значення якої — це об'єкт {BASIC: "basic", SUPERUSER: "superuser"}
 
+// class User {
+//   constructor(email) {
+//     this._email = email;
+//   }
+
+//   get email() {
+//     return this._email;
+//   }
+
+//   set email(newEmail) {
+//     if (typeof newEmail !== 'string' || newEmail === '') {
+//       return;
+//     }
+//     this._email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser',
+//   };
+// }
+
+// const admin = new Admin('admin@mail.com');
+
+// console.log(admin.email);
+// console.log(Admin.role.SUPERUSER);
+
+// ======================= //
+// ======= task-12 ======= //
+
+// Додай класу Admin метод constructor, який приймає один параметр params- об'єкт налаштувань з двома властивостями email і access
+// Додай класу Admin публічну властивість access, значення якої буде передаватися під час виклику конструктора
+// Щоб показати, як буде використовуватися клас Admin, ми додали ініціалізацію екземпляра під оголошенням класу
+
 class User {
+  #email;
+
   constructor(email) {
-    this._email = email;
+    this.#email = email;
   }
 
   get email() {
-    return this._email;
+    return this.#email;
   }
 
   set email(newEmail) {
-    if (typeof newEmail !== 'string' || newEmail === '') {
-      return;
-    }
-    this._email = newEmail;
+    this.#email = newEmail;
   }
 }
 
@@ -329,15 +364,21 @@ class Admin extends User {
     BASIC: 'basic',
     SUPERUSER: 'superuser',
   };
+
+  constructor(params) {
+    super(params.email);
+    this.access = params.access;
+  }
 }
 
-const admin = new Admin('admin@mail.com');
+const mango = new Admin({
+  email: 'mango@mail.com',
+  access: Admin.role.SUPERUSER,
+});
 
-console.log(admin.email);
-console.log(Admin.role.SUPERUSER);
+console.log(mango.email);
+console.log(mango.access);
 
-// ======================= //
-// ======= task-12 ======= //
 // ======================= //
 // ======= task-13 ======= //
 // ======================= //
