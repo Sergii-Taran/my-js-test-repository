@@ -23,6 +23,39 @@
 // console.log(pizzaPalace.order('Big Mike'));
 // console.log(pizzaPalace.order('Viennese'));
 
+// ======= task-01.1 ======= //
+// ========================= //
+
+/**
+ * Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю і
+ * розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та
+ * кількістю з властивості stones.
+ */
+
+const chopShop = {
+  stones: [
+    { name: 'Emerald', price: 1300, quantity: 4 },
+    { name: 'Diamond', price: 2700, quantity: 3 },
+    { name: 'Sapphire', price: 1400, quantity: 7 },
+    { name: 'Ruby', price: 800, quantity: 2 },
+  ],
+
+  calcTotalPrice(stoneName) {
+    const stone = this.stones.find((item) => item.name === stoneName);
+    return stone ? stone.price * stone.quantity : 0;
+  },
+};
+
+console.log(chopShop.calcTotalPrice('Diamond'));
+console.log(chopShop.calcTotalPrice('Amber'));
+
+// if (!stone) {
+//   return `${stoneName} not found`;
+// }
+// return `The cost of all stones ${stoneName} ${
+//   stone.price * stone.quantity
+// } credits`;
+
 // ======================= //
 // ======= task-02 ======= //
 
@@ -388,59 +421,60 @@
 // Публічний метод isBlacklisted(email) для перевірки пошти у чорному списку. Метод повинен перевіряти наявність значення параметра email в масиві, що зберігається у властивості blacklistedEmails, і повертати true або false
 // Після оголошення класу ми додали ініціалізацію екземпляра і виклики методів у тій послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй
 
-class User {
-  #email;
+// class User {
+//   #email;
 
-  constructor(email) {
-    this.#email = email;
-  }
+//   constructor(email) {
+//     this.#email = email;
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-class Admin extends User {
-  static role = {
-    BASIC: 'basic',
-    SUPERUSER: 'superuser',
-  };
+// class Admin extends User {
+//   static role = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser',
+//   };
 
-  blacklistedEmails = [];
+//   blacklistedEmails = [];
 
-  constructor(params) {
-    super(params.email);
-    this.access = params.access;
-  }
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//   }
 
-  blacklist(email) {
-    this.blacklistedEmails.push(email);
-  }
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
 
-  isBlacklisted(email) {
-    return this.blacklistedEmails.includes(email);
-  }
-}
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+// }
 
-const mango = new Admin({
-  email: 'mango@mail.com',
-  access: Admin.role.SUPERUSER,
-});
+// const mango = new Admin({
+//   email: 'mango@mail.com',
+//   access: Admin.role.SUPERUSER,
+// });
 
-console.log(mango.email);
-console.log(mango.access);
+// console.log(mango.email);
+// console.log(mango.access);
 
-mango.blacklist('poly@mail.com');
-console.log(mango.blacklistedEmails);
-console.log(mango.isBlacklisted('mango@mail.com'));
-console.log(mango.isBlacklisted('poly@mail.com'));
+// mango.blacklist('poly@mail.com');
+// console.log(mango.blacklistedEmails);
+// console.log(mango.isBlacklisted('mango@mail.com'));
+// console.log(mango.isBlacklisted('poly@mail.com'));
 
 // ======================= //
 // ======= task-14 ======= //
+
 // ======================= //
 // ======= task-15 ======= //
 // ======================= //
