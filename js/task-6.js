@@ -32,22 +32,22 @@
  * кількістю з властивості stones.
  */
 
-const chopShop = {
-  stones: [
-    { name: 'Emerald', price: 1300, quantity: 4 },
-    { name: 'Diamond', price: 2700, quantity: 3 },
-    { name: 'Sapphire', price: 1400, quantity: 7 },
-    { name: 'Ruby', price: 800, quantity: 2 },
-  ],
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//   ],
 
-  calcTotalPrice(stoneName) {
-    const stone = this.stones.find((item) => item.name === stoneName);
-    return stone ? stone.price * stone.quantity : 0;
-  },
-};
+//   calcTotalPrice(stoneName) {
+//     const stone = this.stones.find((item) => item.name === stoneName);
+//     return stone ? stone.price * stone.quantity : 0;
+//   },
+// };
 
-console.log(chopShop.calcTotalPrice('Diamond'));
-console.log(chopShop.calcTotalPrice('Amber'));
+// console.log(chopShop.calcTotalPrice('Diamond'));
+// console.log(chopShop.calcTotalPrice('Amber'));
 
 // if (!stone) {
 //   return `${stoneName} not found`;
@@ -82,6 +82,62 @@ console.log(chopShop.calcTotalPrice('Amber'));
 
 // console.log(child.hasOwnProperty('name'));
 // console.log(child.hasOwnProperty('surname'));
+
+// ========================= //
+// ======= task-02.1 ======= //
+
+/**
+ * Створи клас для калькулятора, який має такі методи:
+ * - метод number, який набуває початкового значення для наступних операцій
+ * - метод getResult, який повертає фінальний результат усіх операцій, проведених із числом
+ * - методи add, substruct, divide, multiply
+ * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
+ */
+
+class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+
+  number(number) {
+    this.result = number;
+    return this;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  add(number) {
+    this.result += number;
+    return this;
+  }
+
+  substruct(number) {
+    this.result -= number;
+    return this;
+  }
+  divide(number) {
+    this.result /= number;
+    return this;
+  }
+
+  multiply(number) {
+    this.result *= number;
+    return this;
+  }
+}
+
+const calculator = new Calculator();
+const result = calculator
+  .number(10)
+  .add(5)
+  .substruct(2)
+  .divide(4)
+  .multiply(7)
+  .getResult();
+
+console.log(result);
 
 // ======================= //
 // ======= task-03 ======= //
