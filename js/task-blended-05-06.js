@@ -21,18 +21,33 @@
 // з масивів values кожного об'єкту, збережених в одному масиві.
 // Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-const data = [
-  { id: 1, values: [1, 2, 3] },
-  { id: 2, values: [4, 5, 6] },
-  { id: 3, values: [7, 8, 9] },
-];
+// const data = [
+//   { id: 1, values: [1, 2, 3] },
+//   { id: 2, values: [4, 5, 6] },
+//   { id: 3, values: [7, 8, 9] },
+// ];
 
-const flattenedData = data.flatMap((item) => item.values);
+// const flattenedData = data.flatMap((item) => item.values);
 
-console.log(flattenedData);
+// console.log(flattenedData);
 
 // ========================= //
 // ======== task-03 ======== //
+
+// Дано масив об'єктів.
+// Перевірте, чи є хоча б один об'єкт з віком менше 20 років.
+// Очікуваний результат: true.
+
+const people = [
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 31 },
+  { name: 'Bob', age: 19 },
+];
+
+const hasUnderAge = (people, age) => people.some((person) => person.age < age);
+
+console.log(hasUnderAge(people, 20));
+
 // ========================= //
 // ======== task-04 ======== //
 // ========================= //
