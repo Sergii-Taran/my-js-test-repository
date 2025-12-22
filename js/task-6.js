@@ -631,53 +631,53 @@
 
 // ------- var.02 ------- //
 
-class Blogger {
-  email;
-  #age;
-  numberOfPosts;
-  topics;
+// class Blogger {
+//   email;
+//   #age;
+//   numberOfPosts;
+//   topics;
 
-  constructor(settings = {}) {
-    this.email = settings.email;
-    this.#age = settings.age;
-    this.numberOfPosts = settings.numberOfPosts;
-    this.topics = settings.topics;
-  }
+//   constructor(settings = {}) {
+//     this.email = settings.email;
+//     this.#age = settings.age;
+//     this.numberOfPosts = settings.numberOfPosts;
+//     this.topics = settings.topics;
+//   }
 
-  get age() {
-    return this.#age;
-  }
+//   get age() {
+//     return this.#age;
+//   }
 
-  set age(newAge) {
-    if (typeof newAge !== 'number' || newAge <= 0) {
-      console.warn('Incorrect age!');
-      return;
-    }
-    this.#age = newAge;
-  }
+//   set age(newAge) {
+//     if (typeof newAge !== 'number' || newAge <= 0) {
+//       console.warn('Incorrect age!');
+//       return;
+//     }
+//     this.#age = newAge;
+//   }
 
-  getInfo() {
-    return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
-  }
+//   getInfo() {
+//     return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+//   }
 
-  updatePostsCount(value) {
-    if (value > 0) {
-      this.numberOfPosts += value;
-    }
-  }
-}
+//   updatePostsCount(value) {
+//     if (value > 0) {
+//       this.numberOfPosts += value;
+//     }
+//   }
+// }
 
-const mango = new Blogger({
-  email: 'mango@mail.com',
-  age: 24,
-  numberOfPosts: 20,
-  topics: ['tech', 'cooking'],
-});
+// const mango = new Blogger({
+//   email: 'mango@mail.com',
+//   age: 24,
+//   numberOfPosts: 20,
+//   topics: ['tech', 'cooking'],
+// });
 
-console.log(mango.getInfo());
+// console.log(mango.getInfo());
 
-mango.updatePostsCount(5);
-console.log(mango.getInfo());
+// mango.updatePostsCount(5);
+// console.log(mango.getInfo());
 
 // ======================= //
 // ======= task-16 ======= //
@@ -725,14 +725,47 @@ console.log(mango.getInfo());
 // console.log(user.login);
 // console.log(user.email);
 
-// ======================= //
-// ======= task-16 ======= //
-// ======================= //
-// ======= task-16 ======= //
-// ======================= //
-// ======= task-16 ======= //
-// ======================= //
-// ======= task-16 ======= //
-// ======================= //
-// ======= task-16 ======= //
-// ======================= //
+// =========================== //
+// ======= homework-01 ======= //
+
+// Перед звільненням розробник зламав вихідний код управління акаунтами користувачів нашого сервісу доставки їжі
+// Виконай рефакторинг методів об'єкта customer, розставивши відсутні this під час звернення до властивостей об'єкта
+// Використай цей стартовий код і виконай рефакторинг
+// Після оголошення об'єкта ми додали виклики методів
+// У консоль будуть виведені результати їх роботи
+
+const customer = {
+  username: 'Mango',
+  balance: 24000,
+  discount: 0.1,
+  orders: ['Burger', 'Pizza', 'Salad'],
+
+  getBalance() {
+    return this.balance;
+  },
+  getDiscount() {
+    return this.discount;
+  },
+  setDiscount(value) {
+    this.discount = value;
+  },
+  getOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
+};
+
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, 'Steak');
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+// =========================== //
+// ======= homework-02 ======= //
+// =========================== //
+// ======= homework-03 ======= //
+// =========================== //
