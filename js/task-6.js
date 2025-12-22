@@ -433,18 +433,18 @@
 // Щоб показати, як буде використовуватися клас Admin, ми додали ініціалізацію екземпляра під оголошенням класу
 
 // class User {
-//   #email;
+//   email;
 
 //   constructor(email) {
-//     this.#email = email;
+//     this.email = email;
 //   }
 
 //   get email() {
-//     return this.#email;
+//     return this.email;
 //   }
 
 //   set email(newEmail) {
-//     this.#email = newEmail;
+//     this.email = newEmail;
 //   }
 // }
 
@@ -478,18 +478,18 @@
 // Після оголошення класу ми додали ініціалізацію екземпляра і виклики методів у тій послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй
 
 // class User {
-//   #email;
+//   email;
 
 //   constructor(email) {
-//     this.#email = email;
+//     this.email = email;
 //   }
 
 //   get email() {
-//     return this.#email;
+//     return this.email;
 //   }
 
 //   set email(newEmail) {
-//     this.#email = newEmail;
+//     this.email = newEmail;
 //   }
 // }
 
@@ -543,62 +543,102 @@
 //   - department - відділ, в якому працює співробітник.
 //   Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника,  зарплатою та відділом, в якому працює співробітник.
 
-class Person {
-  constructor({ name, age, gender, email }) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.email = email;
-  }
+// class Person {
+//   constructor({ name, age, gender, email }) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
 
-  getDetails() {
-    return {
-      name: this.name,
-      age: this.age,
-      gender: this.gender,
-      email: this.email,
-    };
-  }
-}
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-const sergio = new Person({
-  name: 'Sergio',
-  age: 55,
-  gender: 'male',
-  email: 'sergio@mail.com',
-});
+// const sergio = new Person({
+//   name: 'Sergio',
+//   age: 55,
+//   gender: 'male',
+//   email: 'sergio@mail.com',
+// });
 
-console.log(sergio.getDetails());
+// console.log(sergio.getDetails());
 
-class Employee extends Person {
-  constructor({ name, age, gender, email, salary, department }) {
-    super({ name, age, gender, email });
-    this.salary = salary;
-    this.department = department;
-  }
+// class Employee extends Person {
+//   constructor({ name, age, gender, email, salary, department }) {
+//     super({ name, age, gender, email });
+//     this.salary = salary;
+//     this.department = department;
+//   }
 
-  getEmployeeDetails() {
-    return {
-      ...this.getDetails(),
-      salary: this.salary,
-      department: this.department,
-    };
-  }
-}
+//   getEmployeeDetails() {
+//     return {
+//       ...this.getDetails(),
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
 
-const employee = new Employee({
-  name: 'Max',
-  age: 49,
-  gender: 'male',
-  email: 'max@mail.com',
-  salary: 10_000,
-  department: 'developer',
-});
+// const employee = new Employee({
+//   name: 'Max',
+//   age: 49,
+//   gender: 'male',
+//   email: 'max@mail.com',
+//   salary: 10_000,
+//   department: 'developer',
+// });
 
-console.log(employee.getEmployeeDetails());
+// console.log(employee.getEmployeeDetails());
 
 // ======================= //
 // ======= task-15 ======= //
+
+// Напиши клас Blogger для створення об’єкта блогера з наступними властивостями:
+// email - пошта, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// topics - масив тем, на яких спеціалізується блогер
+// Клас чекає один параметр - об’єкт налаштувань з однойменними властивостями.
+// Додай метод getInfo(), який повертає рядок:
+// User ${email} is ${age} years old and has ${numPosts} posts.
+// Додай метод updatePostsCount(value), який у параметрі value приймає кількість постів які потрібно додати користувачеві
+
+class Blogger {
+  constructor({ email, age, numberOfPosts, topics }) {
+    this.email = email;
+    this.age = age;
+    this.numberOfPosts = numberOfPosts;
+    this.topics = topics;
+  }
+
+  getInfo() {
+    return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+  }
+
+  updatePostsCount(value) {
+    this.numberOfPosts += value;
+  }
+}
+
+const mango = new Blogger({
+  email: 'mango@mail.com',
+  age: 24,
+  numberOfPosts: 20,
+  topics: ['tech', 'cooking'],
+});
+
+console.log(mango.getInfo());
+
+mango.updatePostsCount(5);
+console.log(mango.getInfo());
+
 // ======================= //
 // ======= task-16 ======= //
 // ======================= //
