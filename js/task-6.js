@@ -776,47 +776,90 @@
 // Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення класу для перевірки коректності роботи
 // У консоль будуть виведені результати їх роботи
 
-class Storage {
-  #items;
+// class Storage {
+//   #items;
 
-  constructor(items) {
-    this.#items = items;
-  }
+//   constructor(items) {
+//     this.#items = items;
+//   }
 
-  getItems() {
-    return [...this.#items];
-  }
+//   getItems() {
+//     return [...this.#items];
+//   }
 
-  addItem(newItem) {
-    this.#items.push(newItem);
-  }
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
 
-  //   removeItem(itemToRemove) {
-  //     const index = this.#items.indexOf(itemToRemove);
+// removeItem(itemToRemove) {
+//   const index = this.#items.indexOf(itemToRemove);
 
-  //     if (index === -1) {
-  //       return;
-  //     }
-  //     this.#items.splice(index, 1);
-  //   }
+//   if (index === -1) {
+//     return;
+//   }
+//   this.#items.splice(index, 1);
+// }
 
-  removeItem(itemToRemove) {
-    this.#items = this.#items.filter((item) => item !== itemToRemove);
-  }
-}
+//   removeItem(itemToRemove) {
+//     this.#items = this.#items.filter((item) => item !== itemToRemove);
+//   }
+// }
 
-const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
-console.log(storage.getItems());
+// const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+// console.log(storage.getItems());
 
-storage.addItem('Droid');
-console.log(storage.getItems());
+// storage.addItem('Droid');
+// console.log(storage.getItems());
 
-storage.removeItem('Prolonger');
-console.log(storage.getItems());
+// storage.removeItem('Prolonger');
+// console.log(storage.getItems());
 
-storage.removeItem('Scaner');
-console.log(storage.getItems());
+// storage.removeItem('Scaner');
+// console.log(storage.getItems());
 
 // =========================== //
 // ======= homework-03 ======= //
+
+// Напиши клас StringBuilder, який приймає один параметр initialValue — довільний рядок, який записується у приватну властивість value об'єкта, що створюється
+// Оголоси наступні методи класу:
+// getValue() — повертає поточне значення приватної властивості value
+// padEnd(str) — отримує параметр str (рядок) і додає його в кінець значення приватної властивості value об'єкта, який викликає цей метод
+// padStart(str) — отримує параметр str (рядок) і додає його на початок значення приватної властивості value об'єкта, який викликає цей метод
+// padBoth(str) — отримує параметр str (рядок) і додає його на початок і в кінець значення приватної властивості value об'єкта, який викликає цей метод
+// Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення класу для перевірки коректності роботи
+// У консоль будуть виведені результати їх роботи
+
+class StringBuilder {
+  #value;
+
+  constructor(initialValue) {
+    this.#value = initialValue;
+  }
+
+  getValue() {
+    return this.#value;
+  }
+
+  padEnd(str) {
+    this.#value += str;
+  }
+
+  padStart(str) {
+    this.#value = str + this.#value;
+  }
+
+  padBoth(str) {
+    this.#value = str + this.#value + str;
+  }
+}
+
+const builder = new StringBuilder('.');
+console.log(builder.getValue()); // "."
+builder.padStart('^');
+console.log(builder.getValue()); // "^."
+builder.padEnd('^');
+console.log(builder.getValue()); // "^.^"
+builder.padBoth('=');
+console.log(builder.getValue()); // "=^.^="
+
 // =========================== //
