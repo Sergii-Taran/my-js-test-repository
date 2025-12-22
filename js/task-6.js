@@ -94,50 +94,50 @@
  * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
  */
 
-class Calculator {
-  constructor() {
-    this.result = 0;
-  }
+// class Calculator {
+//   constructor() {
+//     this.result = 0;
+//   }
 
-  number(number) {
-    this.result = number;
-    return this;
-  }
+//   number(number) {
+//     this.result = number;
+//     return this;
+//   }
 
-  getResult() {
-    return this.result;
-  }
+//   getResult() {
+//     return this.result;
+//   }
 
-  add(number) {
-    this.result += number;
-    return this;
-  }
+//   add(number) {
+//     this.result += number;
+//     return this;
+//   }
 
-  substruct(number) {
-    this.result -= number;
-    return this;
-  }
-  divide(number) {
-    this.result /= number;
-    return this;
-  }
+//   substruct(number) {
+//     this.result -= number;
+//     return this;
+//   }
+//   divide(number) {
+//     this.result /= number;
+//     return this;
+//   }
 
-  multiply(number) {
-    this.result *= number;
-    return this;
-  }
-}
+//   multiply(number) {
+//     this.result *= number;
+//     return this;
+//   }
+// }
 
-const calculator = new Calculator();
-const result = calculator
-  .number(10)
-  .add(5)
-  .substruct(2)
-  .divide(4)
-  .multiply(7)
-  .getResult();
+// const calculator = new Calculator();
+// const result = calculator
+//   .number(10)
+//   .add(5)
+//   .substruct(2)
+//   .divide(4)
+//   .multiply(7)
+//   .getResult();
 
-console.log(result);
+// console.log(result);
 
 // ======================= //
 // ======= task-03 ======= //
@@ -530,6 +530,72 @@ console.log(result);
 
 // ======================= //
 // ======= task-14 ======= //
+
+// Cтворіть клас `Person`, який містить наступні властивості:
+//    - `name` - ім'я людини;
+//    - `age`- вік людини;
+//    - `gender` - стать людини;
+//    - `email`- електронна пошта людини.
+// Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
+
+// Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+//   - salary - зарплата співробітника;
+//   - department - відділ, в якому працює співробітник.
+//   Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника,  зарплатою та відділом, в якому працює співробітник.
+
+class Person {
+  constructor({ name, age, gender, email }) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.email = email;
+  }
+
+  getDetails() {
+    return {
+      name: this.name,
+      age: this.age,
+      gender: this.gender,
+      email: this.email,
+    };
+  }
+}
+
+const sergio = new Person({
+  name: 'Sergio',
+  age: 55,
+  gender: 'male',
+  email: 'sergio@mail.com',
+});
+
+console.log(sergio.getDetails());
+
+class Employee extends Person {
+  constructor({ name, age, gender, email, salary, department }) {
+    super({ name, age, gender, email });
+    this.salary = salary;
+    this.department = department;
+  }
+
+  getEmployeeDetails() {
+    return {
+      ...this.getDetails(),
+      salary: this.salary,
+      department: this.department,
+    };
+  }
+}
+
+const employee = new Employee({
+  name: 'Max',
+  age: 49,
+  gender: 'male',
+  email: 'max@mail.com',
+  salary: 10_000,
+  department: 'developer',
+});
+
+console.log(employee.getEmployeeDetails());
 
 // ======================= //
 // ======= task-15 ======= //
