@@ -607,8 +607,10 @@
 // topics - масив тем, на яких спеціалізується блогер
 // Клас чекає один параметр - об’єкт налаштувань з однойменними властивостями.
 // Додай метод getInfo(), який повертає рядок:
-// User ${email} is ${age} years old and has ${numPosts} posts.
+// User ${email} is ${age} years old and has ${numberOfPosts} posts.
 // Додай метод updatePostsCount(value), який у параметрі value приймає кількість постів які потрібно додати користувачеві
+
+// ------- var.01 ------- //
 
 // class Blogger {
 //   constructor({ email, age, numberOfPosts, topics }) {
@@ -627,17 +629,55 @@
 //   }
 // }
 
-// const mango = new Blogger({
-//   email: 'mango@mail.com',
-//   age: 24,
-//   numberOfPosts: 20,
-//   topics: ['tech', 'cooking'],
-// });
+// ------- var.02 ------- //
 
-// console.log(mango.getInfo());
+class Blogger {
+  email;
+  #age;
+  numberOfPosts;
+  topics;
 
-// mango.updatePostsCount(5);
-// console.log(mango.getInfo());
+  constructor(settings = {}) {
+    this.email = settings.email;
+    this.#age = settings.age;
+    this.numberOfPosts = settings.numberOfPosts;
+    this.topics = settings.topics;
+  }
+
+  get age() {
+    return this.#age;
+  }
+
+  set age(newAge) {
+    if (typeof newAge !== 'number' || newAge <= 0) {
+      console.warn('Incorrect age!');
+      return;
+    }
+    this.#age = newAge;
+  }
+
+  getInfo() {
+    return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+  }
+
+  updatePostsCount(value) {
+    if (value > 0) {
+      this.numberOfPosts += value;
+    }
+  }
+}
+
+const mango = new Blogger({
+  email: 'mango@mail.com',
+  age: 24,
+  numberOfPosts: 20,
+  topics: ['tech', 'cooking'],
+});
+
+console.log(mango.getInfo());
+
+mango.updatePostsCount(5);
+console.log(mango.getInfo());
 
 // ======================= //
 // ======= task-16 ======= //
@@ -645,45 +685,45 @@
 // Напиши клас User який створює об’єкт із властивостями login та email.
 // Оголоси приватні властивості #login та #email, доступ до яких зроби через гетер та сетер login та email.
 
-class User {
-  #login;
-  #email;
+// class User {
+//   #login;
+//   #email;
 
-  constructor({ login, email }) {
-    this.#login = login;
-    this.#email = email;
-  }
+//   constructor({ login, email }) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
 
-  get login() {
-    return this.#login;
-  }
+//   get login() {
+//     return this.#login;
+//   }
 
-  set login(newlogin) {
-    this.#login = newlogin;
-  }
+//   set login(newlogin) {
+//     this.#login = newlogin;
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const user = new User({
-  login: 'mango',
-  email: 'mango@mail.com',
-});
+// const user = new User({
+//   login: 'mango',
+//   email: 'mango@mail.com',
+// });
 
-console.log(user.login);
-console.log(user.email);
+// console.log(user.login);
+// console.log(user.email);
 
-user.login = 'poly';
-user.email = 'poly@mail.com';
+// user.login = 'poly';
+// user.email = 'poly@mail.com';
 
-console.log(user.login);
-console.log(user.email);
+// console.log(user.login);
+// console.log(user.email);
 
 // ======================= //
 // ======= task-16 ======= //
