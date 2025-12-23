@@ -54,23 +54,34 @@
 // Дано масив чисел [2, 4, 6, 8, 10].
 // Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
 
-const numbers = [2, 4, 6, 8, 10];
+// const numbers = [2, 4, 6, 8, 10];
 
 // const isAllEven = (numbers) => numbers.every((number) => number % 2 === 0);
 
-const isAllEven = (numbers) => {
-  if (!Array.isArray(numbers)) return false;
+// const isAllEven = (numbers) => {
+//   if (!Array.isArray(numbers)) return false;
 
-  return numbers.every((num) => typeof num === 'number' && num % 2 === 0);
-};
+//   return numbers.every((num) => typeof num === 'number' && num % 2 === 0);
+// };
 
-console.log(isAllEven(numbers));
-console.log(isAllEven([2, 4, 6]));
-console.log(isAllEven([2, 3, 6]));
-console.log(isAllEven([]));
+// console.log(isAllEven(numbers));
+// console.log(isAllEven([2, 4, 6]));
+// console.log(isAllEven([2, 3, 6]));
+// console.log(isAllEven([]));
 
 // ========================= //
 // ======== task-05 ======== //
+
+// Знайдіть перше непарне число
+
+const numbers = [2, 1, 6, 8, 9, 10, 12];
+
+const findFirstOdd = (numbers) => numbers.find((num) => num % 2 !== 0);
+
+console.log(findFirstOdd(numbers));
+findFirstOdd([2, 4, 6]);
+findFirstOdd([]);
+
 // ========================= //
 // ======== task-06 ======== //
 // ========================= //
