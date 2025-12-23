@@ -101,14 +101,32 @@
 //  у порядку алфавіту.
 // Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
-const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
-const sortedArray = stringArray.toSorted((a, b) => a.localeCompare(b));
+// const sortedArray = stringArray.toSorted((a, b) => a.localeCompare(b));
 
-console.log(sortedArray);
+// console.log(sortedArray);
 
 // ========================= //
 // ======== task-08 ======== //
+
+//  Відсортуйте масив об'єктів за віком у порядку зростання.
+// Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
+
+const users = [
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 31 },
+  { name: 'Bob', age: 19 },
+];
+
+// const inAscendingAgeOrder = users.toSorted(
+//   (firstUser, secondUser) => firstUser.age - secondUser.age
+// );
+
+const sortedByAge = users.toSorted((a, b) => a.age - b.age);
+
+console.log(sortedByAge);
+
 // ========================= //
 // ======== task-09 ======== //
 // ========================= //
