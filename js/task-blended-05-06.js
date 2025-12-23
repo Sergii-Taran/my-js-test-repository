@@ -135,18 +135,28 @@
 // вік більше 20 років.
 // Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
-const users = [
-  { name: 'John', age: 27 },
-  { name: 'Jane', age: 31 },
-  { name: 'Bob', age: 19 },
-];
+// const users = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
+// ];
 
-const userAdult = users.filter((user) => user.age > 20);
+// const userAdult = users.filter((user) => user.age > 20);
 
-console.log(userAdult);
+// console.log(userAdult);
 
 // ========================= //
 // ======== task-10 ======== //
+
+// Дано масив чисел [1, 2, 3, 4, 5].
+// Застосуйте метод для обчислення суми елементів масиву.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers.reduce((acc, number) => acc + number, 0);
+
+console.log(result);
+
 // ========================= //
 // ======== task-11 ======== //
 // ========================= //
