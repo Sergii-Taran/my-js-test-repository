@@ -151,14 +151,91 @@
 // Дано масив чисел [1, 2, 3, 4, 5].
 // Застосуйте метод для обчислення суми елементів масиву.
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const result = numbers.reduce((acc, number) => acc + number, 0);
+// const result = numbers.reduce((acc, number) => acc + number, 0);
 
-console.log(result);
+// console.log(result);
 
 // ========================= //
 // ======== task-11 ======== //
+
+// Розроби клас Calculator, який дозволяє виконувати арифметичні
+//  операції над числом за допомогою методів класу, підтримуючи
+// ланцюжковий виклик (method chaining).
+//
+// Вимоги до класу Calculator
+// - Метод number(value)
+// Встановлює початкове значення для наступних обчислень.
+// Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
+
+// - метод getResult, Повертає поточний результат усіх операцій.
+// Не змінює значення, просто повертає його.
+
+// - метод add - Додає value до поточного значення.
+// Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
+
+// - метод subtract - Віднімає value від поточного значення. Повертає this.
+
+// - метод divide - Ділить поточне значення на value, якщо value не дорівнює 0.
+// Якщо value === 0, викидає помилку з повідомленням про неможливість ділення.
+// Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
+
+// - метод multiply -Множить поточне значення на value. Повертає this.
+
+// Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
+
+class Calculator {
+  constructor(result = 0) {
+    this.result = result;
+  }
+
+  number(value) {
+    this.result = value;
+    return this;
+  }
+
+  add(value) {
+    this.result += value;
+    return this;
+  }
+
+  subtract(value) {
+    this.result -= value;
+    return this;
+  }
+
+  multiply(value) {
+    this.result *= value;
+    return this;
+  }
+
+  divide(value) {
+    if (value === 0) {
+      throw new Error('Division by zero is impossible!');
+    }
+
+    this.result /= value;
+    return this;
+  }
+
+  getResult() {
+    return this.result;
+  }
+}
+
+const calc = new Calculator();
+
+const result = calc
+  .number(10)
+  .add(5)
+  .subtract(3)
+  .multiply(4)
+  .divide(2)
+  .getResult();
+
+console.log(result);
+
 // ========================= //
 // ======== task-12 ======== //
 // ========================= //
