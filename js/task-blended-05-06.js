@@ -74,16 +74,26 @@
 
 // Знайдіть перше непарне число
 
-const numbers = [2, 1, 6, 8, 9, 10, 12];
+// const numbers = [2, 1, 6, 8, 9, 10, 12];
 
-const findFirstOdd = (numbers) => numbers.find((num) => num % 2 !== 0);
+// const findFirstOdd = (numbers) => numbers.find((num) => num % 2 !== 0);
 
-console.log(findFirstOdd(numbers));
-findFirstOdd([2, 4, 6]);
-findFirstOdd([]);
+// console.log(findFirstOdd(numbers));
+// findFirstOdd([2, 4, 6]);
+// findFirstOdd([]);
 
 // ========================= //
 // ======== task-06 ======== //
+
+// Відсортуйте масив чисел [4, 2, 5, 1, 3]
+// у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+const numbersArray = [4, 2, 5, 1, 3];
+
+const sortedArray = numbersArray.toSorted((a, b) => a - b);
+
+console.log(sortedArray);
+
 // ========================= //
 // ======== task-07 ======== //
 // ========================= //
