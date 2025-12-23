@@ -38,18 +38,37 @@
 // Перевірте, чи є хоча б один об'єкт з віком менше 20 років.
 // Очікуваний результат: true.
 
-const people = [
-  { name: 'John', age: 27 },
-  { name: 'Jane', age: 31 },
-  { name: 'Bob', age: 19 },
-];
+// const people = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
+// ];
 
-const hasUnderAge = (people, age) => people.some((person) => person.age < age);
+// const hasUnderAge = (people, age) => people.some((person) => person.age < age);
 
-console.log(hasUnderAge(people, 20));
+// console.log(hasUnderAge(people, 20));
 
 // ========================= //
 // ======== task-04 ======== //
+
+// Дано масив чисел [2, 4, 6, 8, 10].
+// Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
+
+const numbers = [2, 4, 6, 8, 10];
+
+// const isAllEven = (numbers) => numbers.every((number) => number % 2 === 0);
+
+const isAllEven = (numbers) => {
+  if (!Array.isArray(numbers)) return false;
+
+  return numbers.every((num) => typeof num === 'number' && num % 2 === 0);
+};
+
+console.log(isAllEven(numbers));
+console.log(isAllEven([2, 4, 6]));
+console.log(isAllEven([2, 3, 6]));
+console.log(isAllEven([]));
+
 // ========================= //
 // ======== task-05 ======== //
 // ========================= //
