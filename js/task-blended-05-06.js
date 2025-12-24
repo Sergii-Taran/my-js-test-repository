@@ -243,48 +243,99 @@
 // Оголоси приватні властивості #login #email, доступ до яких зроби
 // через геттер та сеттер login email
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor(login, email) {
-    this.login = login;
-    this.email = email;
-  }
+//   constructor(login, email) {
+//     this.login = login;
+//     this.email = email;
+//   }
 
-  get login() {
-    return this.#login;
-  }
+//   get login() {
+//     return this.#login;
+//   }
 
-  set login(newLogin) {
-    if (typeof newLogin !== 'string') {
-      throw new Error('Login must be a string');
-    }
+//   set login(newLogin) {
+//     if (typeof newLogin !== 'string') {
+//       throw new Error('Login must be a string');
+//     }
 
-    if (newLogin.length < 5) {
-      throw new Error('Your login must have at least 5 characters!');
-    }
+//     if (newLogin.length < 5) {
+//       throw new Error('Your login must have at least 5 characters!');
+//     }
 
-    this.#login = newLogin;
-  }
+//     this.#login = newLogin;
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    if (typeof newEmail !== 'string') {
-      throw new Error('Email must be a string');
-    }
+//   set email(newEmail) {
+//     if (typeof newEmail !== 'string') {
+//       throw new Error('Email must be a string');
+//     }
 
-    if (!newEmail.includes('@')) {
-      throw new Error('Incorrect email format!');
-    }
+//     if (!newEmail.includes('@')) {
+//       throw new Error('Incorrect email format!');
+//     }
 
-    this.#email = newEmail;
-  }
-}
+//     this.#email = newEmail;
+//   }
+// }
 
 // ========================= //
 // ======== task-13 ======== //
+
+//  Наслідування у класах!
+// Cтворіть клас `Person`, який містить наступні властивості:
+//  - `name` - ім'я людини;
+//  - `age`- вік людини;
+//  - `gender` - стать людини;
+//  - `email`- електронна пошта людини.
+
+// Крім того, клас `Person` має мати метод `getDetails()`,
+// який повертає об'єкт з ім'ям, віком, статтю
+//та електронною поштою людини.
+
+//
+// Потім Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+//  - salary - зарплата співробітника;
+//  - department - відділ, в якому працює співробітник.
+// Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
+
+class Person {
+  constructor({ name, age, gender, email }) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.email = email;
+  }
+
+  getDetails() {
+    return {
+      name: this.name,
+      age: this.age,
+      gender: this.gender,
+      email: this.email,
+    };
+  }
+}
+
+class Employee extends Person {
+  constructor({ name, age, gender, email, salary, department }) {
+    super({ name, age, gender, email });
+    this.salary = salary;
+    this.department = department;
+  }
+
+  getEmployeeDetails() {
+    return {
+      salary: this.salary,
+      department: this.department,
+    };
+  }
+}
+
 // ========================= //
