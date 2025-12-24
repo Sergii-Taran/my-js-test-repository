@@ -185,59 +185,106 @@
 
 // Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
 
-class Calculator {
-  constructor(result = 0) {
-    this.result = result;
-  }
+// class Calculator {
+//   constructor(result = 0) {
+//     this.result = result;
+//   }
 
-  number(value) {
-    this.result = value;
-    return this;
-  }
+//   number(value) {
+//     this.result = value;
+//     return this;
+//   }
 
-  add(value) {
-    this.result += value;
-    return this;
-  }
+//   add(value) {
+//     this.result += value;
+//     return this;
+//   }
 
-  subtract(value) {
-    this.result -= value;
-    return this;
-  }
+//   subtract(value) {
+//     this.result -= value;
+//     return this;
+//   }
 
-  multiply(value) {
-    this.result *= value;
-    return this;
-  }
+//   multiply(value) {
+//     this.result *= value;
+//     return this;
+//   }
 
-  divide(value) {
-    if (value === 0) {
-      throw new Error('Division by zero is impossible!');
-    }
+//   divide(value) {
+//     if (value === 0) {
+//       throw new Error('Division by zero is impossible!');
+//     }
 
-    this.result /= value;
-    return this;
-  }
+//     this.result /= value;
+//     return this;
+//   }
 
-  getResult() {
-    return this.result;
-  }
-}
+//   getResult() {
+//     return this.result;
+//   }
+// }
 
-const calc = new Calculator();
+// const calc = new Calculator();
 
-const result = calc
-  .number(10)
-  .add(5)
-  .subtract(3)
-  .multiply(4)
-  .divide(2)
-  .getResult();
+// const result = calc
+//   .number(10)
+//   .add(5)
+//   .subtract(3)
+//   .multiply(4)
+//   .divide(2)
+//   .getResult();
 
-console.log(result);
+// console.log(result);
 
 // ========================= //
 // ======== task-12 ======== //
+
+// Напиши клас Client який створює об'єкт з властивостями login email.
+// Оголоси приватні властивості #login #email, доступ до яких зроби
+// через геттер та сеттер login email
+
+class Client {
+  #login;
+  #email;
+
+  constructor(login, email) {
+    this.login = login;
+    this.email = email;
+  }
+
+  get login() {
+    return this.#login;
+  }
+
+  set login(newLogin) {
+    if (typeof newLogin !== 'string') {
+      throw new Error('Login must be a string');
+    }
+
+    if (newLogin.length < 5) {
+      throw new Error('Your login must have at least 5 characters!');
+    }
+
+    this.#login = newLogin;
+  }
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    if (typeof newEmail !== 'string') {
+      throw new Error('Email must be a string');
+    }
+
+    if (!newEmail.includes('@')) {
+      throw new Error('Incorrect email format!');
+    }
+
+    this.#email = newEmail;
+  }
+}
+
 // ========================= //
 // ======== task-13 ======== //
 // ========================= //
