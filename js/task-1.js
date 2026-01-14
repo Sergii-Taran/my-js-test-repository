@@ -79,16 +79,44 @@
 //   return bmi.toFixed(1);
 // }
 
-function calcBMI(weight, height) {
-  let numWeight = Number.parseFloat(weight.replace(',', '.'));
-  let numHeight = Number.parseFloat(height.replace(',', '.'));
+// ======================= //
 
-  const bmi = numWeight / numHeight ** 2;
-  return bmi.toFixed(1);
+// function calcBMI(weight, height) {
+//   let numWeight = Number.parseFloat(weight.replace(',', '.'));
+//   let numHeight = Number.parseFloat(height.replace(',', '.'));
+
+//   const bmi = numWeight / numHeight ** 2;
+//   return bmi.toFixed(1);
+// }
+
+// const bmi = calcBMI('103,5', '1.85');
+// console.log(bmi);
+
+// ======================= //
+
+function calcBMIWithMessage(weight, height) {
+  const w = parseFloat(weight.replace(',', '.'));
+  const h = parseFloat(height.replace(',', '.'));
+
+  if (isNaN(w) || isNaN(h) || h < 0) {
+    return 'Incorrect data!';
+  }
+
+  const bmi = +(w / h ** 2).toFixed(1);
+
+  let category;
+  if (bmi < 18.5) category = 'underweight😒';
+  else if (bmi < 25) category = 'norm👌';
+  else if (bmi < 30) category = 'overweight😢';
+  else category = 'adiposity😨';
+
+  return `Your BMI - ${bmi} (${category})`;
 }
 
-const bmi = calcBMI('103,5', '1.85');
-console.log(bmi);
+console.log(calcBMIWithMessage('60', '1.85'));
+console.log(calcBMIWithMessage('85', '1.85'));
+console.log(calcBMIWithMessage('95', '1.85'));
+console.log(calcBMIWithMessage('103,5', '1.85'));
 
 // =========================== //
 // ======= homework-01 ======= //
