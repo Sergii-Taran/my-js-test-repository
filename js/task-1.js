@@ -69,11 +69,19 @@
 // Не цілі числа можуть бути задані у вигляді 24.7 або 24,7, тобто як роздільник дробової частини може бути як крапка, так і кома.
 // Індекс маси тіла потрібно округлити до однієї цифри після коми.
 
+// function calcBMI(weight, height) {
+//   let numWeight = weight.replace(',', '.');
+//   numWeight = Number.parseFloat(numWeight);
+//   let numHeight = height.replace(',', '.');
+//   numHeight = Number.parseFloat(numHeight);
+
+//   const bmi = numWeight / numHeight ** 2;
+//   return bmi.toFixed(1);
+// }
+
 function calcBMI(weight, height) {
-  let numWeight = weight.replace(',', '.');
-  numWeight = Number.parseFloat(numWeight);
-  let numHeight = height.replace(',', '.');
-  numHeight = Number.parseFloat(numHeight);
+  let numWeight = Number.parseFloat(weight.replace(',', '.'));
+  let numHeight = Number.parseFloat(height.replace(',', '.'));
 
   const bmi = numWeight / numHeight ** 2;
   return bmi.toFixed(1);
