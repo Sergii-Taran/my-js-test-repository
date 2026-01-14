@@ -136,19 +136,21 @@
 //   return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
 // }
 
-function makeTransaction(quantity, pricePerDroid) {
-  if (quantity <= 0 || pricePerDroid <= 0) {
-    return 'Invalid input: quantity and price must by positive number';
-  }
+// =========================== //
 
-  const totalPrice = quantity * pricePerDroid;
+// function makeTransaction(quantity, pricePerDroid) {
+//   if (quantity <= 0 || pricePerDroid <= 0) {
+//     return 'Invalid input: quantity and price must by positive number';
+//   }
 
-  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-}
+//   const totalPrice = quantity * pricePerDroid;
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
+//   return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+// }
+
+// console.log(makeTransaction(5, 3000));
+// console.log(makeTransaction(3, 1000));
+// console.log(makeTransaction(10, 500));
 
 // =========================== //
 // ======= homework-02 ======= //
@@ -168,9 +170,21 @@ console.log(makeTransaction(10, 500));
 //   return `Shipping to ${country} will cost ${totalPrice} credits`;
 // }
 
-// console.log(getShippingMessage('Australia', 120, 50));
-// console.log(getShippingMessage('Germany', 80, 20));
-// console.log(getShippingMessage('Sweden', 100, 20));
+// =========================== //
+
+function getShippingMessage(country, price, deliveryFee) {
+  if (!country || price < 0 || deliveryFee < 0) {
+    return 'Invalid input data';
+  }
+
+  const totalPrice = price + deliveryFee;
+
+  return `Shipping to ${country} will cost ${totalPrice} credits`;
+}
+
+console.log(getShippingMessage('Australia', 120, 50));
+console.log(getShippingMessage('Germany', 80, 20));
+console.log(getShippingMessage('Sweden', 100, 20));
 
 // =========================== //
 // ======= homework-03 ======= //
