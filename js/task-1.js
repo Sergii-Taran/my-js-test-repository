@@ -9,19 +9,19 @@
 // const pricePerDroid = 800;
 // const orderedQuantity = 6;
 // const deliveryFee = 50;
-// const totalPrice = pricePerDroid * orderedQuantity + deliveryFee;
-// const message = `You ordered ${orderedQuantity} droids worth ${totalPrice} credits`;
 
-// console.log(totalPrice);
+// const totalPrice = pricePerDroid * orderedQuantity + deliveryFee;
+// const message = `You ordered droids worth ${totalPrice} credits`;
+
 // console.log(message);
 
 // ======================= //
 // ======= task-02 ======= //
 
-// Змінна username зберігає рядок з іменем користувача.
+// Змінна userName зберігає рядок з іменем користувача.
 // Оголоси змінну message та за допомогою синтаксису шаблонних рядків. Доповни код так, щоб в ній зберігався рядок наступного формату: "Username <name> is <length> characters long", в якому <name> це ім'я користувача зі змінної username, а <length> це його довжина.
 
-// const userName = 'Sergio';
+// const userName = 'Sergio Tarantini';
 // const message = `Username ${userName} is ${userName.length} characters long`;
 
 // console.log(message);
@@ -37,12 +37,11 @@
 // const string = 'Winter is coming';
 
 // const courseTopicLength = string.length;
-// console.log(courseTopicLength);
-
 // const firstElement = string[0];
-// console.log(firstElement);
+// const lastElement = string[courseTopicLength - 1];
 
-// const lastElement = string[string.length - 1];
+// console.log(courseTopicLength);
+// console.log(firstElement);
 // console.log(lastElement);
 
 // ======================= //
@@ -70,17 +69,18 @@
 // Не цілі числа можуть бути задані у вигляді 24.7 або 24,7, тобто як роздільник дробової частини може бути як крапка, так і кома.
 // Індекс маси тіла потрібно округлити до однієї цифри після коми.
 
-// function calcBMI(weight, height) {
-//   let numWeight = Number.parseFloat(weight.replace(',', '.'));
-//   let numHeight = Number.parseFloat(height.replace(',', '.'));
+function calcBMI(weight, height) {
+  let numWeight = weight.replace(',', '.');
+  numWeight = Number.parseFloat(numWeight);
+  let numHeight = height.replace(',', '.');
+  numHeight = Number.parseFloat(numHeight);
 
-//   const bmi = numWeight / numHeight ** 2;
+  const bmi = numWeight / numHeight ** 2;
+  return bmi.toFixed(1);
+}
 
-//   return parseFloat(bmi.toFixed(1));
-// }
-
-// const bmi = calcBMI('102.5', '1.85');
-// console.log(bmi);
+const bmi = calcBMI('103,5', '1.85');
+console.log(bmi);
 
 // =========================== //
 // ======= homework-01 ======= //
@@ -94,15 +94,15 @@
 // • <quantity> — це кількість замовлених дроїдів
 // • <totalPrice> — це загальна вартість замовлення, тобто вартість усіх замовлених дроїдів
 
-function makeTransaction(quantity, pricePerDroid) {
-  const totalPrice = quantity * pricePerDroid;
+// function makeTransaction(quantity, pricePerDroid) {
+//   const totalPrice = quantity * pricePerDroid;
 
-  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-}
+//   return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+// }
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
+// console.log(makeTransaction(5, 3000));
+// console.log(makeTransaction(3, 1000));
+// console.log(makeTransaction(10, 500));
 
 // =========================== //
 // ======= homework-02 ======= //
@@ -116,15 +116,15 @@ console.log(makeTransaction(10, 500));
 // • <country> — це країни доставки
 // • <totalPrice> — це загальна вартість замовлення, що включає вартість товару і його доставки
 
-function getShippingMessage(country, price, deliveryFee) {
-  const totalPrice = price + deliveryFee;
+// function getShippingMessage(country, price, deliveryFee) {
+//   const totalPrice = price + deliveryFee;
 
-  return `Shipping to ${country} will cost ${totalPrice} credits`;
-}
+//   return `Shipping to ${country} will cost ${totalPrice} credits`;
+// }
 
-console.log(getShippingMessage('Australia', 120, 50));
-console.log(getShippingMessage('Germany', 80, 20));
-console.log(getShippingMessage('Sweden', 100, 20));
+// console.log(getShippingMessage('Australia', 120, 50));
+// console.log(getShippingMessage('Germany', 80, 20));
+// console.log(getShippingMessage('Sweden', 100, 20));
 
 // =========================== //
 // ======= homework-03 ======= //
@@ -137,16 +137,26 @@ console.log(getShippingMessage('Sweden', 100, 20));
 // Доповни код функції так, щоб вона повертала число —загальну ширину елемента
 // При розрахунку загальної ширини орієнтуйся на те, що значення box-sizing дорівнює border-box
 
-function getElementWidth(content, padding, border) {
-  return (
-    Number.parseFloat(content) +
-    2 * Number.parseFloat(padding) +
-    2 * Number.parseFloat(border)
-  );
-}
+// function getElementWidth(content, padding, border) {
+//   return (
+//     Number.parseFloat(content) +
+//     2 * Number.parseFloat(padding) +
+//     2 * Number.parseFloat(border)
+//   );
+// }
 
-console.log(getElementWidth('50px', '8px', '4px'));
-console.log(getElementWidth('60px', '12px', '8.5px'));
-console.log(getElementWidth('200px', '0px', '0px'));
+// console.log(getElementWidth('50px', '8px', '4px'));
+// console.log(getElementWidth('60px', '12px', '8.5px'));
+// console.log(getElementWidth('200px', '0px', '0px'));
+
+// =========================== //
+
+// const companyName = 'Tarantini & son';
+// const repairBoots = 150;
+// const defenceBoots = 250;
+
+// const total = repairBoots + defenceBoots;
+// const message = `${companyName} has ${total} boots in stock`;
+// console.log(message);
 
 // =========================== //
