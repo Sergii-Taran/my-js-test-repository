@@ -94,29 +94,29 @@
 
 // ======================= //
 
-function calcBMIWithMessage(weight, height) {
-  const w = parseFloat(weight.replace(',', '.'));
-  const h = parseFloat(height.replace(',', '.'));
+// function calcBMIWithMessage(weight, height) {
+//   const w = parseFloat(weight.replace(',', '.'));
+//   const h = parseFloat(height.replace(',', '.'));
 
-  if (isNaN(w) || isNaN(h) || h < 0) {
-    return 'Incorrect data!';
-  }
+//   if (isNaN(w) || isNaN(h) || h <= 0) {
+//     return 'Incorrect data!';
+//   }
 
-  const bmi = +(w / h ** 2).toFixed(1);
+//   const bmi = +(w / h ** 2).toFixed(1);
 
-  let category;
-  if (bmi < 18.5) category = 'underweight😒';
-  else if (bmi < 25) category = 'norm👌';
-  else if (bmi < 30) category = 'overweight😢';
-  else category = 'adiposity😨';
+//   let category;
+//   if (bmi < 18.5) category = 'underweight😒';
+//   else if (bmi < 25) category = 'norm👌';
+//   else if (bmi < 30) category = 'overweight😢';
+//   else category = 'adiposity😨';
 
-  return `Your BMI - ${bmi} (${category})`;
-}
+//   return `Your BMI - ${bmi} (${category})`;
+// }
 
-console.log(calcBMIWithMessage('60', '1.85'));
-console.log(calcBMIWithMessage('85', '1.85'));
-console.log(calcBMIWithMessage('95', '1.85'));
-console.log(calcBMIWithMessage('103,5', '1.85'));
+// console.log(calcBMIWithMessage('60', '1.85'));
+// console.log(calcBMIWithMessage('85', '1.85'));
+// console.log(calcBMIWithMessage('95', '1.85'));
+// console.log(calcBMIWithMessage('103,5', '1.85'));
 
 // =========================== //
 // ======= homework-01 ======= //
@@ -136,9 +136,19 @@ console.log(calcBMIWithMessage('103,5', '1.85'));
 //   return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
 // }
 
-// console.log(makeTransaction(5, 3000));
-// console.log(makeTransaction(3, 1000));
-// console.log(makeTransaction(10, 500));
+function makeTransaction(quantity, pricePerDroid) {
+  if (quantity <= 0 || pricePerDroid <= 0) {
+    return 'Invalid input: quantity and price must by positive number';
+  }
+
+  const totalPrice = quantity * pricePerDroid;
+
+  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+}
+
+console.log(makeTransaction(5, 3000));
+console.log(makeTransaction(3, 1000));
+console.log(makeTransaction(10, 500));
 
 // =========================== //
 // ======= homework-02 ======= //
