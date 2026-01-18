@@ -172,19 +172,19 @@
 
 // =========================== //
 
-function getShippingMessage(country, price, deliveryFee) {
-  if (!country || price < 0 || deliveryFee < 0) {
-    return 'Invalid input data';
-  }
+// function getShippingMessage(country, price, deliveryFee) {
+//   if (!country || price < 0 || deliveryFee < 0) {
+//     return 'Invalid input data';
+//   }
 
-  const totalPrice = price + deliveryFee;
+//   const totalPrice = price + deliveryFee;
 
-  return `Shipping to ${country} will cost ${totalPrice} credits`;
-}
+//   return `Shipping to ${country} will cost ${totalPrice} credits`;
+// }
 
-console.log(getShippingMessage('Australia', 120, 50));
-console.log(getShippingMessage('Germany', 80, 20));
-console.log(getShippingMessage('Sweden', 100, 20));
+// console.log(getShippingMessage('Australia', 120, 50));
+// console.log(getShippingMessage('Germany', 80, 20));
+// console.log(getShippingMessage('Sweden', 100, 20));
 
 // =========================== //
 // ======= homework-03 ======= //

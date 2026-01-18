@@ -7,7 +7,7 @@
 //   if (age >= 18) {
 //     return 'You are an adult';
 //   } else {
-//     return 'You are not an adult';
+//     return 'Wet behind the ears!';
 //   }
 // }
 
@@ -134,6 +134,7 @@
 // console.log(getSubscriptionPrice('starter'));
 // console.log(getSubscriptionPrice('professional'));
 // console.log(getSubscriptionPrice('organization'));
+// console.log(getSubscriptionPrice('premium'));
 
 // ======================= //
 // ======= task-07 ======= //
@@ -170,7 +171,30 @@
 // console.log(checkAccess('vip'));
 
 // ======================= //
-// ======= task-09 ======= //
+// ======= task-10 ======= //
+
+// Напишіть функцію, яка перевіряє, чи є користувач авторизованим
+// Функція приймає об'єкт користувача зі властивостями username та role
+// Якщо користувач не має імені (тобто username є хибним), йому потрібно присвоїти значення за замовчуванням "Guest"
+// Якщо роль не вказана, потрібно призначити роль за замовчуванням "User"
+// Функція повинна повертати рядок із ім'ям користувача та його роллю
+
+function checkUser(user) {
+  const userName = user.userName || 'Guest';
+  const role = user.role || 'User';
+
+  return `Username: ${userName}, Role: ${role}`;
+}
+
+console.log(checkUser({ userName: 'Alice', role: 'Admin' }));
+console.log(checkUser({ userName: '', role: 'Moderator' }));
+console.log(checkUser({ userName: 'Bob' }));
+console.log(checkUser({ role: 'Editor' }));
+console.log(checkUser({}));
+console.log(checkUser({ userName: null, role: undefined }));
+
+// ======================= //
+// ======= task-11 ======= //
 
 // Програма запитує у користувача рік і перевіряє, чи є він високосним
 // Рік є високосним, якщо він ділиться на 4, але не ділиться на 100, або ділиться на 400
@@ -189,6 +213,7 @@
 
 // ======================= //
 // ======= task-10 ======= //
+
 // Функція getSubstring(string, length) приймає рядок і повертає новий підрядок (його часткову копію)
 // Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
 // string - оригінальний рядок
@@ -465,37 +490,37 @@
 // Зі списку видно, що доставка можлива не скрізь
 // Якщо зазначена країна відсутня у списку, то функція повинна повернути рядок "Sorry, there is no delivery to your country"
 
-function getShippingCost(country) {
-  let price;
+// function getShippingCost(country) {
+//   let price;
 
-  switch ('price') {
-    case 'China':
-      price = 100;
-      break;
+//   switch ('price') {
+//     case 'China':
+//       price = 100;
+//       break;
 
-    case 'Chile':
-      price = 250;
-      break;
+//     case 'Chile':
+//       price = 250;
+//       break;
 
-    case 'Australia':
-      price = 170;
-      break;
+//     case 'Australia':
+//       price = 170;
+//       break;
 
-    case 'Jamaica':
-      price = 120;
-      break;
+//     case 'Jamaica':
+//       price = 120;
+//       break;
 
-    default:
-      return 'Sorry, there is no delivery to your country';
-  }
-  return `Shipping to ${country} will cost ${price} credits`;
-}
+//     default:
+//       return 'Sorry, there is no delivery to your country';
+//   }
+//   return `Shipping to ${country} will cost ${price} credits`;
+// }
 
-console.log(getShippingCost('China'));
-console.log(getShippingCost('Chile'));
-console.log(getShippingCost('Australia'));
-console.log(getShippingCost('Jamaica'));
-console.log(getShippingCost('Ukraine'));
-console.log(getShippingCost('USA'));
+// console.log(getShippingCost('China'));
+// console.log(getShippingCost('Chile'));
+// console.log(getShippingCost('Australia'));
+// console.log(getShippingCost('Jamaica'));
+// console.log(getShippingCost('Ukraine'));
+// console.log(getShippingCost('USA'));
 
 // =========================== //
