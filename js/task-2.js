@@ -317,7 +317,7 @@
 // В іншому разі, функція повертала рядок "File extension does not match"
 
 function checkFileExtension(fileName, ext) {
-  if (fileName.toLowerCase().includes(ext.toLowerCase())) {
+  if (fileName.endWith(ext)) {
     return 'File extension matches';
   }
 
@@ -330,7 +330,7 @@ console.log(checkFileExtension('hello.js', '.js'));
 console.log(checkFileExtension('hello.js', '.css'));
 
 // ======================= //
-// ======= task-16 ======= //
+// ======= task-17 ======= //
 
 // Функція getFileName(file) приймає один параметр
 // file - рядок з іменем файлу. Ім'я файлу може бути з розширенням, наприклад: styles.css, app.js або без, наприклад: styles, app.
