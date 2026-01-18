@@ -179,22 +179,33 @@
 // Якщо роль не вказана, потрібно призначити роль за замовчуванням "User"
 // Функція повинна повертати рядок із ім'ям користувача та його роллю
 
-function checkUser(user) {
-  const userName = user.userName || 'Guest';
-  const role = user.role || 'User';
+// function checkUser(user) {
+//   const userName = user.userName || 'Guest';
+//   const role = user.role || 'User';
 
-  return `Username: ${userName}, Role: ${role}`;
-}
+//   return `Username: ${userName}, Role: ${role}`;
+// }
 
-console.log(checkUser({ userName: 'Alice', role: 'Admin' }));
-console.log(checkUser({ userName: '', role: 'Moderator' }));
-console.log(checkUser({ userName: 'Bob' }));
-console.log(checkUser({ role: 'Editor' }));
-console.log(checkUser({}));
-console.log(checkUser({ userName: null, role: undefined }));
+// console.log(checkUser({ userName: 'Alice', role: 'Admin' }));
+// console.log(checkUser({ userName: '', role: 'Moderator' }));
+// console.log(checkUser({ userName: 'Bob' }));
+// console.log(checkUser({ role: 'Editor' }));
+// console.log(checkUser({}));
+// console.log(checkUser({ userName: null, role: undefined }));
 
 // ======================= //
 // ======= task-11 ======= //
+
+// Функція toggleModalVisibility(isVisible) перемикає стан відображення модального вікна
+// У параметрі isVisible вона очікує буль true або false
+// Доповни код функції так, щоб вона повертала протилежне значення цього параметра
+
+function toggleModalVisibility(isVisible) {
+  return !isVisible;
+}
+
+// ======================= //
+// ======= task-12 ======= //
 
 // Програма запитує у користувача рік і перевіряє, чи є він високосним
 // Рік є високосним, якщо він ділиться на 4, але не ділиться на 100, або ділиться на 400
