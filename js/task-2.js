@@ -230,22 +230,22 @@
 //   alert(`${year} is not a leap year`);
 // }
 
-function isLeapYear(year) {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
+// function isLeapYear(year) {
+//   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+// }
 
-const year = Number(prompt('Enter the year:'));
+// const year = Number(prompt('Enter the year:'));
 
-if (isNaN(year)) {
-  alert('Please enter a valid number');
-} else {
-  alert(
-    isLeapYear(year) ? `${year} is a leap year` : `${year} is not a leap year`
-  );
-}
+// if (isNaN(year)) {
+//   alert('Please enter a valid number');
+// } else {
+//   alert(
+//     isLeapYear(year) ? `${year} is a leap year` : `${year} is not a leap year`
+//   );
+// }
 
 // ======================= //
-// ======= task-10 ======= //
+// ======= task-13 ======= //
 
 // Функція getSubstring(string, length) приймає рядок і повертає новий підрядок (його часткову копію)
 // Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
@@ -258,9 +258,12 @@ if (isNaN(year)) {
 // }
 
 // console.log(getSubstring('slice НЕ змінює оригінальний рядок', 15));
+// console.log(getSubstring('slice НЕ змінює оригінальний рядок', 0));
+// console.log(getSubstring('slice НЕ змінює оригінальний рядок', 75));
+// console.log(getSubstring('slice НЕ змінює оригінальний рядок', -10));
 
 // ======================= //
-// ======= task-11 ======= //
+// ======= task-14 ======= //
 
 // Функція normalizeInput(input, to) оголошує два параметри:
 // input - рядок, який потрібно привести до певного регістру
@@ -283,7 +286,7 @@ if (isNaN(year)) {
 // console.log(normalizeInput('Доповни код функції', 'lower'));
 
 // ======================= //
-// ======= task-12 ======= //
+// ======= task-15 ======= //
 
 // Функція checkForName(fullName, firstName) приймає два параметри та повертає буль true або false - результат перевірки входження підрядка firstName у рядок fullName.
 // fullName - рядок, що містить повне ім'я
@@ -296,11 +299,38 @@ if (isNaN(year)) {
 //   return fullName.toLowerCase().includes(firstName.toLowerCase());
 // }
 
+// function checkForName(fullName, firstName) {
+//   return fullName.toLowerCase().includes(firstName.toLowerCase());
+// }
+
 // console.log(checkForName('Serhii Taran', 'sErHIi'));
 // console.log(checkForName('Serhii Taran', 'Mykola'));
 
 // ======================= //
-// ======= task-13 ======= //
+// ======= task-16 ======= //
+
+// Функція checkFileExtension(fileName, ext) приймає два параметри:
+// fileName - рядок, що зберігає ім'я файлу з розширенням, наприклад, styles.css, hello.js тощо.
+// ext - рядок, що зберігає розширення, наприклад, .css, .js тощо
+// Доповни код функції так, щоб:
+// Якщо ім'я файлу fileName закінчується розширенням, зазначеним у параметрі ext, то функція повертала рядок "File extension matches"
+// В іншому разі, функція повертала рядок "File extension does not match"
+
+function checkFileExtension(fileName, ext) {
+  if (fileName.toLowerCase().includes(ext.toLowerCase())) {
+    return 'File extension matches';
+  }
+
+  return 'File extension does not match';
+}
+
+console.log(checkFileExtension('styles.css', '.css'));
+console.log(checkFileExtension('styles.css', '.js'));
+console.log(checkFileExtension('hello.js', '.js'));
+console.log(checkFileExtension('hello.js', '.css'));
+
+// ======================= //
+// ======= task-16 ======= //
 
 // Функція getFileName(file) приймає один параметр
 // file - рядок з іменем файлу. Ім'я файлу може бути з розширенням, наприклад: styles.css, app.js або без, наприклад: styles, app.
@@ -318,11 +348,12 @@ if (isNaN(year)) {
 
 //   return file.slice(0, dotIndex);
 // }
+
 // console.log(getFileName('index.html'));
 // console.log(getFileName('styles'));
 
 // ======================= //
-// ======= task-14 ======= //
+// ======= task-16 ======= //
 
 // Функція createFileName(name, ext) приймає два параметри:
 // name - рядок, що зберігає ім'я файлу без розширення, яке вводить користувач. Воно може містити зайві пробіли на початку або в кінці рядка, наприклад "order ", " finance " тощо
@@ -337,7 +368,7 @@ if (isNaN(year)) {
 // console.log(createFileName('order', 'xsls'));
 
 // ======================= //
-// ======= task-15 ======= //
+// ======= task-18 ======= //
 
 // Функція calculateTotal(number) приймає ціле число (параметр number)
 // Доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
@@ -361,7 +392,7 @@ if (isNaN(year)) {
 // console.log(calculateTotal(77));
 
 // ======================= //
-// ======= task-16 ======= //
+// ======= task-19 ======= //
 
 // Функція calculateTotal(number) приймає ціле число (параметр number)
 // Використовуючи цикл for, доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
@@ -378,7 +409,7 @@ if (isNaN(year)) {
 // console.log(calculateTotal(15));
 
 // ======================= //
-// ======= task-17 ======= //
+// ======= task-20 ======= //
 
 // Функція calculateEvenTotal(number) приймає ціле число (параметр number)
 // Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно
