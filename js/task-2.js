@@ -222,12 +222,26 @@
 //   }
 // }
 
+// const year = Number(prompt('Enter the year:'));
+
+// if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//   alert(`${year} is a leap year`);
+// } else {
+//   alert(`${year} is not a leap year`);
+// }
+
+function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
 const year = Number(prompt('Enter the year:'));
 
-if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-  alert(`${year} is a leap year`);
+if (isNaN(year)) {
+  alert('Please enter a valid number');
 } else {
-  alert(`${year} is not a leap year`);
+  alert(
+    isLeapYear(year) ? `${year} is a leap year` : `${year} is not a leap year`
+  );
 }
 
 // ======================= //
