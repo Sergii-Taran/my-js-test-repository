@@ -200,9 +200,9 @@
 // У параметрі isVisible вона очікує буль true або false
 // Доповни код функції так, щоб вона повертала протилежне значення цього параметра
 
-function toggleModalVisibility(isVisible) {
-  return !isVisible;
-}
+// function toggleModalVisibility(isVisible) {
+//   return !isVisible;
+// }
 
 // ======================= //
 // ======= task-12 ======= //
@@ -221,6 +221,14 @@ function toggleModalVisibility(isVisible) {
 //     console.log(`${year} is not a leap year`);
 //   }
 // }
+
+const year = Number(prompt('Enter the year:'));
+
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+  alert(`${year} is a leap year`);
+} else {
+  alert(`${year} is not a leap year`);
+}
 
 // ======================= //
 // ======= task-10 ======= //
