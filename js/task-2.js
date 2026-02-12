@@ -594,16 +594,27 @@
 // Змінна maxClients зберігає загальну кількість номерів у готелі
 // Завдяки циклу while місця в готелі будуть заповнюватися доти, доки поточна кількість клієнтів не дорівнюватиме максимально допустимій
 
-// ======================= //
-// ======= task-20 ======= //
+// let clientCounter = 20;
+// const maxClients = 35;
 
-let clientCounter = 20;
-const maxClients = 35;
+// while (clientCounter <= maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
 
-while (clientCounter <= maxClients) {
-  console.log(clientCounter);
-  clientCounter += 1;
+function countClients(clientCounter, maxClients) {
+  let counter = clientCounter;
+
+  while (counter < maxClients) {
+    console.log(counter);
+    counter += 1;
+  }
 }
+
+countClients(21, 38);
+
+// ======================= //
+// ======= task-21 ======= //
 
 // ======================= //
 // ======= task-19 ======= //
