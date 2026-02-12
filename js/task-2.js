@@ -316,18 +316,18 @@
 // Якщо ім'я файлу fileName закінчується розширенням, зазначеним у параметрі ext, то функція повертала рядок "File extension matches"
 // В іншому разі, функція повертала рядок "File extension does not match"
 
-function checkFileExtension(fileName, ext) {
-  if (fileName.endWith(ext)) {
-    return 'File extension matches';
-  }
+// function checkFileExtension(fileName, ext) {
+//   if (fileName.endWith(ext)) {
+//     return 'File extension matches';
+//   }
 
-  return 'File extension does not match';
-}
+//   return 'File extension does not match';
+// }
 
-console.log(checkFileExtension('styles.css', '.css'));
-console.log(checkFileExtension('styles.css', '.js'));
-console.log(checkFileExtension('hello.js', '.js'));
-console.log(checkFileExtension('hello.js', '.css'));
+// console.log(checkFileExtension('styles.css', '.css'));
+// console.log(checkFileExtension('styles.css', '.js'));
+// console.log(checkFileExtension('hello.js', '.js'));
+// console.log(checkFileExtension('hello.js', '.css'));
 
 // ======================= //
 // ======= task-17 ======= //
@@ -353,7 +353,7 @@ console.log(checkFileExtension('hello.js', '.css'));
 // console.log(getFileName('styles'));
 
 // ======================= //
-// ======= task-16 ======= //
+// ======= task-18 ======= //
 
 // Функція createFileName(name, ext) приймає два параметри:
 // name - рядок, що зберігає ім'я файлу без розширення, яке вводить користувач. Воно може містити зайві пробіли на початку або в кінці рядка, наприклад "order ", " finance " тощо
@@ -368,7 +368,7 @@ console.log(checkFileExtension('hello.js', '.css'));
 // console.log(createFileName('order', 'xsls'));
 
 // ======================= //
-// ======= task-18 ======= //
+// ======= task-19 ======= //
 
 // Функція calculateTotal(number) приймає ціле число (параметр number)
 // Доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
@@ -587,4 +587,29 @@ console.log(checkFileExtension('hello.js', '.css'));
 // console.log(getShippingCost('Ukraine'));
 // console.log(getShippingCost('USA'));
 
-// =========================== //
+// ======================= //
+// ======= task-20 ======= //
+
+// Змінна clientCounter зберігає кількість зайнятих номерів на поточний момент.
+// Змінна maxClients зберігає загальну кількість номерів у готелі
+// Завдяки циклу while місця в готелі будуть заповнюватися доти, доки поточна кількість клієнтів не дорівнюватиме максимально допустимій
+
+// ======================= //
+// ======= task-20 ======= //
+
+let clientCounter = 20;
+const maxClients = 35;
+
+while (clientCounter <= maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
+
+// ======================= //
+// ======= task-19 ======= //
+
+// ======================= //
+// ======= task-19 ======= //
+
+// ======================= //
+// ======= task-19 ======= //
