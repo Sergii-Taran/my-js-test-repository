@@ -641,16 +641,28 @@
 // За допомогою while виводить у консоль числа від цього числа до 0
 // Кожне число виводиться з нового рядка
 
-const input = Number(prompt('Enter the number'));
-let counter = input;
+// const input = Number(prompt('Enter the number'));
+// let counter = input;
 
-while (counter >= 0) {
-  console.log(`Count: ${counter}`);
-  counter -= 1;
-}
+// while (counter >= 0) {
+//   console.log(`Count: ${counter}`);
+//   counter -= 1;
+// }
 
 // ======================= //
 // ======= task-27 ======= //
+
+// Напишіть програму, яка:
+// Запитує у користувача число N
+// За допомогою циклу while виводить у консоль всі парні числа від 1 до N
+
+const input = Number(prompt('Enter the number'));
+let counter = 2;
+
+while (counter <= input) {
+  console.log(`Count: ${counter}`);
+  counter += 2;
+}
 
 // ======================= //
 // ======= task-28 ======= //
