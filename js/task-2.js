@@ -622,22 +622,35 @@
 // За допомогою циклу while обчислює суму всіх чисел від 1 до N
 // Виводить результат у консоль
 
+// const input = Number(prompt('Enter the number'));
+// let sum = 0;
+// let count = 1;
+
+// while (count <= input) {
+//   sum = sum + count;
+
+//   count++;
+// }
+// console.log(sum);
+
+// ======================= //
+// ======= task-26 ======= //
+
+// Напишіть програму, яка:
+// Запитує у користувача число
+// За допомогою while виводить у консоль числа від цього числа до 0
+// Кожне число виводиться з нового рядка
+
 const input = Number(prompt('Enter the number'));
-let sum = 0;
-let count = 1;
+let counter = input;
 
-while (count <= input) {
-  sum = sum + count;
-
-  count++;
+while (counter >= 0) {
+  console.log(`Count: ${counter}`);
+  counter -= 1;
 }
-console.log(sum);
 
 // ======================= //
-// ======= task-19 ======= //
+// ======= task-27 ======= //
 
 // ======================= //
-// ======= task-19 ======= //
-
-// ======================= //
-// ======= task-19 ======= //
+// ======= task-28 ======= //
