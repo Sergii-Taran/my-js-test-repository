@@ -390,9 +390,10 @@
 // console.log(calculateTotal(99));
 // console.log(calculateTotal(0));
 // console.log(calculateTotal(77));
+// console.log(calculateTotal(1));
 
 // ======================= //
-// ======= task-19 ======= //
+// ======= task-20 ======= //
 
 // Функція calculateTotal(number) приймає ціле число (параметр number)
 // Використовуючи цикл for, доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно
@@ -409,7 +410,7 @@
 // console.log(calculateTotal(15));
 
 // ======================= //
-// ======= task-20 ======= //
+// ======= task-21 ======= //
 
 // Функція calculateEvenTotal(number) приймає ціле число (параметр number)
 // Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно
@@ -428,7 +429,7 @@
 // console.log(calculateEvenTotal(15));
 
 // ======================= //
-// ======= task-18 ======= //
+// ======= task-22 ======= //
 
 // Доповни код таким чином, щоб у змінну number записувалося перше число у проміжку від start до end, яке ділиться на 5 без остачі
 
@@ -446,7 +447,7 @@
 // console.log(number);
 
 // ======================= //
-// ======= task-19 ======= //
+// ======= task-23 ======= //
 
 // Функція findNumber(start, end, divisor) приймає три параметра, які є цілими числами.
 // Доповни код функції таким чином, щоб вона:
@@ -588,7 +589,7 @@
 // console.log(getShippingCost('USA'));
 
 // ======================= //
-// ======= task-20 ======= //
+// ======= task-24 ======= //
 
 // Змінна clientCounter зберігає кількість зайнятих номерів на поточний момент.
 // Змінна maxClients зберігає загальну кількість номерів у готелі
@@ -602,19 +603,35 @@
 //   clientCounter += 1;
 // }
 
-function countClients(clientCounter, maxClients) {
-  let counter = clientCounter;
+// function countClients(clientCounter, maxClients) {
+//   let counter = clientCounter;
 
-  while (counter < maxClients) {
-    console.log(counter);
-    counter += 1;
-  }
-}
+//   while (counter < maxClients) {
+//     console.log(counter);
+//     counter += 1;
+//   }
+// }
 
-countClients(21, 38);
+// countClients(21, 38);
 
 // ======================= //
-// ======= task-21 ======= //
+// ======= task-25 ======= //
+
+// Напишіть програму, яка:
+// Запитує у користувача число N
+// За допомогою циклу while обчислює суму всіх чисел від 1 до N
+// Виводить результат у консоль
+
+const input = Number(prompt('Enter the number'));
+let sum = 0;
+let count = 1;
+
+while (count <= input) {
+  sum = sum + count;
+
+  count++;
+}
+console.log(sum);
 
 // ======================= //
 // ======= task-19 ======= //
