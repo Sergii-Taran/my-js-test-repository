@@ -673,9 +673,13 @@
 // Цикл завершується тільки тоді, коли користувач введе число більше 10
 // Після цього вивести повідомлення:  "Дякую! Ви ввели правильне число"
 
-// const input = Number(prompt('Enter a number greater than 10:'));
+let input;
 
-// do {} while (condition);
+do {
+  input = Number(prompt('Enter a number greater than 10:'));
+} while (input <= 10);
+
+console.log('Thanks! You entered the correct number!');
 
 // ======================= //
 // ======= task-29 ======= //
@@ -686,17 +690,17 @@
 // Якщо користувач вводить 0 — цикл завершується
 // В кінці вивести загальну суму
 
-let sum = 0;
-let input;
+// let sum = 0;
+// let input;
 
-do {
-  input = Number(prompt('Enter the number:'));
-  if (input !== 0) {
-    sum += input;
-  }
-} while (input !== 0);
+// do {
+//   input = Number(prompt('Enter the number:'));
+//   if (input !== 0) {
+//     sum += input;
+//   }
+// } while (input !== 0);
 
-console.log(`Total sum: ${sum}`);
+// console.log(`Total sum: ${sum}`);
 
 // ======================= //
 // ======= task-30 ======= //
