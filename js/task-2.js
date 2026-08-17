@@ -673,13 +673,13 @@
 // Цикл завершується тільки тоді, коли користувач введе число більше 10
 // Після цього вивести повідомлення:  "Дякую! Ви ввели правильне число"
 
-let input;
+// let input;
 
-do {
-  input = Number(prompt('Enter a number greater than 10:'));
-} while (input <= 10);
+// do {
+//   input = Number(prompt('Enter a number greater than 10:'));
+// } while (input <= 10);
 
-console.log('Thanks! You entered the correct number!');
+// console.log('Thanks! You entered the correct number!');
 
 // ======================= //
 // ======= task-29 ======= //
@@ -704,6 +704,81 @@ console.log('Thanks! You entered the correct number!');
 
 // ======================= //
 // ======= task-30 ======= //
+
+// function findNumber(start, end, divisor) {
+//   for (let i = start; i <= end; i++) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+// }
+
+// console.log(findNumber(2, 15, 6));
+
+// ======================= //
+// ======= task-31 ======= //
+
+// function checkStorage(available, ordered) {
+//   if (available < ordered) {
+//     return 'Not enough goods in stock!';
+//   } else {
+//     return 'Order is processed, our manager will contact you';
+//   }
+// }
+
+// console.log(checkStorage(1000, 1500));
+// console.log(checkStorage(1500, 1000));
+// console.log(checkStorage(1500, 1500));
+
+// ======================= //
+// ======= task-32 ======= //
+
+// function checkStorage(available, ordered) {
+//   if (ordered === 0) {
+//     return 'There are no products in the order!';
+//   } else if (ordered > available) {
+//     return 'Your order is too large, there are not enough items in stock!';
+//   } else {
+//     return 'The order is accepted, our manager will contact you';
+//   }
+// }
+
+// console.log(checkStorage(1000, 1500));
+// console.log(checkStorage(1500, 1000));
+// console.log(checkStorage(1500, 0));
+
+// ======================= //
+// ======= task-31 ======= //
+
+// const number = parseFloat(prompt('Enter the number...'));
+
+// if (number > 0) {
+//   console.log('the number is positiv');
+// } else if (number < 0) {
+//   console.log('the number is negativ');
+// } else {
+//   console.log('the number is zero');
+// }
+
+// ======================= //
+// ======= task-31 ======= //
+
+function checkScore(score) {
+  if (score >= 90) {
+    return 'Excellent';
+  } else if (score >= 75) {
+    return 'Good';
+  } else if (score >= 60) {
+    return 'Satisfactory';
+  } else {
+    return 'Unsatisfactory';
+  }
+}
+
+console.log(checkScore(99));
+console.log(checkScore(80));
+console.log(checkScore(69));
+console.log(checkScore(30));
 
 // ======================= //
 // ======= task-31 ======= //
