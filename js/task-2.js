@@ -748,7 +748,7 @@
 // console.log(checkStorage(1500, 0));
 
 // ======================= //
-// ======= task-31 ======= //
+// ======= task-33 ======= //
 
 // const number = parseFloat(prompt('Enter the number...'));
 
@@ -761,24 +761,53 @@
 // }
 
 // ======================= //
-// ======= task-31 ======= //
+// ======= task-34 ======= //
 
-function checkScore(score) {
-  if (score >= 90) {
-    return 'Excellent';
-  } else if (score >= 75) {
-    return 'Good';
-  } else if (score >= 60) {
-    return 'Satisfactory';
+// function checkScore(score) {
+//   if (score >= 90) {
+//     return 'Excellent';
+//   } else if (score >= 75) {
+//     return 'Good';
+//   } else if (score >= 60) {
+//     return 'Satisfactory';
+//   } else {
+//     return 'Unsatisfactory';
+//   }
+// }
+
+// console.log(checkScore(99));
+// console.log(checkScore(80));
+// console.log(checkScore(69));
+// console.log(checkScore(30));
+
+// ======================= //
+// ======= task-35 ======= //
+
+function checkMonth(month) {
+  if (month === 12 || month === 1 || month === 2) {
+    return 'winter';
+  } else if (month >= 3 && month <= 5) {
+    return 'spring';
+  } else if (month >= 6 && month <= 8) {
+    return 'summer';
   } else {
-    return 'Unsatisfactory';
+    return 'autumn';
   }
 }
 
-console.log(checkScore(99));
-console.log(checkScore(80));
-console.log(checkScore(69));
-console.log(checkScore(30));
+console.log(checkMonth(1));
+console.log(checkMonth(5));
+console.log(checkMonth(8));
+console.log(checkMonth(10));
 
 // ======================= //
-// ======= task-31 ======= //
+// ======= task-36 ======= //
+
+// ======================= //
+// ======= task-37 ======= //
+
+// ======================= //
+// ======= task-38 ======= //
+
+// ======================= //
+// ======= task-39 ======= //
