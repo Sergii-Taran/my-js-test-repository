@@ -814,16 +814,35 @@
 // console.log(checkAge(15));
 // Умова: використати тернарний оператор.
 
-function checkAge(age) {
-  return age >= 18 ? 'Adult' : 'Minor';
-}
+// function checkAge(age) {
+//   return age >= 18 ? 'Adult' : 'Minor';
+// }
 
-console.log(checkAge(25));
-console.log(checkAge(18));
-console.log(checkAge(15));
+// console.log(checkAge(25));
+// console.log(checkAge(18));
+// console.log(checkAge(15));
 
 // ======================= //
 // ======= task-37 ======= //
+
+// Безкоштовна доставка
+// Створи функцію checkDelivery(total), яка отримує суму замовлення.
+// Правила:
+// якщо total 1000 або більше → "Free delivery"
+// якщо total менше 1000 → "Delivery fee: 100 UAH"
+// Приклади:
+// console.log(checkDelivery(1500));
+// console.log(checkDelivery(1000));
+// console.log(checkDelivery(750));
+// Умова: використати тернарний оператор.
+
+function checkDelivery(total) {
+  return total >= 1000 ? 'Free delivery' : 'Delivery fee: 100 UAH';
+}
+
+console.log(checkDelivery(1500));
+console.log(checkDelivery(1000));
+console.log(checkDelivery(750));
 
 // ======================= //
 // ======= task-38 ======= //
