@@ -836,16 +836,48 @@
 // console.log(checkDelivery(750));
 // Умова: використати тернарний оператор.
 
-function checkDelivery(total) {
-  return total >= 1000 ? 'Free delivery' : 'Delivery fee: 100 UAH';
-}
+// function checkDelivery(total) {
+//   return total >= 1000 ? 'Free delivery' : 'Delivery fee: 100 UAH';
+// }
 
-console.log(checkDelivery(1500));
-console.log(checkDelivery(1000));
-console.log(checkDelivery(750));
+// console.log(checkDelivery(1500));
+// console.log(checkDelivery(1000));
+// console.log(checkDelivery(750));
 
 // ======================= //
 // ======= task-38 ======= //
 
+// Login status
+// Створи функцію checkLoginStatus(isLoggedIn), яка отримує true або false.
+// Функція повинна повертати:
+// "Welcome back!" — якщо користувач авторизований (true)
+// "Please log in" — якщо користувач не авторизований (false)
+// Умова: використати тернарний оператор.
+
+function checkLoginStatus(isLoggedIn) {
+  return isLoggedIn ? 'Welcome back!' : 'Please log in';
+}
+
+console.log(checkLoginStatus(true));
+console.log(checkLoginStatus(false));
+
 // ======================= //
 // ======= task-39 ======= //
+
+// ======================= //
+// ======= task-40 ======= //
+
+// ======================= //
+// ======= task-41 ======= //
+
+// ======================= //
+// ======= task-42 ======= //
+
+// ======================= //
+// ======= task-43 ======= //
+
+// ======================= //
+// ======= task-44 ======= //
+
+// ======================= //
+// ======= task-45 ======= //
