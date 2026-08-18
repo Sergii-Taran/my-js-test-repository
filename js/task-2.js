@@ -936,29 +936,58 @@
 // Умова: використати switch і обов'язково передбачити default.
 // 💡 Зверни увагу на важливу частину switch: case → дія → break.
 
-function getUserRole(role) {
-  switch (role) {
-    case 'admin':
-      return 'Full access';
-    case 'manager':
-      return 'Management access';
-    case 'editor':
-      return 'Content editing access';
-    case 'user':
-      return 'Basic access';
+// function getUserRole(role) {
+//   switch (role) {
+//     case 'admin':
+//       return 'Full access';
+//     case 'manager':
+//       return 'Management access';
+//     case 'editor':
+//       return 'Content editing access';
+//     case 'user':
+//       return 'Basic access';
 
-    default:
-      return 'Unknown role';
-  }
-}
+//     default:
+//       return 'Unknown role';
+//   }
+// }
 
-console.log(getUserRole('admin'));
-console.log(getUserRole('editor'));
-console.log(getUserRole('user'));
-console.log(getUserRole('guest'));
+// console.log(getUserRole('admin'));
+// console.log(getUserRole('editor'));
+// console.log(getUserRole('user'));
+// console.log(getUserRole('guest'));
 
 // ======================= //
 // ======= task-42 ======= //
+
+// Shipping method
+// Створи функцію:
+// calculateShipping(method)
+// Функція отримує спосіб доставки:
+// "standard" → "Shipping cost: 50 UAH"
+// "express" → "Shipping cost: 100 UAH"
+// "pickup" → "Free shipping"
+// Для будь-якого іншого значення:
+// "Unknown shipping method"
+
+function calculateShipping(method) {
+  switch (method) {
+    case 'standard':
+      return 'Shipping cost: 50 UAH';
+    case 'express':
+      return 'Shipping cost: 100 UAH';
+    case 'pickup':
+      return 'Free shipping';
+
+    default:
+      return 'Unknown shipping method';
+  }
+}
+
+console.log(calculateShipping('standard'));
+console.log(calculateShipping('express'));
+console.log(calculateShipping('pickup'));
+console.log(calculateShipping('courier'));
 
 // ======================= //
 // ======= task-43 ======= //
