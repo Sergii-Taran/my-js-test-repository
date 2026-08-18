@@ -854,15 +854,29 @@
 // "Please log in" — якщо користувач не авторизований (false)
 // Умова: використати тернарний оператор.
 
-function checkLoginStatus(isLoggedIn) {
-  return isLoggedIn ? 'Welcome back!' : 'Please log in';
-}
+// function checkLoginStatus(isLoggedIn) {
+//   return isLoggedIn ? 'Welcome back!' : 'Please log in';
+// }
 
-console.log(checkLoginStatus(true));
-console.log(checkLoginStatus(false));
+// console.log(checkLoginStatus(true));
+// console.log(checkLoginStatus(false));
 
 // ======================= //
 // ======= task-39 ======= //
+
+// Discount
+// Створи функцію calculatePrice(price, isMember).
+// Якщо користувач є членом програми лояльності (isMember === true), він отримує 10% знижки.
+// Якщо isMember === false — ціна залишається без змін.
+// Умова: використати тернарний оператор для визначення фінальної ціни.
+
+function calculatePrice(price, isMember) {
+  return isMember ? price * 0.9 : price;
+}
+
+console.log(calculatePrice(1000, true));
+console.log(calculatePrice(1000, false));
+console.log(calculatePrice(2500, true));
 
 // ======================= //
 // ======= task-40 ======= //
