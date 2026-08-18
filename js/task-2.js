@@ -894,35 +894,68 @@
 // "Invalid day"
 // Умова: використати switch.
 
-function getDayName(day) {
-  switch (day) {
-    case 1:
-      return 'Monday';
-    case 2:
-      return 'Tuesday';
-    case 3:
-      return 'Wednesday';
-    case 4:
-      return 'Thursday';
-    case 5:
-      return 'Friday';
-    case 6:
-      return 'Saturday';
-    case 7:
-      return 'Sunday';
+// function getDayName(day) {
+//   switch (day) {
+//     case 1:
+//       return 'Monday';
+//     case 2:
+//       return 'Tuesday';
+//     case 3:
+//       return 'Wednesday';
+//     case 4:
+//       return 'Thursday';
+//     case 5:
+//       return 'Friday';
+//     case 6:
+//       return 'Saturday';
+//     case 7:
+//       return 'Sunday';
 
-    default:
-      return 'Invalid day';
-  }
-}
+//     default:
+//       return 'Invalid day';
+//   }
+// }
 
-console.log(getDayName(1));
-console.log(getDayName(5));
-console.log(getDayName(7));
-console.log(getDayName(10));
+// console.log(getDayName(1));
+// console.log(getDayName(5));
+// console.log(getDayName(7));
+// console.log(getDayName(10));
 
 // ======================= //
 // ======= task-41 ======= //
+
+// Тип користувача
+// Створи функцію getUserRole(role), яка отримує рядок із роллю користувача.
+// Можливі ролі:
+// "admin" → "Full access"
+// "manager" → "Management access"
+// "editor" → "Content editing access"
+// "user" → "Basic access"
+// Для будь-якої іншої ролі повернути:
+// "Unknown role"
+// Умова: використати switch і обов'язково передбачити default.
+// 💡 Зверни увагу на важливу частину switch: case → дія → break.
+
+function getUserRole(role) {
+  switch (role) {
+    case 'admin':
+      return 'Full access';
+    case 'manager':
+      return 'Management access';
+    case 'editor':
+      return 'Content editing access';
+    case 'user':
+      return 'Basic access';
+
+    default:
+      return 'Unknown role';
+  }
+}
+
+console.log(getUserRole('admin'));
+console.log(getUserRole('editor'));
+console.log(getUserRole('user'));
+console.log(getUserRole('guest'));
 
 // ======================= //
 // ======= task-42 ======= //
