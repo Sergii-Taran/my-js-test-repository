@@ -783,25 +783,44 @@
 // ======================= //
 // ======= task-35 ======= //
 
-function checkMonth(month) {
-  if (month === 12 || month === 1 || month === 2) {
-    return 'winter';
-  } else if (month >= 3 && month <= 5) {
-    return 'spring';
-  } else if (month >= 6 && month <= 8) {
-    return 'summer';
-  } else {
-    return 'autumn';
-  }
-}
+// function checkMonth(month) {
+//   if (month === 12 || month === 1 || month === 2) {
+//     return 'winter';
+//   } else if (month >= 3 && month <= 5) {
+//     return 'spring';
+//   } else if (month >= 6 && month <= 8) {
+//     return 'summer';
+//   } else {
+//     return 'autumn';
+//   }
+// }
 
-console.log(checkMonth(1));
-console.log(checkMonth(5));
-console.log(checkMonth(8));
-console.log(checkMonth(10));
+// console.log(checkMonth(1));
+// console.log(checkMonth(5));
+// console.log(checkMonth(8));
+// console.log(checkMonth(10));
 
 // ======================= //
 // ======= task-36 ======= //
+
+// Перевірка повноліття
+// Створи функцію checkAge(age), яка отримує вік людини.
+// Функція повинна повертати:
+// "Adult" — якщо age 18 або більше
+// "Minor" — якщо age менше 18
+// Приклади виклику:
+// console.log(checkAge(25));
+// console.log(checkAge(18));
+// console.log(checkAge(15));
+// Умова: використати тернарний оператор.
+
+function checkAge(age) {
+  return age >= 18 ? 'Adult' : 'Minor';
+}
+
+console.log(checkAge(25));
+console.log(checkAge(18));
+console.log(checkAge(15));
 
 // ======================= //
 // ======= task-37 ======= //
