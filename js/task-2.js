@@ -970,27 +970,54 @@
 // Для будь-якого іншого значення:
 // "Unknown shipping method"
 
-function calculateShipping(method) {
-  switch (method) {
-    case 'standard':
-      return 'Shipping cost: 50 UAH';
-    case 'express':
-      return 'Shipping cost: 100 UAH';
-    case 'pickup':
-      return 'Free shipping';
+// function calculateShipping(method) {
+//   switch (method) {
+//     case 'standard':
+//       return 'Shipping cost: 50 UAH';
+//     case 'express':
+//       return 'Shipping cost: 100 UAH';
+//     case 'pickup':
+//       return 'Free shipping';
 
-    default:
-      return 'Unknown shipping method';
-  }
-}
+//     default:
+//       return 'Unknown shipping method';
+//   }
+// }
 
-console.log(calculateShipping('standard'));
-console.log(calculateShipping('express'));
-console.log(calculateShipping('pickup'));
-console.log(calculateShipping('courier'));
+// console.log(calculateShipping('standard'));
+// console.log(calculateShipping('express'));
+// console.log(calculateShipping('pickup'));
+// console.log(calculateShipping('courier'));
 
 // ======================= //
 // ======= task-43 ======= //
+
+// Temperature
+// Створи функцію:
+// checkTemperature(temperature)
+// Функція отримує температуру в градусах Цельсія.
+// Правила:
+// temperature < 0 → "Freezing"
+// temperature >= 0 і temperature < 15 → "Cold"
+// temperature >= 15 і temperature < 25 → "Warm"
+// temperature >= 25 → "Hot"
+
+function checkTemperature(temperature) {
+  if (temperature < 0) {
+    return 'Freezing';
+  } else if (temperature < 15) {
+    return 'Cold';
+  } else if (temperature < 25) {
+    return 'Warm';
+  } else {
+    return 'Hot';
+  }
+}
+
+console.log(checkTemperature(-5));
+console.log(checkTemperature(10));
+console.log(checkTemperature(20));
+console.log(checkTemperature(30));
 
 // ======================= //
 // ======= task-44 ======= //
