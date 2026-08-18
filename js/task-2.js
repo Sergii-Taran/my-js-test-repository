@@ -870,16 +870,56 @@
 // Якщо isMember === false — ціна залишається без змін.
 // Умова: використати тернарний оператор для визначення фінальної ціни.
 
-function calculatePrice(price, isMember) {
-  return isMember ? price * 0.9 : price;
-}
+// function calculatePrice(price, isMember) {
+//   return isMember ? price * 0.9 : price;
+// }
 
-console.log(calculatePrice(1000, true));
-console.log(calculatePrice(1000, false));
-console.log(calculatePrice(2500, true));
+// console.log(calculatePrice(1000, true));
+// console.log(calculatePrice(1000, false));
+// console.log(calculatePrice(2500, true));
 
 // ======================= //
 // ======= task-40 ======= //
+
+// День тижня
+// Створи функцію getDayName(day), яка отримує число від 1 до 7 і повертає назву дня англійською:
+// 1 → "Monday"
+// 2 → "Tuesday"
+// 3 → "Wednesday"
+// 4 → "Thursday"
+// 5 → "Friday"
+// 6 → "Saturday"
+// 7 → "Sunday"
+// Якщо передано число, якого немає в діапазоні 1–7, функція повинна повернути:
+// "Invalid day"
+// Умова: використати switch.
+
+function getDayName(day) {
+  switch (day) {
+    case 1:
+      return 'Monday';
+    case 2:
+      return 'Tuesday';
+    case 3:
+      return 'Wednesday';
+    case 4:
+      return 'Thursday';
+    case 5:
+      return 'Friday';
+    case 6:
+      return 'Saturday';
+    case 7:
+      return 'Sunday';
+
+    default:
+      return 'Invalid day';
+  }
+}
+
+console.log(getDayName(1));
+console.log(getDayName(5));
+console.log(getDayName(7));
+console.log(getDayName(10));
 
 // ======================= //
 // ======= task-41 ======= //
