@@ -1100,13 +1100,13 @@
 // normalizeUsername(username)
 // Функція отримує ім'я користувача в різному регістрі й повинна повернути його повністю в нижньому регістрі.
 
-function normalizeUsername(username) {
-  return username.toLowerCase();
-}
+// function normalizeUsername(username) {
+//   return username.toLowerCase();
+// }
 
-console.log(normalizeUsername('JohnDoe'));
-console.log(normalizeUsername('SERGII'));
-console.log(normalizeUsername('Alex_DEV'));
+// console.log(normalizeUsername('JohnDoe'));
+// console.log(normalizeUsername('SERGII'));
+// console.log(normalizeUsername('Alex_DEV'));
 
 // ======================= //
 // ======= task-48 ======= //
@@ -1116,19 +1116,95 @@ console.log(normalizeUsername('Alex_DEV'));
 // formatTitle(title)
 // Функція отримує назву в різному регістрі й повинна повернути її повністю у верхньому регістрі.
 
-function formatTitle(title) {
-  return title.toUpperCase();
-}
+// function formatTitle(title) {
+//   return title.toUpperCase();
+// }
 
-console.log(formatTitle('javascript basics'));
-console.log(formatTitle('my first project'));
-console.log(formatTitle('fullstack developer'));
+// console.log(formatTitle('javascript basics'));
+// console.log(formatTitle('my first project'));
+// console.log(formatTitle('fullstack developer'));
 
 // ======================= //
 // ======= task-49 ======= //
 
+// Задача — Check email
+// Створи функцію:
+// checkEmail(email)
+// Функція повинна перевірити email і повернути:
+// "Email is valid" — якщо email містить одночасно @ і .
+// "Invalid email" — якщо хоча б одного з цих символів немає.
+// Умова: використати includes().
+// 💡 Тут тобі знадобиться два виклики includes() і логічний оператор.
+
+function checkEmail(email) {
+  if (email.includes('@') && email.includes('.')) {
+    return 'Email is valid';
+  } else {
+    return 'Invalid email';
+  }
+}
+
+console.log(checkEmail('john@gmail.com'));
+console.log(checkEmail('john.gmail.com'));
+console.log(checkEmail('johngmail.com'));
+console.log(checkEmail('alex@yahoo.com'));
+
 // ======================= //
 // ======= task-50 ======= //
 
+// Задача — Check forbidden words
+// Створи функцію:
+// checkMessage(message)
+// Є список заборонених слів:
+// const forbiddenWord1 = 'spam';
+// const forbiddenWord2 = 'scam';
+// Функція повинна повернути:
+// "Message blocked" — якщо повідомлення містить хоча б одне із заборонених слів.
+// "Message accepted" — якщо жодного із заборонених слів немає.
+// Умова: використати includes() та логічний оператор.
+
+function checkMessage(message) {
+  if (message.includes('spam') || message.includes('scam')) {
+    return 'Message blocked';
+  } else {
+    return 'Message accepted';
+  }
+}
+
+console.log(checkMessage('Hello, how are you?'));
+console.log(checkMessage('This is a spam message'));
+console.log(checkMessage('This looks like a scam'));
+console.log(checkMessage('Hello my friend'));
+
 // ======================= //
 // ======= task-51 ======= //
+
+// ======================= //
+// ======= task-52 ======= //
+
+// ======================= //
+// ======= task-53 ======= //
+
+// ======================= //
+// ======= task-54 ======= //
+
+// ======================= //
+// ======= task-55 ======= //
+
+// ======================= //
+// ======= task-56 ======= //
+
+// ======================= //
+// ======= task-57 ======= //
+
+// ======================= //
+// ======= task-58 ======= //
+
+// ======================= //
+// ======= task-59 ======= //
+
+// ======================= //
+// ======= task-60 ======= //
+
+// ======================= //
+// ======= task-61 ======= //
