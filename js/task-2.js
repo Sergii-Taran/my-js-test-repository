@@ -1064,16 +1064,33 @@
 // Умова: використати метод slice().
 // 💡 Підказка: тобі знадобиться знайти позицію символу @.
 
-function getUsername(email) {
-  return email.slice(0, email.indexOf('@'));
-}
+// function getUsername(email) {
+//   return email.slice(0, email.indexOf('@'));
+// }
 
-console.log(getUsername('john.doe@gmail.com'));
-console.log(getUsername('alex.dev@yahoo.com'));
-console.log(getUsername('sergii@gmail.com'));
+// console.log(getUsername('john.doe@gmail.com'));
+// console.log(getUsername('alex.dev@yahoo.com'));
+// console.log(getUsername('sergii@gmail.com'));
 
 // ======================= //
 // ======= task-46 ======= //
+
+// Задача — Hide phone number
+// Створи функцію:
+// hidePhone(phone)
+// Функція отримує номер телефону у форматі:
+// +380671234567
+// і повинна повернути номер, у якому останні 4 цифри замінені на ****.
+// Умова: використати slice().
+// 💡 Тут особливо зверни увагу на можливість використовувати від'ємний індекс у slice().
+
+function hidePhone(phone) {
+  return phone.slice(0, -4) + '****';
+}
+
+console.log(hidePhone('+380671234567'));
+console.log(hidePhone('+380501112233'));
+console.log(hidePhone('+380931234567'));
 
 // ======================= //
 // ======= task-47 ======= //
