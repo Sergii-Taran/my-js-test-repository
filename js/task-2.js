@@ -1002,25 +1002,90 @@
 // temperature >= 15 і temperature < 25 → "Warm"
 // temperature >= 25 → "Hot"
 
-function checkTemperature(temperature) {
-  if (temperature < 0) {
-    return 'Freezing';
-  } else if (temperature < 15) {
-    return 'Cold';
-  } else if (temperature < 25) {
-    return 'Warm';
-  } else {
-    return 'Hot';
-  }
-}
+// function checkTemperature(temperature) {
+//   if (temperature < 0) {
+//     return 'Freezing';
+//   } else if (temperature < 15) {
+//     return 'Cold';
+//   } else if (temperature < 25) {
+//     return 'Warm';
+//   } else {
+//     return 'Hot';
+//   }
+// }
 
-console.log(checkTemperature(-5));
-console.log(checkTemperature(10));
-console.log(checkTemperature(20));
-console.log(checkTemperature(30));
+// console.log(checkTemperature(-5));
+// console.log(checkTemperature(10));
+// console.log(checkTemperature(20));
+// console.log(checkTemperature(30));
 
 // ======================= //
 // ======= task-44 ======= //
 
+// User status
+// Створи функцію:
+// checkUserStatus(status)
+// Можливі значення:
+// "active" → "User is active"
+// "blocked" → "User is blocked"
+// "pending" → "Waiting for verification"
+// "deleted" → "User account was deleted"
+// Для невідомого статусу:
+// "Unknown status"
+
+// function checkUserStatus(status) {
+//   switch (status) {
+//     case 'active':
+//       return 'User is active';
+//     case 'blocked':
+//       return 'User is blocked';
+//     case 'pending':
+//       return 'Waiting for verification';
+//     case 'deleted':
+//       return 'User account was deleted';
+
+//     default:
+//       return 'Unknown status';
+//   }
+// }
+
+// console.log(checkUserStatus('active'));
+// console.log(checkUserStatus('pending'));
+// console.log(checkUserStatus('blocked'));
+// console.log(checkUserStatus('guest'));
+
 // ======================= //
 // ======= task-45 ======= //
+
+// Задача — Extract username
+// Створи функцію:
+// getUsername(email)
+// Функція отримує email і повинна повернути частину email до символу @.
+// Умова: використати метод slice().
+// 💡 Підказка: тобі знадобиться знайти позицію символу @.
+
+function getUsername(email) {
+  return email.slice(0, email.indexOf('@'));
+}
+
+console.log(getUsername('john.doe@gmail.com'));
+console.log(getUsername('alex.dev@yahoo.com'));
+console.log(getUsername('sergii@gmail.com'));
+
+// ======================= //
+// ======= task-46 ======= //
+
+// ======================= //
+// ======= task-47 ======= //
+
+// ======================= //
+// ======= task-48 ======= //
+
+// ======================= //
+// ======= task-49 ======= //
+
+// ======================= //
+// ======= task-50 ======= //
+
+// ======================= //
+// ======= task-51 ======= //
