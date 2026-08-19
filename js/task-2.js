@@ -1084,19 +1084,45 @@
 // Умова: використати slice().
 // 💡 Тут особливо зверни увагу на можливість використовувати від'ємний індекс у slice().
 
-function hidePhone(phone) {
-  return phone.slice(0, -4) + '****';
-}
+// function hidePhone(phone) {
+//   return phone.slice(0, -4) + '****';
+// }
 
-console.log(hidePhone('+380671234567'));
-console.log(hidePhone('+380501112233'));
-console.log(hidePhone('+380931234567'));
+// console.log(hidePhone('+380671234567'));
+// console.log(hidePhone('+380501112233'));
+// console.log(hidePhone('+380931234567'));
 
 // ======================= //
 // ======= task-47 ======= //
 
+// Задача — Normalize username
+// Створи функцію:
+// normalizeUsername(username)
+// Функція отримує ім'я користувача в різному регістрі й повинна повернути його повністю в нижньому регістрі.
+
+function normalizeUsername(username) {
+  return username.toLowerCase();
+}
+
+console.log(normalizeUsername('JohnDoe'));
+console.log(normalizeUsername('SERGII'));
+console.log(normalizeUsername('Alex_DEV'));
+
 // ======================= //
 // ======= task-48 ======= //
+
+// Задача — Format title
+// Створи функцію:
+// formatTitle(title)
+// Функція отримує назву в різному регістрі й повинна повернути її повністю у верхньому регістрі.
+
+function formatTitle(title) {
+  return title.toUpperCase();
+}
+
+console.log(formatTitle('javascript basics'));
+console.log(formatTitle('my first project'));
+console.log(formatTitle('fullstack developer'));
 
 // ======================= //
 // ======= task-49 ======= //
