@@ -1136,18 +1136,18 @@
 // Умова: використати includes().
 // 💡 Тут тобі знадобиться два виклики includes() і логічний оператор.
 
-function checkEmail(email) {
-  if (email.includes('@') && email.includes('.')) {
-    return 'Email is valid';
-  } else {
-    return 'Invalid email';
-  }
-}
+// function checkEmail(email) {
+//   if (email.includes('@') && email.includes('.')) {
+//     return 'Email is valid';
+//   } else {
+//     return 'Invalid email';
+//   }
+// }
 
-console.log(checkEmail('john@gmail.com'));
-console.log(checkEmail('john.gmail.com'));
-console.log(checkEmail('johngmail.com'));
-console.log(checkEmail('alex@yahoo.com'));
+// console.log(checkEmail('john@gmail.com'));
+// console.log(checkEmail('john.gmail.com'));
+// console.log(checkEmail('johngmail.com'));
+// console.log(checkEmail('alex@yahoo.com'));
 
 // ======================= //
 // ======= task-50 ======= //
@@ -1163,21 +1163,51 @@ console.log(checkEmail('alex@yahoo.com'));
 // "Message accepted" — якщо жодного із заборонених слів немає.
 // Умова: використати includes() та логічний оператор.
 
-function checkMessage(message) {
-  if (message.includes('spam') || message.includes('scam')) {
-    return 'Message blocked';
-  } else {
-    return 'Message accepted';
-  }
-}
+// function checkMessage(message) {
+//   if (message.includes('spam') || message.includes('scam')) {
+//     return 'Message blocked';
+//   } else {
+//     return 'Message accepted';
+//   }
+// }
 
-console.log(checkMessage('Hello, how are you?'));
-console.log(checkMessage('This is a spam message'));
-console.log(checkMessage('This looks like a scam'));
-console.log(checkMessage('Hello my friend'));
+// console.log(checkMessage('Hello, how are you?'));
+// console.log(checkMessage('This is a spam message'));
+// console.log(checkMessage('This looks like a scam'));
+// console.log(checkMessage('Hello my friend'));
 
 // ======================= //
 // ======= task-51 ======= //
+
+// Задача — Validate file name
+// Створи функцію:
+// validateFileName(fileName)
+// Функція перевіряє назву файлу за двома правилами:
+// Назва файлу повинна починатися з "report_".
+// Назва файлу повинна закінчуватися на ".pdf".
+// Якщо обидві умови виконуються, функція повинна повернути:
+// "Valid report"
+// Якщо хоча б одна умова не виконується:
+// "Invalid report"
+// Умова
+// Обов'язково використай:
+// startsWith()
+// endsWith()
+// логічний оператор для об'єднання двох умов.
+
+function validateFileName(fileName) {
+  if (fileName.startsWith('report_') && fileName.endsWith('.pdf')) {
+    return 'Valid report';
+  } else {
+    return 'Invalid report';
+  }
+}
+
+console.log(validateFileName('report_2026.pdf'));
+console.log(validateFileName('report_august.pdf'));
+console.log(validateFileName('report_2026.docx'));
+console.log(validateFileName('invoice_2026.pdf'));
+console.log(validateFileName('report.pdf'));
 
 // ======================= //
 // ======= task-52 ======= //
