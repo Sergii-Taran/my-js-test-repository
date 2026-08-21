@@ -1195,22 +1195,42 @@
 // endsWith()
 // логічний оператор для об'єднання двох умов.
 
-function validateFileName(fileName) {
-  if (fileName.startsWith('report_') && fileName.endsWith('.pdf')) {
-    return 'Valid report';
-  } else {
-    return 'Invalid report';
-  }
-}
+// function validateFileName(fileName) {
+//   if (fileName.startsWith('report_') && fileName.endsWith('.pdf')) {
+//     return 'Valid report';
+//   } else {
+//     return 'Invalid report';
+//   }
+// }
 
-console.log(validateFileName('report_2026.pdf'));
-console.log(validateFileName('report_august.pdf'));
-console.log(validateFileName('report_2026.docx'));
-console.log(validateFileName('invoice_2026.pdf'));
-console.log(validateFileName('report.pdf'));
+// console.log(validateFileName('report_2026.pdf'));
+// console.log(validateFileName('report_august.pdf'));
+// console.log(validateFileName('report_2026.docx'));
+// console.log(validateFileName('invoice_2026.pdf'));
+// console.log(validateFileName('report.pdf'));
 
 // ======================= //
 // ======= task-52 ======= //
+
+// Задача — Extract domain from email
+// Створи функцію getDomain(email)
+// Функція отримує email і повинна повернути домен, тобто частину після символу @.
+// Наприклад:
+// john.doe@gmail.com
+//          ↓
+//        gmail.com
+// Умова - Обов'язково використай метод indexOf()
+// А також використай один із способів отримати частину рядка після знайденої позиції.
+
+function getDomain(email) {
+  const atIndex = email.indexOf('@');
+
+  return email.slice(atIndex + 1);
+}
+
+console.log(getDomain('john.doe@gmail.com'));
+console.log(getDomain('alex@yahoo.com'));
+console.log(getDomain('sergii@outlook.com'));
 
 // ======================= //
 // ======= task-53 ======= //
