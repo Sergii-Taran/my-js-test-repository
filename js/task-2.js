@@ -1222,21 +1222,56 @@
 // Умова - Обов'язково використай метод indexOf()
 // А також використай один із способів отримати частину рядка після знайденої позиції.
 
-function getDomain(email) {
-  const atIndex = email.indexOf('@');
+// function getDomain(email) {
+//   const atIndex = email.indexOf('@');
 
-  return email.slice(atIndex + 1);
-}
+//   return email.slice(atIndex + 1);
+// }
 
-console.log(getDomain('john.doe@gmail.com'));
-console.log(getDomain('alex@yahoo.com'));
-console.log(getDomain('sergii@outlook.com'));
+// console.log(getDomain('john.doe@gmail.com'));
+// console.log(getDomain('alex@yahoo.com'));
+// console.log(getDomain('sergii@outlook.com'));
 
 // ======================= //
 // ======= task-53 ======= //
 
+// Задача 1 — Format order number
+// Створи функцію:
+// formatOrderNumber(orderNumber)
+// Функція отримує номер замовлення як число і повинна повернути його у форматі з 6 цифр, додаючи нулі на початок.
+// Умова:
+// використати padStart();
+// результат функції повинен бути рядком;
+// якщо номер уже містить 6 або більше символів — нічого не змінювати.
+
+function formatOrderNumber(orderNumber) {
+  return String(orderNumber).padStart(6, '0');
+}
+
+console.log(formatOrderNumber(25));
+console.log(formatOrderNumber(734));
+console.log(formatOrderNumber(125678));
+
 // ======================= //
 // ======= task-54 ======= //
+
+// Задача 2 — Format product label
+// Створи функцію:
+// formatProductLabel(product)
+// Функція отримує назву товару і повинна сформувати рядок довжиною 20 символів.
+// Назва товару повинна бути вирівняна по лівому краю, а справа потрібно додати крапки . до загальної довжини 20 символів.
+// Умова:
+// використати padEnd();
+// загальна довжина результату повинна бути 20 символів;
+// символ заповнення — ..
+
+function formatProductLabel(product) {
+  return product.padEnd(20, '.');
+}
+
+console.log(formatProductLabel('Laptop'));
+console.log(formatProductLabel('Phone'));
+console.log(formatProductLabel('Keyboard'));
 
 // ======================= //
 // ======= task-55 ======= //
